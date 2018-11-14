@@ -1,7 +1,7 @@
 version: 2
 
 defaults: &defaults
-  working_directory: ~/apto-ui-react
+  working_directory: ~/aptotude
   docker:
     - image: circleci/node:8-browsers
 
