@@ -1,0 +1,45 @@
+version: 2
+
+defaults: &defaults
+  working_directory: ~/apto-ui-react
+  docker:
+    - image: circleci/node:8-browsers
+
+jobs:
+  continuous-integration:
+    <<: *defaults
+    steps:
+      - checkout
+      - run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run: yarn install
+      - run: yarn lint
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - ./node_modules
+      - run: yarn test:headless
+      - add_ssh_keys:
+          fingerprints:
+              - "3a:b6:ac:01:7d:ef:5f:2c:73:e9:5f:f3:52:09:ff:7c"
+      - run: >
+          if [ "$CIRCLE_BRANCH" == "master" ]; then
+            echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
+            npm run release
+          fi
+
+workflows:
+  version: 2
+  branches:
+    jobs:
+      - continuous-integration:
+          filters:
+            branches:
+              ignore: master
+  master:
+    jobs:
+      - continuous-integration:
+          filters:
+            branches:
+              only: master

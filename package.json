@@ -1,0 +1,70 @@
+{
+  "name": "apto-ui",
+  "description": "Apto UI for React",
+  "homepage": "https://github.com/aptotude/apto-ui-react",
+  "bugs": "https://github.com/aptotude/apto-ui-react/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aptotude/apto-ui-react.git"
+  },
+  "scripts": {
+    "gulp": "gulp",
+    "dev": "yarn storybook:local",
+    "release": "./scripts/release.sh",
+    "test": "",
+    "test:headless": "",
+    "lint": "",
+    "icons": "gulp sprites",
+    "storybook:local": "start-storybook -p 9001 -c .storybook",
+    "storybook:deploy": "storybook-to-ghpages"
+  },
+  "license": "MIT",
+  "version": "1.0.77",
+  "engines": {
+    "node": ">= 8.9.0"
+  },
+  "dependencies": {
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "prop-types": "^15.6.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.6",
+    "@babel/node": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-proposal-do-expressions": "^7.0.0",
+    "@babel/plugin-proposal-export-default-from": "^7.0.0",
+    "@babel/plugin-proposal-logical-assignment-operators": "^7.0.0",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.0.0",
+    "@babel/plugin-proposal-optional-chaining": "^7.0.0",
+    "@babel/plugin-proposal-pipeline-operator": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "@storybook/addon-actions": "^4.0.6",
+    "@storybook/addon-events": "^4.0.6",
+    "@storybook/addon-links": "^4.0.6",
+    "@storybook/addon-options": "^4.0.6",
+    "@storybook/react": "^4.0.6",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.0.1",
+    "babel-loader": "^8.0.0-beta.6",
+    "babel-plugin-transform-imports": "^1.5.0",
+    "classnames": "^2.2.6",
+    "css-loader": "^1.0.1",
+    "emotion": "^9.2.12",
+    "eslint": "^5.9.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-babel": "^5.2.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-react": "^7.11.1",
+    "node-sass": "^4.10.0",
+    "prettier": "^1.15.2",
+    "react-emotion": "^9.2.12",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1"
+  }
+}
