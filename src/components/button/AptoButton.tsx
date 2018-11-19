@@ -1,29 +1,41 @@
 import React from 'react';
 import classNames from 'classnames';
+import './aptoButton.scss';
+import { StandardTypes } from '../../utils/standardTypes';
 
-import './button.scss';
+interface Props extends StandardTypes {
+  kind?: 'button' | 'link'
+  variant?: 'primary' | 'secondary' | 'secondaryDark' | 'danger';
+  active?: boolean;
+  disabled?: boolean;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement|HTMLAnchorElement>) => void;
+  href?: string;
+  role?: string;
+  title?: string;
+  target?: string;
+}
 
-function missingHref(href) {
+function missingHref(href: undefined | string) {
   return !href || href.trim() === '#';
 }
 
 const COMPONENT_PREFIX = 'AptoButton';
 
-class AptoButton extends React.Component {
-  static defaultProps = {
+class AptoButton extends React.Component<Props> {
+  public static defaultProps = {
     kind: 'button',
     variant: 'primary',
     active: false,
     disabled: false
   };
 
-  constructor(props) {
+  public constructor(props = {}) {
     super(props);
 
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick(event) {
+  public handleClick(event: React.MouseEvent<HTMLButtonElement|HTMLAnchorElement>) {
     const {disabled, href, onClick } = this.props;
 
     if (disabled || missingHref(href)) {
@@ -40,7 +52,7 @@ class AptoButton extends React.Component {
     }
   }
 
-  render() {
+  public render() {
     const {
       variant,
       kind,
