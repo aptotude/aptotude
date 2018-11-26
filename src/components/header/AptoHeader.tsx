@@ -3,13 +3,15 @@ import classNames from 'classnames';
 import './aptoHeader.scss';
 import { StandardTypes } from '../../utils/standardTypes';
 
+export type HeaderType = '1' | '2' | '3' | '4' | '5' | '6';
+
 interface Props extends StandardTypes {
-  type?: '1' | '2' | '3' | '4' | '5' | '6';
+  type?: HeaderType;
 }
 
 const COMPONENT_PREFIX = 'AptoHeader';
 
-class AptoHeader extends React.Component<Props> {
+export default class AptoHeader extends React.Component<Props> {
   public static defaultProps = {
     type: '1'
   };
@@ -63,5 +65,3 @@ class AptoHeader extends React.Component<Props> {
     );
   }
 }
-
-export default AptoHeader;

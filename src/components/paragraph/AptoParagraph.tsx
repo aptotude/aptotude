@@ -9,7 +9,7 @@ interface Props extends StandardTypes {
 
 const COMPONENT_PREFIX = 'AptoParagraph';
 
-class AptoParagraph extends React.Component<Props> {
+export default class AptoParagraph extends React.Component<Props> {
   public static defaultProps = {
     compact: false
   };
@@ -23,8 +23,6 @@ class AptoParagraph extends React.Component<Props> {
       ...rest
     } = this.props;
 
-    const Component = 'p';
-
     const classes = classNames(
       COMPONENT_PREFIX,
       compact && `${COMPONENT_PREFIX}--compact`,
@@ -32,14 +30,12 @@ class AptoParagraph extends React.Component<Props> {
     );
 
     return (
-      <Component
+      <p
         {...rest}
         ref={forwardRef}
         className={classes}>
           {children}
-      </Component>
+      </p>
     );
   }
 }
-
-export default AptoParagraph;

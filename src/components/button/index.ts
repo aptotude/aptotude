@@ -1,1 +1,1 @@
-export { default } from './AptoButton';
+export * from './AptoButton';

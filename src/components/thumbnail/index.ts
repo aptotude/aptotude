@@ -1,1 +1,1 @@
-export { default } from './AptoThumbnail';
+export * from './AptoThumbnail';

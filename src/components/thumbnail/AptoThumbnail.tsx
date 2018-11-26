@@ -5,7 +5,7 @@ import { StandardTypes } from '../../utils/standardTypes';
 
 const COMPONENT_PREFIX = 'AptoThumbnail';
 
-class AptoThumbnail extends React.Component<StandardTypes> {
+export default class AptoThumbnail extends React.Component<StandardTypes> {
   public render() {
     const {
       className,
@@ -14,23 +14,18 @@ class AptoThumbnail extends React.Component<StandardTypes> {
       ...rest
     } = this.props;
 
-    const Component = 'p';
-
     const classes = classNames(
       COMPONENT_PREFIX,
       className
     );
 
     return (
-      <Component
+      <div
         {...rest}
         ref={forwardRef}
         className={classes}>
           {children}
-      </Component>
+      </div>
     );
   }
 }
-
-
-export default AptoThumbnail;

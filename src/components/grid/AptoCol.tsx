@@ -5,7 +5,7 @@ import './aptoCol.scss';
 
 const COMPONENT_PREFIX = 'AptoCol';
 
-type RowType = 'auto' | 'true' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '11' | '12';
+export type RowType = 'auto' | 'true' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '11' | '12';
 
 interface Props extends StandardTypes {
   xs?: RowType;
@@ -15,7 +15,7 @@ interface Props extends StandardTypes {
   xl?: RowType;
 }
 
-class AptoCol extends React.Component<Props> {
+export default class AptoCol extends React.Component<Props> {
   public render() {
     const {
       children,
@@ -30,15 +30,13 @@ class AptoCol extends React.Component<Props> {
       className
     );
 
-    const Component = 'div';
-
     return (
-      <Component
+      <div
         {...rest}
         ref={forwardRef}
         className={classes}>
         {children}
-      </Component>
+      </div>
     );
   }
 
@@ -76,5 +74,3 @@ class AptoCol extends React.Component<Props> {
     }
   }
 }
-
-export default AptoCol;

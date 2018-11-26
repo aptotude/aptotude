@@ -9,7 +9,7 @@ interface Props extends StandardTypes {
   noGutter?: boolean;
 }
 
-class AptoRow extends React.Component<Props> {
+export default class AptoRow extends React.Component<Props> {
   public static defaultProps = {
     noGutter: false
   };
@@ -29,17 +29,13 @@ class AptoRow extends React.Component<Props> {
       className
     );
 
-    const Component = 'div';
-
     return (
-      <Component
+      <div
         {...rest}
         ref={forwardRef}
         className={classes}>
         {children}
-      </Component>
+      </div>
     );
   }
 }
-
-export default AptoRow;

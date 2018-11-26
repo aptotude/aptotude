@@ -10,7 +10,7 @@ interface Props extends StandardTypes {
   fixed?: boolean;
 }
 
-class AptoContainer extends React.Component<Props> {
+export default class AptoContainer extends React.Component<Props> {
   public static defaultProps = {
     scroll: false,
     fixed: false
@@ -33,17 +33,13 @@ class AptoContainer extends React.Component<Props> {
       className
     );
 
-    const Component = 'div';
-
     return (
-      <Component
+      <div
         {...rest}
         ref={forwardRef}
         className={classes}>
         {children}
-      </Component>
+      </div>
     );
   }
 }
-
-export default AptoContainer;

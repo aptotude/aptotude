@@ -10,7 +10,7 @@ interface Props extends StandardTypes {
 
 const COMPONENT_PREFIX = 'AptoLoader';
 
-class AptoLoader extends React.Component<Props> {
+export default class AptoLoader extends React.Component<Props> {
   public static defaultProps = {
     text: '',
     noOverlay: false
@@ -25,8 +25,6 @@ class AptoLoader extends React.Component<Props> {
       ...rest
     } = this.props;
 
-    const Component = 'div';
-
     const classes = classNames(
       COMPONENT_PREFIX,
       noOverlay && `${COMPONENT_PREFIX}--noOverlay`,
@@ -34,7 +32,7 @@ class AptoLoader extends React.Component<Props> {
     );
 
     return (
-      <Component
+      <div
         {...rest}
         ref={forwardRef}
         className={classes}>
@@ -46,9 +44,7 @@ class AptoLoader extends React.Component<Props> {
           {
             text ? <div className="AptoLoader-content">{text}</div> : null
           }
-      </Component>
+      </div>
     );
   }
 }
-
-export default AptoLoader;

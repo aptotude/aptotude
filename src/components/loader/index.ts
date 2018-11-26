@@ -1,1 +1,1 @@
-export { default } from './AptoLoader';
+export * from './AptoLoader';

@@ -3,9 +3,12 @@ import classNames from 'classnames';
 import './aptoButton.scss';
 import { StandardTypes } from '../../utils/standardTypes';
 
+export type ButtonKind = 'button' | 'link';
+export type ButtonVariant = 'primary' | 'secondary' | 'secondaryDark' | 'danger';
+
 interface Props extends StandardTypes {
-  kind?: 'button' | 'link'
-  variant?: 'primary' | 'secondary' | 'secondaryDark' | 'danger';
+  kind?: ButtonKind;
+  variant?: ButtonVariant;
   active?: boolean;
   disabled?: boolean;
   onClick?: (event: React.MouseEvent<HTMLButtonElement|HTMLAnchorElement>) => void;
@@ -21,7 +24,7 @@ function missingHref(href: undefined | string) {
 
 const COMPONENT_PREFIX = 'AptoButton';
 
-class AptoButton extends React.Component<Props> {
+export default class AptoButton extends React.Component<Props> {
   public static defaultProps = {
     kind: 'button',
     variant: 'primary',
@@ -95,5 +98,3 @@ class AptoButton extends React.Component<Props> {
     );
   }
 }
-
-export default AptoButton;
