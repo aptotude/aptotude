@@ -93,20 +93,22 @@ storiesOf('Grid', module)
   })
   .add('Scrollable', () => {
     return (
-      <div className="scrollableWrapper">
-        <AptoContainer scroll >
-          <AptoRow>
-            <AptoCol className="scrollableHeight">1 of 3</AptoCol>
-            <AptoCol className="scrollableHeight">2 of 3</AptoCol>
-            <AptoCol className="scrollableHeight">3 of 3</AptoCol>
-          </AptoRow>
-        </AptoContainer>
+      <div className="gridStories">
+        <div className="scrollableWrapper">
+          <AptoContainer scroll>
+            <AptoRow>
+              <AptoCol className="scrollableHeight">1 of 3</AptoCol>
+              <AptoCol className="scrollableHeight">2 of 3</AptoCol>
+              <AptoCol className="scrollableHeight">3 of 3</AptoCol>
+            </AptoRow>
+          </AptoContainer>
+        </div>
       </div>
     );
   })
   .add('Fixed', () => {
     return (
-      <AptoContainer fixed>
+      <AptoContainer fixed className="gridStories">
         <AptoRow>
           <AptoCol>1 of 3</AptoCol>
           <AptoCol>2 of 3</AptoCol>
