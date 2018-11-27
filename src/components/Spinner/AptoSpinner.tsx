@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import './aptoLoader.scss';
+import './aptoSpinner.scss';
 import { StandardTypes } from '../../utils/standardTypes';
 
 interface Props extends StandardTypes {
@@ -8,9 +8,9 @@ interface Props extends StandardTypes {
   noOverlay?: boolean;
 }
 
-const COMPONENT_PREFIX = 'AptoLoader';
+const COMPONENT_PREFIX = 'AptoSpinner';
 
-export default class AptoLoader extends React.Component<Props> {
+export default class AptoSpinner extends React.Component<Props> {
   public static defaultProps = {
     text: '',
     noOverlay: false
@@ -36,13 +36,13 @@ export default class AptoLoader extends React.Component<Props> {
         {...rest}
         ref={forwardRef}
         className={classes}>
-          <div className="AptoLoader-spinner">
+          <div className="AptoSpinner-spinner">
             <svg viewBox="0 0 64 64">
               <circle transform="translate(32,32)" r="26"/>
             </svg>
           </div>
           {
-            text ? <div className="AptoLoader-content">{text}</div> : null
+            text ? <div className="AptoSpinner-content">{text}</div> : null
           }
       </div>
     );

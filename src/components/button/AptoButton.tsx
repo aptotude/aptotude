@@ -42,11 +42,15 @@ export default class AptoButton extends React.Component<Props> {
     const {disabled, href, onClick } = this.props;
 
     if (disabled || missingHref(href)) {
-      event.preventDefault();
+      if (event) {
+        event.preventDefault();
+      }
     }
 
     if (disabled) {
-      event.stopPropagation();
+      if (event) {
+        event.stopPropagation();
+      }
       return;
     }
 
@@ -90,7 +94,7 @@ export default class AptoButton extends React.Component<Props> {
         ref={forwardRef}
         aria-label={title}
         href={href}
-        disabled={disabled}
+        disabled={disabled || undefined}
         onClick={this.handleClick}
         className={classes}>
           {children}

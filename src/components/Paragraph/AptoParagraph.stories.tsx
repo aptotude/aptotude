@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import AptoParagraph from './AptoParagraph';
 
-storiesOf('Text (Paragraph)', module)
+storiesOf('Paragraph', module)
     .add('Basic Usage', () => {
         return (
             <div>

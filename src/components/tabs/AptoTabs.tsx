@@ -1,7 +1,7 @@
 import React, { Component, cloneElement, Children } from 'react';
 import { StandardTypes } from '../../utils/standardTypes';
-import './tabs.scss';
-import AptoTabPane from '../tabPane/AptoTabPane';
+import './aptoTabs.scss';
+import AptoTabPane from '../TabPane/AptoTabPane';
 import classNames from 'classnames';
 import { HOME, END, RIGHT_ARROW, LEFT_ARROW } from '../../utils/keycodes';
 

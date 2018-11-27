@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './tab-pane.scss';
+import './aptoTabPane.scss';
 import classNames from 'classnames';
 
 interface Props {

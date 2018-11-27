@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import AptoRow from '../../grid/AptoRow';
-import AptoCol from '../../grid/AptoCol';
+import AptoRow from '../../Row/AptoRow';
+import AptoCol from '../../Column/AptoCol';
 
 import './variableStories.scss';
 

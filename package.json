@@ -10,6 +10,7 @@
   "scripts": {
     "dev": "yarn storybook:local",
     "test": "jest --silent",
+    "test:update": "jest --silent -u",
     "storybook:local": "start-storybook -p 9001 -c .storybook",
     "storybook:deploy": "storybook-to-ghpages",
     "lint": "tslint --project .",
@@ -55,9 +56,7 @@
     "babel-loader": "^8.0.0-beta.6",
     "classnames": "^2.2.6",
     "css-loader": "^1.0.1",
-    "identity-obj-proxy": "^3.0.0",
     "jest": "^23.6.0",
-    "jest-transform-css": "^2.0.0",
     "node-sass": "^4.10.0",
     "react-test-renderer": "^16.6.3",
     "sass-loader": "^7.1.0",
@@ -74,7 +73,7 @@
     "transform": {
       "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
-    "testRegex": "\\.spec.(ts|tsx)$",
+    "testRegex": "\\.spec.(ts|tsx|js)$",
     "moduleNameMapper": {
       "\\.(css|scss)$": "<rootDir>/__mocks__/styleMock.js"
     }

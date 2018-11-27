@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders 1`] = `
+<h1
+  className="AptoHeader AptoHeader--h1"
+/>
+`;
+
+exports[`Header sizes render 1`] = `
+<div>
+  <h1
+    className="AptoHeader AptoHeader--h1"
+  />
+  <h1
+    className="AptoHeader AptoHeader--h1"
+  />
+  <h2
+    className="AptoHeader AptoHeader--h2"
+  />
+  <h3
+    className="AptoHeader AptoHeader--h3"
+  />
+  <h4
+    className="AptoHeader AptoHeader--h4"
+  />
+  <h5
+    className="AptoHeader AptoHeader--h5"
+  />
+  <h6
+    className="AptoHeader AptoHeader--h6"
+  />
+</div>
+`;

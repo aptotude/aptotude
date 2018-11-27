@@ -1,27 +1,26 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import AptoLoader from './AptoLoader';
+import AptoSpinner from './AptoSpinner';
+import './aptoSpinnerStories.scss';
 
-import './loaderStories.scss';
-
-storiesOf('Spinner Loader', module)
+storiesOf('Spinner', module)
     .add('Basic Usage', () => {
         return (
             <div className="loaderStories">
                 <div className="loaderWrapper">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-                    <AptoLoader text="Loading..."/>
+                    <AptoSpinner text="Loading..."/>
                 </div>
                 <br /><br />
                 <div className="loaderWrapper">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-                    <AptoLoader/>
+                    <AptoSpinner/>
                 </div>
                 <br /><br />
                 <div className="loaderWrapper minHeightLoaderWrapper">
-                    <AptoLoader noOverlay text="No Overlay Loader"/>
+                    <AptoSpinner noOverlay text="No Overlay Spinner"/>
                 </div>
             </div>
         );

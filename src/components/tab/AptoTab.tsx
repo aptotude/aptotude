@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { StandardTypes } from '../../utils/standardTypes';
-import './tab.scss';
+import './aptoTab.scss';
 import classNames from 'classnames';
 
 interface Props extends StandardTypes {

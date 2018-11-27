@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import AptoTabs from './AptoTabs';
-import AptoTab from '../tab/AptoTab';
+import AptoTab from '../Tab/AptoTab';
 
 storiesOf('Tabs', module)
   .add('Basic Usage', () => {
