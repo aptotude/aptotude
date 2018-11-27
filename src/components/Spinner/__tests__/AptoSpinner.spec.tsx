@@ -1,35 +1,51 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import AptoSpinner from '../AptoSpinner';
+import { render } from 'react-testing-library';
 
-test('Spinner renders', () => {
-  const component = renderer.create(
-    <AptoSpinner />
-  );
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
-});
+describe('Spinner Component', () => {
+  it('Spinner renders', () => {
+    const {
+      container
+    } = render(
+      <AptoSpinner/>
+    );
 
-test('Spinner with no overlay renders', () => {
-  const component = renderer.create(
-    <AptoSpinner noOverlay />
-  );
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
-});
+    const node = container.querySelector('.AptoSpinner');
+    const textNode = container.querySelector('.AptoSpinner .AptoSpinner-content');
+    expect(node!.className).toEqual('AptoSpinner');
+    expect(textNode).toEqual(null);
+  });
 
-test('Spinner with text renders', () => {
-  const component = renderer.create(
-    <AptoSpinner text="foo" />
-  );
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
-});
+  it('Spinner with no overlay renders', () => {
+    const {
+      container
+    } = render(
+      <AptoSpinner noOverlay/>
+    );
 
-test('Spinner with text and no overlay renders', () => {
-  const component = renderer.create(
-    <AptoSpinner text="foo" noOverlay />
-  );
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+    const node = container.querySelector('.AptoSpinner');
+    expect(node!.className).toEqual('AptoSpinner AptoSpinner--noOverlay');
+  });
+
+  it('Spinner with text renders', () => {
+    const {
+      container
+    } = render(
+      <AptoSpinner text="foo"/>
+    );
+
+    const node = container.querySelector('.AptoSpinner .AptoSpinner-content');
+    expect(node!.innerHTML).toEqual('foo');
+  });
+
+  it('Custom className renders', () => {
+    const {
+      container
+    } = render(
+      <AptoSpinner className="foo"/>
+    );
+
+    const node = container.querySelector('.AptoSpinner');
+    expect(node!.className).toEqual('AptoSpinner foo');
+  });
 });

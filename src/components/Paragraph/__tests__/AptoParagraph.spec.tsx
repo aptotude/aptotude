@@ -1,19 +1,27 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import AptoParagraph from '../AptoParagraph';
+import { render } from 'react-testing-library';
 
-test('Paragraph renders', () => {
-  const component = renderer.create(
-    <AptoParagraph />
-  );
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
-});
+describe('Paragraph Component', () => {
+  it('Paragraph renders', () => {
+    const {
+      container
+    } = render(
+      <AptoParagraph/>
+    );
 
-test('Paragraph compact renders', () => {
-  const component = renderer.create(
-    <AptoParagraph compact />
-  );
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+    const node = container.querySelector('p.AptoParagraph');
+    expect(node!.className).toEqual('AptoParagraph');
+  });
+
+  it('Paragraph compact renders', () => {
+    const {
+      container
+    } = render(
+      <AptoParagraph compact/>
+    );
+
+    const node = container.querySelector('p.AptoParagraph');
+    expect(node!.className).toEqual('AptoParagraph AptoParagraph--compact');
+  });
 });

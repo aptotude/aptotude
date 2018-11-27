@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Grid renders 1`] = `
+<div
+  className="AptoContainer"
+>
+  <div
+    className="AptoRow"
+  >
+    <div
+      className="AptoCol"
+    >
+      Foo
+    </div>
+    <div
+      className="AptoCol"
+    >
+      Bar
+    </div>
+  </div>
+  <div
+    className="AptoRow"
+  >
+    <div
+      className="AptoCol"
+    >
+      Baz
+    </div>
+    <div
+      className="AptoCol"
+    >
+      Maz
+    </div>
+  </div>
+</div>
+`;

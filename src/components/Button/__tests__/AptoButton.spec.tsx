@@ -1,163 +1,222 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import AptoButton from '../AptoButton';
+import { render, fireEvent } from 'react-testing-library';
 
-test('Button renders', () => {
-  const component = renderer.create(
-    <AptoButton />
-  );
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
-});
+ describe('Button Component', () => {
+  it('Button renders', () => {
+    const {
+      container
+    } = render(
+      <AptoButton />
+    );
+    const node = container.querySelector('button.AptoButton');
+    expect(node!.className).toEqual('AptoButton AptoButton--button AptoButton--primary');
+  });
 
-test('Button children render', () => {
-  const component = renderer.create(
-    <AptoButton>Foo</AptoButton>
-  );
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
-});
+  it('Button children render', () => {
+    const {
+      container
+    } = render(
+      <AptoButton>
+        Foo
+      </AptoButton>
+    );
+    const node = container.querySelector('button.AptoButton');
+    expect(node!.innerHTML).toEqual('Foo');
+  });
 
-test('Primary Button renders', () => {
-  const component = renderer.create(
-    <AptoButton variant="primary" />
-  );
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
-});
+  it('Primary Button renders', () => {
+    const {
+      container
+    } = render(
+      <AptoButton variant="primary" />
+    );
+    const node = container.querySelector('button.AptoButton');
+    expect(node!.className).toEqual('AptoButton AptoButton--button AptoButton--primary');
+  });
 
-test('Secondary Button renders', () => {
-  const component = renderer.create(
-    <AptoButton variant="secondary" />
-  );
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
-});
+  it('Secondary Button renders', () => {
+    const {
+      container
+    } = render(
+      <AptoButton variant="secondary" />
+    );
+    const node = container.querySelector('button.AptoButton');
+    expect(node!.className).toEqual('AptoButton AptoButton--button AptoButton--secondary');
+  });
 
-test('SecondaryDark Button renders', () => {
-  const component = renderer.create(
-    <AptoButton variant="secondaryDark" />
-  );
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
-});
+  it('SecondaryDark Button renders', () => {
+    const {
+      container
+    } = render(
+      <AptoButton variant="secondaryDark" />
+    );
+    const node = container.querySelector('button.AptoButton');
+    expect(node!.className).toEqual('AptoButton AptoButton--button AptoButton--secondaryDark');
+  });
 
-test('Danger Button renders', () => {
-  const component = renderer.create(
-    <AptoButton variant="danger" />
-  );
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
-});
+  it('Danger Button renders', () => {
+    const {
+      container
+    } = render(
+      <AptoButton variant="danger" />
+    );
+    const node = container.querySelector('button.AptoButton');
+    expect(node!.className).toEqual('AptoButton AptoButton--button AptoButton--danger');
+  });
 
-test('Link button renders', () => {
-  const component = renderer.create(
-    <AptoButton kind="link" />
-  );
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
-});
+  it('Link button renders', () => {
+    const {
+      container
+    } = render(
+      <AptoButton kind="link" />
+    );
+    const node = container.querySelector('button.AptoButton');
+    expect(node!.className).toEqual('AptoButton AptoButton--link AptoButton--primary');
+  });
 
-test('Button button renders', () => {
-  const component = renderer.create(
-    <AptoButton kind="button" />
-  );
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
-});
+  it('Button button renders', () => {
+    const {
+      container
+    } = render(
+      <AptoButton kind="button" />
+    );
+    const node = container.querySelector('button.AptoButton');
+    expect(node!.className).toEqual('AptoButton AptoButton--button AptoButton--primary');
+  });
 
-test('Secondary Link button renders', () => {
-  const component = renderer.create(
-    <AptoButton kind="link" variant="secondary" />
-  );
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
-});
+  it('Secondary Link button renders', () => {
+    const {
+      container
+    } = render(
+      <AptoButton kind="link" variant="secondary" />
+    );
+    const node = container.querySelector('button.AptoButton');
+    expect(node!.className).toEqual('AptoButton AptoButton--link AptoButton--secondary');
+  });
 
-test('Disabled button renders', () => {
-  const component = renderer.create(
-    <AptoButton disabled />
-  );
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
-});
+  it('Disabled button renders', () => {
+    const {
+      container
+    } = render(
+      <AptoButton disabled />
+    );
+    const node = container.querySelector('button.AptoButton');
+    expect(node!.hasAttribute('disabled')).toBeTruthy();
+    expect(node!.className).toEqual('AptoButton AptoButton--button AptoButton--primary AptoButton--disabled');
+  });
 
-test('Active button renders', () => {
-  const component = renderer.create(
-    <AptoButton active />
-  );
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
-});
+  it('Active button renders', () => {
+    const {
+      container
+    } = render(
+      <AptoButton active />
+    );
+    const node = container.querySelector('button.AptoButton');
+    expect(node!.className).toEqual('AptoButton AptoButton--button AptoButton--primary AptoButton--active');
+  });
 
-test('Anchor renders with role attribute', () => {
-  const component = renderer.create(
-    <AptoButton href="#" />
-  );
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
-});
+  it('Anchor renders with role attribute', () => {
+    const {
+      container
+    } = render(
+      <AptoButton href="#" />
+    );
+    const node = container.querySelector('a.AptoButton');
+    expect(node!.className).toEqual('AptoButton AptoButton--button AptoButton--primary');
+    expect(node!.hasAttribute('role')).toBeTruthy();
+    expect(node!.getAttribute('href')).toEqual('#');
+  });
 
-test('Anchor renders without role', () => {
-  const component = renderer.create(
-    <AptoButton href="http://www.google.com" />
-  );
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
-});
+  it('Anchor renders without role', () => {
+    const {
+      container
+    } = render(
+      <AptoButton href="http://www.google.com" />
+    );
+    const node = container.querySelector('a.AptoButton');
+    expect(node!.className).toEqual('AptoButton AptoButton--button AptoButton--primary');
+    expect(node!.hasAttribute('role')).toBeFalsy();
+    expect(node!.getAttribute('href')).toEqual('http://www.google.com');
+  });
 
-test('Anchor target renders', () => {
-  const component = renderer.create(
-    <AptoButton href="#" target="_blank" />
-  );
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
-});
+  it('Anchor target renders', () => {
+    const {
+      container
+    } = render(
+      <AptoButton href="http://www.google.com" target="_blank" />
+    );
+    const node = container.querySelector('a.AptoButton');
+    expect(node!.className).toEqual('AptoButton AptoButton--button AptoButton--primary');
+    expect(node!.getAttribute('href')).toEqual('http://www.google.com');
+    expect(node!.getAttribute('target')).toEqual('_blank');
+  });
 
-test('Disabled anchor renders', () => {
-  const component = renderer.create(
-    <AptoButton href="#" disabled />
-  );
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
-});
+  it('Disabled anchor renders', () => {
+    const {
+      container
+    } = render(
+      <AptoButton href="#" disabled />
+    );
+    const node = container.querySelector('a.AptoButton');
+    expect(node!.className).toEqual('AptoButton AptoButton--button AptoButton--primary AptoButton--disabled');
+  });
 
-test('Active anchor renders', () => {
-  const component = renderer.create(
-    <AptoButton active href="#" />
-  );
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
-});
+  it('Active anchor renders', () => {
+    const {
+      container
+    } = render(
+      <AptoButton active href="#" />
+    );
+    const node = container.querySelector('a.AptoButton');
+    expect(node!.className).toEqual('AptoButton AptoButton--button AptoButton--primary AptoButton--active');
+  });
 
-test('Aria Label attribute renders', () => {
-  const component = renderer.create(
-    <AptoButton title="some title" />
-  );
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
-});
+  it('Custom className is passed in', () => {
+    const {
+      container
+    } = render(
+      <AptoButton className="foo" />
+    );
+    const node = container.querySelector('button.AptoButton');
+    expect(node!.className).toEqual('AptoButton AptoButton--button AptoButton--primary foo');
+  });
 
-test('Button is clickable', () => {
-  const onClick = jest.fn();
-  const component = renderer.create(
-    <AptoButton onClick={onClick}>Click</AptoButton>
-  );
-  const tree = component.toJSON();
-  if (tree) {
-    tree.props.onClick();
-  }
-  expect(onClick).toBeCalled();
-});
+  it('Aria Label attribute renders', () => {
+    const {
+      container
+    } = render(
+      <AptoButton title="some title" />
+    );
+    const node = container.querySelector('button.AptoButton');
+    expect(node!.getAttribute('aria-label')).toEqual('some title');
+  });
 
-test('Button is not clickable when disabled', () => {
-  const onClick = jest.fn();
-  const component = renderer.create(
-    <AptoButton onClick={onClick} disabled>Click</AptoButton>
-  );
-  const tree = component.toJSON();
-  if (tree) {
-    tree.props.onClick();
-  }
-  expect(onClick).not.toBeCalled();
+  it('Button is clickable', () => {
+    const onClick = jest.fn();
+    const {
+      container
+    } = render(
+      <AptoButton onClick={onClick}>Click</AptoButton>
+    );
+    const node = container.querySelector('button.AptoButton');
+    if (node) {
+      fireEvent.click(node);
+    }
+    expect(onClick).toBeCalled();
+  });
+
+  it('Button is not clickable when disabled', () => {
+    const onClick = jest.fn();
+    const {
+      container
+    } = render(
+      <AptoButton onClick={onClick} disabled>Click</AptoButton>
+    );
+    const node = container.querySelector('button.AptoButton');
+    if (node) {
+      fireEvent.click(node);
+    }
+    expect(onClick).not.toBeCalled();
+  });
 });

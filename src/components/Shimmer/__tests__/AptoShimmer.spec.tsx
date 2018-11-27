@@ -1,12 +1,27 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import AptoShimmer from '../AptoShimmer';
+import { render } from 'react-testing-library';
 
-test('Shimmer renders', () => {
-  const component = renderer.create(
-    <AptoShimmer />
-  );
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+describe('Shimmer Component', () => {
+  it('Shimmer renders', () => {
+    const {
+      container
+    } = render(
+      <AptoShimmer/>
+    );
+
+    const node = container.querySelector('.AptoShimmer');
+    expect(node!.className).toEqual('AptoShimmer');
+  });
+
+  it('Custom className renders', () => {
+    const {
+      container
+    } = render(
+      <AptoShimmer className="foo"/>
+    );
+
+    const node = container.querySelector('.AptoShimmer');
+    expect(node!.className).toEqual('AptoShimmer foo');
+  });
 });
-
