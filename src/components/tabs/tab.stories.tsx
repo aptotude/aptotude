@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import AptoTabs from './AptoTabs';
 import AptoTab from '../tab/AptoTab';
 
-storiesOf('Tabs)', module)
+storiesOf('Tabs', module)
   .add('Basic Usage', () => {
     return (
       <div>
