@@ -42,5 +42,4 @@ storiesOf('Button', module)
   )
   .add('Aria Label', () =>  <AptoButton title="some title">Button</AptoButton>)
   .add('Click Handler', () =>  <AptoButton onClick={action('button-click')}>Button</AptoButton>)
-  .add('Custom ClassName', () =>  <AptoButton className="my-class-here">Button</AptoButton>)
 ;

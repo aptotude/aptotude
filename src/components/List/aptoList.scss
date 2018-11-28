@@ -1,0 +1,14 @@
+.AptoList {
+    margin: 0;
+    padding: 0;
+    &.AptoList--ol,
+    &.AptoList--ul {
+        list-style: none;
+    }
+    list-style: none;
+    > *:last-child {
+        .AptoListItem-text {
+            border-bottom-color: transparent;
+        }
+    }
+}
