@@ -1,0 +1,13 @@
+@import '../Card/aptoCard.scss';
+
+.AptoCardFooter {
+    display: flex;
+    padding: $card-footer-padding;
+    justify-content: space-between;
+    &.AptoCardFooter--padTop {
+        padding-top: $card-footer-top-padding;
+    }
+    .AptoCardFooterButtonRight {
+        margin-left: auto;
+    }
+}

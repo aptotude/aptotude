@@ -4,6 +4,7 @@ import './aptoTabs.scss';
 import AptoTabPane from '../TabPane/AptoTabPane';
 import classNames from 'classnames';
 import { HOME, END, RIGHT_ARROW, LEFT_ARROW } from '../../utils/keycodes';
+import AptoCard from '../Card/AptoCard';
 
 let nextId = 0;
 
@@ -127,14 +128,14 @@ export default class AptoTabs extends Component<Props, State> {
 
     return (
       <div className={classes}>
-        <div className="AptoTabNav-wrapper">
+        <AptoCard className="AptoTabNav-wrapper">
           <nav
             className="AptoTabNav"
             role="tablist"
             onKeyDown={this.keyDownHandler}>
             {tabs}
           </nav>
-        </div>
+        </AptoCard>
         <div className="AptoTabPane-wrapper">
           {tabContent}
         </div>
