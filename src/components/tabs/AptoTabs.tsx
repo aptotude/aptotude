@@ -9,7 +9,6 @@ let nextId = 0;
 
 interface Props extends StandardTypes {
   activeIndex?: number;
-  messages?: any;
   onActive?: (index: number) => void
 }
 

@@ -1,10 +1,9 @@
-.loaderStories {
-    .loaderWrapper {
-        background: '#efefef';
-        max-width: 400px;
-        position: relative;
-    }
-    .minHeightLoaderWrapper {
-        min-height: 200px;
-    }
+.loaderStory {
+  background: '#efefef';
+  max-width: 400px;
+  position: relative;
+  border: 1px solid #ccc;
+}
+.minHeightLoaderStory {
+  min-height: 200px;
 }

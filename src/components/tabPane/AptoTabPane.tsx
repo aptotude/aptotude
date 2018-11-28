@@ -5,7 +5,8 @@ import classNames from 'classnames';
 interface Props {
   group: number,
   index: number,
-  active: boolean
+  active: boolean,
+  className?: string
 }
 
 const COMPONENT_PREFIX = 'AptoTabPane';
@@ -16,12 +17,14 @@ export default class AptoTabPane extends Component<Props> {
       children,
       group,
       index,
-      active
+      active,
+      className
     } = this.props;
 
     const classes = classNames(
       COMPONENT_PREFIX,
-      active ? `${COMPONENT_PREFIX}--active` : null
+      active ? `${COMPONENT_PREFIX}--active` : null,
+      className
     );
 
     return (

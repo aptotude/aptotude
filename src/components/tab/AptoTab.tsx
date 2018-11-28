@@ -17,6 +17,8 @@ export default class AptoTab extends Component<Props> {
   public static defaultProps = {
     tabGroupId: 0,
     tabIndex: 0,
+    active: false,
+    title: ''
   };
 
   public onClickTab = (event: React.MouseEvent | React.FocusEvent) => {
