@@ -32,21 +32,30 @@ storiesOf('Card', module)
       <AptoCardContent>This is content</AptoCardContent>
     </AptoCard>
   )
-  .add('Right Footer Button', () =>
+  .add('Right Align Footer', () =>
     <AptoCard>
       <AptoCardHeader>Card Header</AptoCardHeader>
       <AptoCardContent>This is content</AptoCardContent>
-      <AptoCardFooter>
-        <AptoButton kind="link" className="AptoCardFooterButtonRight">Right</AptoButton>
+      <AptoCardFooter align="right">
+        <AptoButton kind="link" >Right</AptoButton>
       </AptoCardFooter>
     </AptoCard>
   )
-  .add('Left Footer Button', () =>
+  .add('Center Align Footer', () =>
     <AptoCard>
       <AptoCardHeader>Card Header</AptoCardHeader>
       <AptoCardContent>This is content</AptoCardContent>
-      <AptoCardFooter>
-        <AptoButton kind="link">Left</AptoButton>
+      <AptoCardFooter align="center">
+        <AptoButton kind="link" >Center</AptoButton>
+      </AptoCardFooter>
+    </AptoCard>
+  )
+  .add('Left Align Footer', () =>
+    <AptoCard>
+      <AptoCardHeader>Card Header</AptoCardHeader>
+      <AptoCardContent>This is content</AptoCardContent>
+      <AptoCardFooter align="left">
+        <AptoButton kind="link" >Left</AptoButton>
       </AptoCardFooter>
     </AptoCard>
   )

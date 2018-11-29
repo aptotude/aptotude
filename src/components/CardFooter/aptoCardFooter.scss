@@ -7,7 +7,13 @@
     &.AptoCardFooter--padTop {
         padding-top: $card-footer-top-padding;
     }
-    .AptoCardFooterButtonRight {
-        margin-left: auto;
+    &.AptoCardFooter--left {
+        justify-content: flex-start;
+    }
+    &.AptoCardFooter--right {
+        justify-content: flex-end;
+    }
+    &.AptoCardFooter--center {
+        justify-content: center;
     }
 }
