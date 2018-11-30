@@ -1,0 +1,52 @@
+@import '../../scss/theme/variables.scss';
+
+$fieldFontFamily:       $font-family-base;
+$fieldPadding:          1.9rem 0;
+$labelColor:            $gray-650;
+$labelFontSize:         $font-size-md;
+$errorMessageColor:     $orange-400;
+$counterFontSize:       $font-size-sm;
+$disabledOpactiy:       0.3;
+$fieldFocusColor:       $blue-500;
+
+.AptoFormGroup {
+  position: relative;
+  padding: $fieldPadding;
+  font-family: $fieldFontFamily;
+
+  .AptoFormGroup-label {
+    color: $labelColor;
+    font-size: $labelFontSize;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .AptoFormGroup-errorMessage {
+    color: $errorMessageColor;
+    padding-top: 0.5rem;
+    display: block;
+  }
+
+  .AptoFormGroup-counterMessage {
+    position: absolute;
+    right: 0;
+    font-size: $counterFontSize;
+  }
+
+  &.AptoFormGroup--inline {
+    display: inline-block;
+  }
+
+  &.AptoFormGroup--disabled,
+  &.AptoFormGroup--readonly {
+    opacity: $disabledOpactiy;
+    cursor: default;
+  }
+
+  input:focus ~ .AptoFormGroup-label,
+  textarea:focus ~ .AptoFormGroup-label,
+  select:focus ~ .AptoFormGroup-label {
+    color: $fieldFocusColor;
+  }
+}

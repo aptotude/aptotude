@@ -1,0 +1,49 @@
+@import '../../scss/theme/variables.scss';
+
+$inputFontFamily:       $font-family-base;
+$inputFontSize:         $font-size-md;
+$inputPadding:          0.8rem 0;
+$inputBorder:           1px solid $gray-300;
+$inputColor:            $gray-800;
+$inputPlaceholderColor: $gray-500;
+$inputFocusBorderColor: $blue-500;
+$inputErrorBorderColor: $orange-400;
+$inputDisabledOpactiy:       0.3;
+
+.AptoInput {
+  font-family: $inputFontFamily;
+  font-size: $inputFontSize;
+  color: $inputColor;
+  display: block;
+  margin: 0;
+  width: 100%;
+  padding: $inputPadding;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-bottom: $inputBorder;
+
+  &::placeholder {
+    color: $inputPlaceholderColor;
+  }
+
+  &:focus {
+    border-bottom-color: $inputFocusBorderColor;
+  }
+
+  &.AptoInput--textarea {
+    max-height: 96px;
+    overflow: auto;
+    resize: vertical;
+    min-height: 54px;
+  }
+
+  &.AptoInput--error {
+    border-bottom-color: $inputErrorBorderColor;
+  }
+
+  &.AptoInput--disabled,
+  &.AptoInput--readonly {
+    opacity: $inputDisabledOpactiy;
+  }
+}
