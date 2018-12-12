@@ -35,4 +35,14 @@ storiesOf('Tabs', module)
       </AptoTab>
     </AptoTabs>
   )
+  .add('Define Active Tab', () =>
+    <AptoTabs activeIndex={1}>
+      <AptoTab title="Tab 1">
+        Tab 1 Content
+      </AptoTab>
+      <AptoTab title="Tab 2">
+        Tab 2 Content
+      </AptoTab>
+    </AptoTabs>
+  )
 ;
