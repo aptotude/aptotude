@@ -91,6 +91,70 @@ storiesOf('Grid', module)
       </AptoContainer>
     );
   })
+  .add('Vertical Row Alignment', () => {
+    return (
+      <AptoContainer className="gridStories gridStories-valign">
+        <AptoRow align="start">
+         <AptoCol>start</AptoCol>
+          <AptoCol>start</AptoCol>
+          <AptoCol>start</AptoCol>
+        </AptoRow>
+
+        <AptoRow align="center">
+          <AptoCol>center</AptoCol>
+          <AptoCol>center</AptoCol>
+          <AptoCol>center</AptoCol>
+        </AptoRow>
+
+        <AptoRow align="end">
+          <AptoCol>end</AptoCol>
+          <AptoCol>end</AptoCol>
+          <AptoCol>end</AptoCol>
+        </AptoRow>
+      </AptoContainer>
+    );
+  })
+  .add('Vertical Column Alignment', () => {
+    return (
+      <AptoContainer className="gridStories gridStories-valign">
+        <AptoRow>
+          <AptoCol align="start">start</AptoCol>
+          <AptoCol align="center">center</AptoCol>
+          <AptoCol align="end">end</AptoCol>
+        </AptoRow>
+      </AptoContainer>
+    );
+  })
+  .add('Horizontal Row Alignment', () => {
+    return (
+      <AptoContainer className="gridStories">
+        <AptoRow justify="start">
+          <AptoCol xs="3">start</AptoCol>
+          <AptoCol xs="3">start</AptoCol>
+        </AptoRow>
+
+        <AptoRow justify="center">
+          <AptoCol xs="3">center</AptoCol>
+          <AptoCol xs="3">center</AptoCol>
+        </AptoRow>
+
+        <AptoRow justify="end">
+          <AptoCol xs="3">end</AptoCol>
+          <AptoCol xs="3">end</AptoCol>
+        </AptoRow>
+
+        <AptoRow justify="around">
+          <AptoCol xs="3">around</AptoCol>
+          <AptoCol xs="3">around</AptoCol>
+        </AptoRow>
+
+        <AptoRow justify="between">
+          <AptoCol xs="3">between</AptoCol>
+          <AptoCol xs="3">between</AptoCol>
+        </AptoRow>
+      </AptoContainer>
+    );
+  })
   .add('Scrollable', () => {
     return (
       <div className="gridStories">

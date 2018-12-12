@@ -13,20 +13,27 @@ interface Props extends StandardTypes {
   md?: RowType;
   lg?: RowType;
   xl?: RowType;
+  align?: 'start' | 'center' | 'end' | null | undefined;
 }
 
 export default class AptoCol extends React.Component<Props> {
+  public static defaultProps = {
+    align: null
+  };
+
   public render() {
     const {
       children,
       className,
       forwardRef,
+      align,
       ...rest
     } = this.props;
 
     const classes = classNames(
       COMPONENT_PREFIX,
       this._getClass(),
+      align && `${COMPONENT_PREFIX}--align-${align}`,
       className
     );
 
@@ -57,20 +64,13 @@ export default class AptoCol extends React.Component<Props> {
     if (this.props.xl) {
       classes.push(this._parseAttribute(this.props.xl, 'xl'));
     }
-    if (classes.length) {
-      return classes.join(' ');
-    }
-    return '';
+    return classes.length ? classes.join(' ') : '';
   }
 
   private _parseAttribute(count: any, size: string): string {
     if (size !== '') {
       size = `-${size}`;
     }
-    if (count === 'true') {
-      return `${COMPONENT_PREFIX}${size}`;
-    } else {
-      return `${COMPONENT_PREFIX}${size}-${count}`;
-    }
+    return count === 'true' ? `${COMPONENT_PREFIX}${size}` : `${COMPONENT_PREFIX}${size}-${count}`;
   }
 }

@@ -2,13 +2,20 @@
     .AptoCol {
         padding-top: .75rem;
         padding-bottom: .75rem;
-        background-color: rgba(86,61,124,.15);
-        border: 1px solid rgba(86,61,124,.2);
+        background-color: #A9A9A9;
+        border: 1px solid #808080;
     }
     .scrollableWrapper {
         height: 200px;
     }
     .scrollableHeight {
         height: 500px;
+    }
+    &.gridStories-valign {
+        .AptoRow {
+            height: 100px;
+            margin-bottom: 1rem;
+            background: #DCDCDC;
+        }
     }
 }

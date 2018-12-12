@@ -11,4 +11,28 @@
             padding-left: 0;
         }
     }
+    &.AptoRow--align-start {
+        align-items: flex-start;
+    }
+    &.AptoRow--align-center {
+        align-items: center;
+    }
+    &.AptoRow--align-end {
+        align-items: flex-end;
+    }
+    &.AptoRow--justify-start {
+        justify-content: flex-start;
+    }
+    &.AptoRow--justify-center {
+        justify-content: center;
+    }
+    &.AptoRow--justify-end {
+        justify-content: flex-end;
+    }
+    &.AptoRow--justify-around {
+        justify-content: space-around;
+    }
+    &.AptoRow--justify-between {
+        justify-content: space-between;
+    }
 }
