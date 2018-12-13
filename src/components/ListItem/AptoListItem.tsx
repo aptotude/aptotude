@@ -7,13 +7,16 @@ interface Props extends StandardTypes {
   type?: 'li' | null | undefined;
   link?: boolean;
   active?: boolean;
+  empty?: boolean;
 }
 
 const COMPONENT_PREFIX = 'AptoListItem';
 
 export default class AptoListItem extends React.Component<Props> {
   public static defaultProps = {
-    link: null
+    link: false,
+    active: false,
+    empty: false
   };
 
   public render() {
@@ -24,6 +27,7 @@ export default class AptoListItem extends React.Component<Props> {
       children,
       link,
       active,
+      empty,
       ...rest
     } = this.props;
 
@@ -32,6 +36,7 @@ export default class AptoListItem extends React.Component<Props> {
       type ? `${COMPONENT_PREFIX}--${type}` : undefined,
       link && `${COMPONENT_PREFIX}--link`,
       active && `${COMPONENT_PREFIX}--active`,
+      empty && `${COMPONENT_PREFIX}--empty`,
       className
     );
 
@@ -43,9 +48,7 @@ export default class AptoListItem extends React.Component<Props> {
         ref={forwardRef}
         className={classes}>
           <div className="AptoListItem-content">
-            <div className="AptoListItem-text">
-              {children}
-            </div>
+            {children}
           </div>
       </Component>
     );

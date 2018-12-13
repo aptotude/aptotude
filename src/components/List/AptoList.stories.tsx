@@ -2,6 +2,9 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import AptoList from './AptoList';
 import AptoListItem from '../ListItem/AptoListItem';
+import AptoCard from '../Card/AptoCard';
+import AptoCardContent from '../CardContent/AptoCardContent';
+import AptoCardHeader from '../CardHeader/AptoCardHeader';
 
 storiesOf('List', module)
   .add('Default', () =>
@@ -28,5 +31,42 @@ storiesOf('List', module)
       <AptoListItem link>Link B</AptoListItem>
       <AptoListItem link active>Active Link C</AptoListItem>
     </AptoList>
+  )
+  .add('Empty List', () =>
+    <AptoList>
+      <AptoListItem empty>Empty List</AptoListItem>
+    </AptoList>
+  )
+  .add('List In Card', () =>
+    <React.Fragment>
+      <AptoCard>
+        <AptoCardHeader>List In Card</AptoCardHeader>
+        <AptoCardContent>
+          <AptoList>
+            <AptoListItem>A</AptoListItem>
+            <AptoListItem>B</AptoListItem>
+          </AptoList>
+        </AptoCardContent>
+      </AptoCard>
+
+      <AptoCard>
+        <AptoCardHeader>Link List In Card</AptoCardHeader>
+        <AptoCardContent>
+          <AptoList>
+            <AptoListItem link>A</AptoListItem>
+            <AptoListItem link>B</AptoListItem>
+          </AptoList>
+        </AptoCardContent>
+      </AptoCard>
+
+      <AptoCard>
+        <AptoCardHeader>Empty List In Card</AptoCardHeader>
+        <AptoCardContent>
+          <AptoList>
+            <AptoListItem empty>Empty List</AptoListItem>
+          </AptoList>
+        </AptoCardContent>
+      </AptoCard>
+    </React.Fragment>
   )
 ;

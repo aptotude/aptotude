@@ -5,9 +5,8 @@
     &.AptoList--ul {
         list-style: none;
     }
-    list-style: none;
     > *:last-child {
-        .AptoListItem-text {
+        .AptoListItem-content {
             border-bottom-color: transparent;
         }
     }
