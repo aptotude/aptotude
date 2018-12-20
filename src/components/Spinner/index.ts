@@ -1,1 +1,3 @@
-export * from './AptoSpinner';
+export {
+  default as AptoSpinner
+} from './AptoSpinner';

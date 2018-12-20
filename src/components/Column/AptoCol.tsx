@@ -2,6 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import { StandardTypes } from '../../utils/standardTypes';
 import './aptoCol.scss';
+import capitalize from '../../utils/capitalize';
 
 const COMPONENT_PREFIX = 'AptoCol';
 
@@ -33,7 +34,7 @@ export default class AptoCol extends React.Component<Props> {
     const classes = classNames(
       COMPONENT_PREFIX,
       this._getClass(),
-      align && `${COMPONENT_PREFIX}--align-${align}`,
+      align && `${COMPONENT_PREFIX}--align${capitalize(align)}`,
       className
     );
 

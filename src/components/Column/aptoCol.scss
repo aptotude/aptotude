@@ -3,13 +3,13 @@
 @include make-apto-grid-columns();
 
 .AptoCol {
-  &.AptoCol--align-start {
+  &.AptoCol--alignStart {
     align-self: flex-start;
   }
-  &.AptoCol--align-center {
+  &.AptoCol--alignCenter {
     align-self: center;
   }
-  &.AptoCol--align-end {
+  &.AptoCol--alignEnd {
     align-self: flex-end;
   }
 }

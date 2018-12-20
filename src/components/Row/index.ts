@@ -1,1 +1,3 @@
-export * from './AptoRow';
+export {
+  default as AptoRow
+} from './AptoRow';

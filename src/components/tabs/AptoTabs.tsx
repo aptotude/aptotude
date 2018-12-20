@@ -1,4 +1,4 @@
-import React, { Component, cloneElement, Children } from 'react';
+import React, { cloneElement, Children } from 'react';
 import { StandardTypes } from '../../utils/standardTypes';
 import './aptoTabs.scss';
 import AptoTabPane from '../TabPane/AptoTabPane';
@@ -17,7 +17,7 @@ interface State {
   activeIndex?: number;
 }
 
-export default class AptoTabs extends Component<Props, State> {
+export default class AptoTabs extends React.Component<Props, State> {
   private tabCount = 0;
 
   constructor(props: Props = {}) {

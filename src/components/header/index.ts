@@ -1,1 +1,3 @@
-export * from './AptoHeader';
+export {
+  default as AptoHeader
+} from './AptoHeader';

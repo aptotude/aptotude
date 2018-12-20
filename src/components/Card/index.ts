@@ -1,1 +1,3 @@
-export * from './AptoCard';
+export {
+  default as AptoCard
+} from './AptoCard';

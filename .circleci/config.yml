@@ -1,45 +1,32 @@
 version: 2
 
-defaults: &defaults
-  working_directory: ~/aptotude
-  docker:
-    - image: circleci/node:8-browsers
-
 jobs:
-  continuous-integration:
-    <<: *defaults
-    steps:
-      - checkout
-      - run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
-      - restore_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
-      - run: yarn install
-      - run: yarn lint
-      - save_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
-          paths:
-            - ./node_modules
-      - run: yarn test:headless
-      - add_ssh_keys:
-          fingerprints:
-              - "3a:b6:ac:01:7d:ef:5f:2c:73:e9:5f:f3:52:09:ff:7c"
-      - run: >
-          if [ "$CIRCLE_BRANCH" == "master" ]; then
-            echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
-            npm run release
-          fi
+    build:
+        working_directory: ~/aptotude
+        docker:
+            # LTS version
+            - image: circleci/node:10-browsers
+        steps:
+            - checkout
+            - add_ssh_keys:
+                fingerprints:
+                    - "9f:c3:e6:09:34:eb:6f:00:c0:ab:1d:d9:05:06:e8:3b"
+            - run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
+            - run: yarn install
+            - run: yarn lint
+            - run: yarn test
+
+            # Create a new github release
+            - run: >
+                if [ "$CIRCLE_BRANCH" == "master" ]; then
+                    echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
+                    npm run release
+                fi
 
 workflows:
-  version: 2
-  branches:
-    jobs:
-      - continuous-integration:
-          filters:
-            branches:
-              ignore: master
-  master:
-    jobs:
-      - continuous-integration:
-          filters:
-            branches:
-              only: master
+    version: 2
+
+    #Perform build and unit tests on every commit
+    commit-workflow:
+      jobs:
+        - build

@@ -34,8 +34,6 @@ describe('Tab Component', () => {
   });
 
   it('sets initial active tab', () => {
-    const onActive = jest.fn();
-
     const props = {
       activeIndex: 1
     };

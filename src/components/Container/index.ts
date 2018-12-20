@@ -1,1 +1,3 @@
-export * from './AptoContainer';
+export {
+  default as AptoContainer
+} from './AptoContainer';

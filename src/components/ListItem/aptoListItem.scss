@@ -9,18 +9,12 @@
     background-color: $white;
 
     .AptoListItem-content {
-        display: flex;
-        align-items: center;
-    }
-
-    .AptoListItem-text {
         padding: 1.4rem 1.6rem;
         margin: 0;
         width: 100%;
         overflow: hidden;
         border-bottom: 1px solid $gray-450;
     }
-
 
     &.AptoListItem--link {
         cursor: pointer;
@@ -36,8 +30,17 @@
             top: 50%;
             transform: rotate(-45deg) translateY(-50%);
         }
-        .AptoListItem-text {
+        .AptoListItem-content {
             padding-right: 3.6rem;
+        }
+    }
+
+    &.AptoListItem--empty {
+        color: $gray-500;
+        .AptoListItem-content {
+            padding-left: 3.6rem;
+            padding-right: 3.6rem;
+            border-bottom-color: transparent;
         }
     }
 
@@ -45,5 +48,4 @@
     &.AptoListItem--active {
         background-color: $gray-300;
     }
-
 }

@@ -1,1 +1,3 @@
-export * from './AptoCardFooter';
+export {
+  default as AptoCardFooter
+} from './AptoCardFooter';

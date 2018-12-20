@@ -1,1 +1,3 @@
-export * from './AptoParagraph';
+export {
+  default as AptoParagraph
+} from './AptoParagraph';

@@ -1,5 +1,5 @@
 {
-  "name": "aptotude",
+  "name": "@apto/aptotude",
   "description": "Apto UI for React",
   "homepage": "https://github.com/aptotude/aptotude",
   "bugs": "https://github.com/aptotude/aptotude/issues",
@@ -12,10 +12,13 @@
     "test": "jest --silent",
     "test:watch": "jest --silent --watch",
     "test:update": "jest --silent -u",
-    "storybook:local": "start-storybook -p 9001 -c .storybook",
+    "storybook:local": "start-storybook -p 9001 -s ./src/assets -c .storybook",
     "storybook:deploy": "storybook-to-ghpages",
     "lint": "tslint --project .",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "build": "yarn build:clean; rollup -c",
+    "build:clean": "rm -rf ./dist; mkdir ./dist",
+    "release": "./scripts/release.sh"
   },
   "license": "MIT",
   "version": "1.0.0",
@@ -23,13 +26,15 @@
     "node": "^10.11",
     "yarn": "^1.3.2"
   },
-  "peerDependencies": {
-    "prop-types": "^15.6.2",
+  "main": "aptotude.js",
+  "module": "aptotude.module.js",
+  "dependencies": {
+    "classnames": "^2.2.6",
     "react": "^16.6.3",
     "react-dom": "^16.6.3"
   },
-  "dependencies": {
-    "prop-types": "^15.6.2",
+  "peerDependencies": {
+    "classnames": "^2.2.6",
     "react": "^16.6.3",
     "react-dom": "^16.6.3"
   },
@@ -46,6 +51,7 @@
     "@storybook/react": "^4.0.6",
     "@types/classnames": "^2.2.6",
     "@types/jest": "^23.3.9",
+    "@types/node": "^10.12.18",
     "@types/react": "^16.7.6",
     "@types/react-dom": "^16.0.9",
     "@types/react-test-renderer": "^16.0.3",
@@ -56,12 +62,19 @@
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^23.0.1",
     "babel-loader": "^8.0.0-beta.6",
-    "classnames": "^2.2.6",
     "css-loader": "^1.0.1",
     "jest": "^23.6.0",
     "node-sass": "^4.10.0",
+    "prop-types": "^15.6.2",
     "react-test-renderer": "^16.6.3",
     "react-testing-library": "^5.3.0",
+    "rollup": "^0.68.0",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-copy": "^0.2.3",
+    "rollup-plugin-generate-package-json": "^2.1.1",
+    "rollup-plugin-node-resolve": "^4.0.0",
+    "rollup-plugin-postcss": "^1.6.3",
+    "rollup-plugin-typescript2": "^0.18.1",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "ts-jest": "^23.10.4",
@@ -70,19 +83,5 @@
     "tslint-react": "^3.6.0",
     "typescript": "^3.1.6",
     "webpack": "^4.26.1"
-  },
-  "jest": {
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js"
-    ],
-    "transform": {
-      "\\.(ts|tsx)$": "<rootDir>test-preprocessor.js"
-    },
-    "testRegex": "\\.spec.(ts|tsx)$",
-    "moduleNameMapper": {
-      "\\.(css|scss)$": "<rootDir>/__mocks__/styleMock.js"
-    }
   }
 }

@@ -1,5 +1,4 @@
 import React from 'react';
-import AptoParagraph from '../AptoHelpText';
 import { render } from 'react-testing-library';
 import AptoHelpText from '../AptoHelpText';
 

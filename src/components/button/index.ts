@@ -1,1 +1,3 @@
-export * from './AptoButton';
+export {
+  default as AptoButton
+} from './AptoButton';

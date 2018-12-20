@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './aptoTabPane.scss';
 import classNames from 'classnames';
 
@@ -11,7 +11,7 @@ interface Props {
 
 const COMPONENT_PREFIX = 'AptoTabPane';
 
-export default class AptoTabPane extends Component<Props> {
+export default class AptoTabPane extends React.Component<Props> {
   public render() {
     const {
       children,

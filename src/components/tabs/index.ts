@@ -1,1 +1,3 @@
-export * from './AptoTabs';
+export {
+  default as AptoTabs
+} from './AptoTabs';

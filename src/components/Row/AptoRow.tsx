@@ -2,6 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import { StandardTypes } from '../../utils/standardTypes';
 import './aptoRow.scss';
+import capitalize from '../../utils/capitalize';
 
 const COMPONENT_PREFIX = 'AptoRow';
 
@@ -32,8 +33,8 @@ export default class AptoRow extends React.Component<Props> {
     const classes = classNames(
       COMPONENT_PREFIX,
       noGutter && `${COMPONENT_PREFIX}--noGutter`,
-      align && `${COMPONENT_PREFIX}--align-${align}`,
-      justify && `${COMPONENT_PREFIX}--justify-${justify}`,
+      align && `${COMPONENT_PREFIX}--align${capitalize(align)}`,
+      justify && `${COMPONENT_PREFIX}--justify${capitalize(justify)}`,
       className
     );
 

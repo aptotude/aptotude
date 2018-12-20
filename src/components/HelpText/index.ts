@@ -1,1 +1,3 @@
-export * from './AptoHelpText';
+export {
+  default as AptoHelpText
+} from './AptoHelpText';

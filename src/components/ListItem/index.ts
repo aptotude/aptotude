@@ -1,1 +1,3 @@
-export * from './AptoListItem';
+export {
+  default as AptoListItem
+} from './AptoListItem';

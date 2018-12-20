@@ -1,1 +1,3 @@
-export * from './AptoShimmer';
+export {
+  default as AptoShimmer
+} from './AptoShimmer';
