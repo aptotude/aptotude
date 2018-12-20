@@ -13,7 +13,7 @@ interface Props extends StandardTypes {
 
 const COMPONENT_PREFIX = 'AptoTabNav-item';
 
-export default class AptoTab extends React.Component<Props> {
+class AptoTab extends React.Component<Props> {
   public static defaultProps = {
     tabGroupId: 0,
     tabIndex: 0,
@@ -67,3 +67,5 @@ export default class AptoTab extends React.Component<Props> {
     );
   }
 }
+
+export default AptoTab;
