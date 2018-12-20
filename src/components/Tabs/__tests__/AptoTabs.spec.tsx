@@ -1,8 +1,8 @@
 import React from 'react';
-import { render, fireEvent } from 'react-testing-library';
 import AptoTabs from '../AptoTabs';
 import AptoTab from '../../Tab/AptoTab';
 import { HOME, END, RIGHT_ARROW, LEFT_ARROW } from '../../../utils/keycodes';
+import { render, fireEvent } from 'react-testing-library';
 
 describe('Tab Component', () => {
   it('renders', () => {

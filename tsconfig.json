@@ -8,10 +8,8 @@
     "jsx": "react",
     "strict": true,
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "declaration": true,
-    "experimentalDecorators": true,
     "typeRoots": [
       "node_modules/@types"
     ]

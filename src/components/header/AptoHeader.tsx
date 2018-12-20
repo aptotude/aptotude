@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react';
+import React from 'react';
 import classNames from 'classnames';
 import './aptoHeader.scss';
 import { StandardTypes } from '../../utils/standardTypes';
