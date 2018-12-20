@@ -1,6 +1,6 @@
 import React from 'react';
-import AptoTab from '../AptoTab';
 import { render, fireEvent } from 'react-testing-library';
+import { AptoTab } from '..';
 
 describe('Tab Component', () => {
   it('renders', () => {
