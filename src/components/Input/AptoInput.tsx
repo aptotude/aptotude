@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import './aptoInput.scss';
-import { AptoFormGroup, AptoFormGroupProps } from '../FormGroup/AptoFormGroup';
+import { AptoFormControl, AptoFormControlProps } from '../FormControl/AptoFormControl';
 
 const COMPONENT_PREFIX = 'AptoInput';
 
@@ -17,7 +17,7 @@ export interface AptoInputProps {
   multiline?: boolean;
   name?: string;
   onBlur?: React.FormEventHandler<HTMLTextAreaElement | HTMLInputElement>;
-  onChange?: (value: any, event: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => void;
+  onChange?: React.ChangeEventHandler<HTMLTextAreaElement | HTMLInputElement>;
   onClick?: React.MouseEventHandler<HTMLTextAreaElement | HTMLInputElement>;
   onFocus?: React.FocusEventHandler<HTMLTextAreaElement | HTMLInputElement>;
   onKeyPress?: React.KeyboardEventHandler<HTMLTextAreaElement | HTMLInputElement>;
@@ -42,19 +42,11 @@ export class AptoInput extends React.Component<AptoInputProps> {
 
   public handleChange = (event: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
     const {
-      onChange,
-      maxLength,
-      multiline
+      onChange
     } = this.props;
 
-    let value = event.target.value;
-
-    if (multiline && maxLength && value.length > maxLength) {
-      value = value.substring(0, maxLength);
-    }
-
     if (onChange) {
-      onChange(value, event);
+      onChange(event);
     }
   };
 
@@ -77,7 +69,6 @@ export class AptoInput extends React.Component<AptoInputProps> {
       disabled,
       error,
       label,
-      maxLength,
       multiline,
       onChange,
       readOnly,
@@ -99,11 +90,10 @@ export class AptoInput extends React.Component<AptoInputProps> {
       inputClasses
     )
 
-    const formGroupProps: AptoFormGroupProps = {
+    const formGroupProps: AptoFormControlProps = {
       className,
       label,
       error,
-      maxLength,
       required,
       readOnly,
       disabled,
@@ -112,7 +102,7 @@ export class AptoInput extends React.Component<AptoInputProps> {
     }
 
     return (
-      <AptoFormGroup {...formGroupProps}>
+      <AptoFormControl {...formGroupProps}>
         <InputComponent
           className={classes}
           readOnly={readOnly}
@@ -123,7 +113,7 @@ export class AptoInput extends React.Component<AptoInputProps> {
           onChange={this.handleChange}
           ref={this.setNode}
           {...rest} />
-      </AptoFormGroup>
+      </AptoFormControl>
     );
   }
 }

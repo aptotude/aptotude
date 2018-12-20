@@ -77,7 +77,7 @@ export default class AptoButton extends React.Component<Props> {
       rest.role = rest.role || 'button';
     }
 
-    const Component = href ? 'a' : 'button';
+    const Component: any = href ? 'a' : 'button';
 
     const classes = classNames(
       COMPONENT_PREFIX,

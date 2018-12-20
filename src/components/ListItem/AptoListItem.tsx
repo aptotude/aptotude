@@ -40,7 +40,7 @@ export default class AptoListItem extends React.Component<Props> {
       className
     );
 
-    const Component = type || 'div';
+    const Component: any = type || 'div';
 
     return (
       <Component

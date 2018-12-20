@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import classNames from 'classnames';
 import './aptoHeader.scss';
 import { StandardTypes } from '../../utils/standardTypes';
@@ -9,7 +9,7 @@ interface Props extends StandardTypes {
 
 const COMPONENT_PREFIX = 'AptoHeader';
 
-export default class AptoHeader extends React.Component<Props> {
+class AptoHeader extends React.Component<Props> {
   public static defaultProps = {
     type: '1'
   };
@@ -23,7 +23,7 @@ export default class AptoHeader extends React.Component<Props> {
       ...rest
     } = this.props;
 
-    let Component = 'h1';
+    let Component: any = 'h1';
 
     switch (type) {
       case '2':
@@ -63,3 +63,5 @@ export default class AptoHeader extends React.Component<Props> {
     );
   }
 }
+
+export default AptoHeader;
