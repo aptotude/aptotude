@@ -5,7 +5,7 @@ jobs:
         working_directory: ~/aptotude
         docker:
             # LTS version
-            - image: circleci/node:10-browsers
+            - image: circleci/node:10.13.0-browsers
         steps:
             - checkout
             - add_ssh_keys:
