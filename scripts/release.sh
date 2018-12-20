@@ -7,15 +7,12 @@ if [[ $GIT_COMMIT =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
     exit 0
 fi
 
-# install gulp cli so we can run gulp stuff
-sudo npm install gulp-cli -g
-
 # Set Git credentials for committing the tags
 git config user.email "$GIT_EMAIL"
 git config user.name "$GIT_USER"
 
 # Get the latest version from NPM
-LATEST_RELEASE_VERSION=$(npm view @apto/aptotude version)
+LATEST_RELEASE_VERSION=$(npm view aptotude version)
 
 echo "Latest npm version $LATEST_RELEASE_VERSION"
 
