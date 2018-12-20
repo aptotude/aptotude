@@ -5,7 +5,7 @@ import { StandardTypes } from '../../utils/standardTypes';
 
 const COMPONENT_PREFIX = 'AptoThumbnail';
 
-export default class AptoThumbnail extends React.Component<StandardTypes> {
+export class AptoThumbnail extends React.Component<StandardTypes> {
   public render() {
     const {
       className,

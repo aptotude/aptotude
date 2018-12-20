@@ -12,7 +12,7 @@ interface Props extends StandardTypes {
 
 const COMPONENT_PREFIX = 'AptoListItem';
 
-export default class AptoListItem extends React.Component<Props> {
+export class AptoListItem extends React.Component<Props> {
   public static defaultProps = {
     link: false,
     active: false,

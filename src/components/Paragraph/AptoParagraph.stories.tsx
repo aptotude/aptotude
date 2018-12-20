@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import AptoParagraph from './AptoParagraph';
+import { AptoParagraph } from './AptoParagraph';
 
 storiesOf('Paragraph', module)
   .add('Default', () =>

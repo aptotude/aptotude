@@ -1,3 +1,3 @@
 export {
-  default as AptoCol
+  AptoCol
 } from './AptoCol';

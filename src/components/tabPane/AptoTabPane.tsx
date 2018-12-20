@@ -11,7 +11,7 @@ interface Props {
 
 const COMPONENT_PREFIX = 'AptoTabPane';
 
-export default class AptoTabPane extends React.Component<Props> {
+export class AptoTabPane extends React.Component<Props> {
   public render() {
     const {
       children,

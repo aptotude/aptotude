@@ -1,8 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import AptoContainer from '../Container/AptoContainer';
-import AptoRow from '../Row/AptoRow';
-import AptoCol from '../Column/AptoCol';
+import { AptoContainer } from '../Container/AptoContainer';
+import { AptoRow } from '../Row/AptoRow';
+import { AptoCol } from '../Column/AptoCol';
 
 import './gridStories.scss';
 

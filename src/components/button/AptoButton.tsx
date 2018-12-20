@@ -24,7 +24,7 @@ function missingHref(href: undefined | string) {
 
 const COMPONENT_PREFIX = 'AptoButton';
 
-export default class AptoButton extends React.Component<Props> {
+export class AptoButton extends React.Component<Props> {
   public static defaultProps = {
     kind: 'button',
     variant: 'primary',

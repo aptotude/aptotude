@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-testing-library';
-import AptoCardFooter from '../AptoCardFooter';
+import { AptoCardFooter } from '../AptoCardFooter';
 
 describe('Card Footer Component', () => {
   it('Renders', () => {

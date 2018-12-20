@@ -9,7 +9,7 @@ import { StandardTypes } from '../../utils/standardTypes';
 
 const COMPONENT_PREFIX = 'AptoCard';
 
-export default class AptoCard extends React.Component<StandardTypes> {
+export class AptoCard extends React.Component<StandardTypes> {
   public render() {
     const {
       className,

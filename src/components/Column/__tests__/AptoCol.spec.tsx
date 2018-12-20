@@ -1,5 +1,5 @@
 import React from 'react';
-import AptoCol from '../AptoCol';
+import { AptoCol } from '../AptoCol';
 import { render } from 'react-testing-library';
 
 describe('Column Component', () => {

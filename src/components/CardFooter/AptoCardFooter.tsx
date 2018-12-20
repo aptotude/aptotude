@@ -10,7 +10,7 @@ interface Props extends StandardTypes {
   align?: 'left' | 'right' | 'center' | undefined
 }
 
-export default class AptoCardFooter extends React.Component<Props> {
+export class AptoCardFooter extends React.Component<Props> {
   public render() {
     const {
       padTop,

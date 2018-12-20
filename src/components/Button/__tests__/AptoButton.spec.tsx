@@ -1,5 +1,5 @@
 import React from 'react';
-import AptoButton from '../AptoButton';
+import { AptoButton } from '../AptoButton';
 import { render, fireEvent } from 'react-testing-library';
 
  describe('Button Component', () => {

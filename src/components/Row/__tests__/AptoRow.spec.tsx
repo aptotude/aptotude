@@ -1,5 +1,5 @@
 import React from 'react';
-import AptoRow from '../AptoRow';
+import { AptoRow } from '../AptoRow';
 import { render } from 'react-testing-library';
 
 describe('Row Component', () => {

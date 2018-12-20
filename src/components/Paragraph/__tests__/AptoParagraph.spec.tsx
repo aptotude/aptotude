@@ -1,5 +1,5 @@
 import React from 'react';
-import AptoParagraph from '../AptoParagraph';
+import { AptoParagraph } from '../AptoParagraph';
 import { render } from 'react-testing-library';
 
 describe('Paragraph Component', () => {

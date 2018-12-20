@@ -1,3 +1,3 @@
 export {
-  default as AptoTab
+  AptoTab
 } from './AptoTab';

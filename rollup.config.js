@@ -31,7 +31,7 @@ export default {
     {
       globals: globalLibs,
       name: libraryName,
-      format: 'es',
+      format: 'esm',
       file: `dist/${pkg.module}`
     }
   ],
@@ -41,7 +41,7 @@ export default {
       include: 'node_modules/**'
     }),
     postcss({
-      modules: true
+      modules: false
     }),
     typescript({
       importHelpers: true,

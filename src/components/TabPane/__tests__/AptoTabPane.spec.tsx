@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-testing-library';
-import AptoTabPane from '../AptoTabPane';
+import { AptoTabPane } from '../AptoTabPane';
 
 describe('Tab Pane Component', () => {
   it('renders', () => {

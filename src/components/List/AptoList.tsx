@@ -9,7 +9,7 @@ interface Props extends StandardTypes {
 
 const COMPONENT_PREFIX = 'AptoList';
 
-export default class AptoList extends React.Component<Props> {
+export class AptoList extends React.Component<Props> {
   public render() {
     const {
       type,

@@ -1,3 +1,3 @@
 export {
-  default as AptoCardContent
+  AptoCardContent
 } from './AptoCardContent';

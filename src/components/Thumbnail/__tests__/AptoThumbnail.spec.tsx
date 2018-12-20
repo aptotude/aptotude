@@ -1,5 +1,5 @@
 import React from 'react';
-import AptoThumbnail from '../AptoThumbnail';
+import { AptoThumbnail } from '../AptoThumbnail';
 import { render } from 'react-testing-library';
 
 describe('Thumbnail Component', () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-testing-library';
-import AptoList from '../AptoList';
+import { AptoList } from '../AptoList';
 
 describe('List Component', () => {
   it('renders', () => {

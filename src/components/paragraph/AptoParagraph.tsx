@@ -9,7 +9,7 @@ interface Props extends StandardTypes {
 
 const COMPONENT_PREFIX = 'AptoParagraph';
 
-export default class AptoParagraph extends React.Component<Props> {
+export class AptoParagraph extends React.Component<Props> {
   public static defaultProps = {
     compact: false
   };

@@ -1,8 +1,8 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import AptoCol from '../../Column/AptoCol';
-import AptoContainer from '../../Container/AptoContainer';
-import AptoRow from '../../Row/AptoRow';
+import { AptoCol } from '../../Column/AptoCol';
+import { AptoContainer } from '../../Container/AptoContainer';
+import { AptoRow } from '../../Row/AptoRow';
 
 describe('Grid Component', () => {
   it('Grid renders', () => {

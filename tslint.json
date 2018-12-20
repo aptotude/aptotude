@@ -10,6 +10,8 @@
     "interface-name": false,
     "member-ordering": false,
     "no-console": false,
-    "jsx-boolean-value": false
+    "jsx-boolean-value": false,
+    "no-unused-expression": false,
+    "no-implicit-dependencies": false
   }
 }

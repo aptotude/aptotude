@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import AptoSpinner from './AptoSpinner';
+import { AptoSpinner } from './AptoSpinner';
 import './aptoSpinnerStories.scss';
 
 storiesOf('Spinner', module)

@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import AptoHeader from './AptoHeader';
+import { AptoHeader } from './AptoHeader';
 
 storiesOf('Header', module)
   .add('Basic Usage', () =>

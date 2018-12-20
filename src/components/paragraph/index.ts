@@ -1,3 +1,3 @@
 export {
-  default as AptoParagraph
+  AptoParagraph
 } from './AptoParagraph';

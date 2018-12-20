@@ -1,3 +1,3 @@
 export {
-  default as AptoHelpText
+  AptoHelpText
 } from './AptoHelpText';

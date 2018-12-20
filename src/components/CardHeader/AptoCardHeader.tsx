@@ -9,7 +9,7 @@ interface Props extends StandardTypes {
   padBottom?: boolean;
 }
 
-export default class AptoCardHeader extends React.Component<Props> {
+export class AptoCardHeader extends React.Component<Props> {
   public render() {
     const {
       padBottom,

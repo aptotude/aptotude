@@ -1,10 +1,10 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import AptoCard from './AptoCard';
-import AptoCardContent from '../CardContent/AptoCardContent';
-import AptoCardHeader from '../CardHeader/AptoCardHeader';
-import AptoCardFooter from '../CardFooter/AptoCardFooter';
-import AptoButton from '../Button/AptoButton';
+import { AptoCard} from './AptoCard';
+import { AptoCardContent } from '../CardContent/AptoCardContent';
+import { AptoCardHeader } from '../CardHeader/AptoCardHeader';
+import { AptoCardFooter } from '../CardFooter/AptoCardFooter';
+import { AptoButton } from '../Button/AptoButton';
 
 storiesOf('Card', module)
   .add('Default', () =>

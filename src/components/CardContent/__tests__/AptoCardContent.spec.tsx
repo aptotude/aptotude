@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-testing-library';
-import AptoCardContent from '../AptoCardContent';
+import { AptoCardContent } from '../AptoCardContent';
 
 describe('Card Content Component', () => {
   it('Renders', () => {

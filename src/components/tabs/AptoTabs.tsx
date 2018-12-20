@@ -1,10 +1,10 @@
 import React, { cloneElement, Children } from 'react';
 import { StandardTypes } from '../../utils/standardTypes';
 import './aptoTabs.scss';
-import AptoTabPane from '../TabPane/AptoTabPane';
+import { AptoTabPane } from '../TabPane/AptoTabPane';
 import classNames from 'classnames';
 import { HOME, END, RIGHT_ARROW, LEFT_ARROW } from '../../utils/keycodes';
-import AptoCard from '../Card/AptoCard';
+import { AptoCard } from '../Card/AptoCard';
 
 let nextId = 0;
 
@@ -17,7 +17,7 @@ interface State {
   activeIndex?: number;
 }
 
-export default class AptoTabs extends React.Component<Props, State> {
+export class AptoTabs extends React.Component<Props, State> {
   private tabCount = 0;
 
   constructor(props: Props = {}) {

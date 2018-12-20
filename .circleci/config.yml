@@ -14,7 +14,7 @@ jobs:
             - run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
             - run: yarn install
             - run: yarn lint
-
+            - run: yarn test
             # Create a new github release
             - run: >
                 if [ "$CIRCLE_BRANCH" == "master" ]; then

@@ -1,5 +1,5 @@
 import React from 'react';
-import AptoShimmer from '../AptoShimmer';
+import { AptoShimmer } from '../AptoShimmer';
 import { render } from 'react-testing-library';
 
 describe('Shimmer Component', () => {

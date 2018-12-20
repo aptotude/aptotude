@@ -1,5 +1,5 @@
 import React from 'react';
-import AptoContainer from '../AptoContainer';
+import { AptoContainer } from '../AptoContainer';
 import { render } from 'react-testing-library';
 
 describe('Container Component', () => {

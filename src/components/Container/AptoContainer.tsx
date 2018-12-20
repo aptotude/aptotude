@@ -10,7 +10,7 @@ interface Props extends StandardTypes {
   fixed?: boolean;
 }
 
-export default class AptoContainer extends React.Component<Props> {
+export class AptoContainer extends React.Component<Props> {
   public static defaultProps = {
     scroll: false,
     fixed: false

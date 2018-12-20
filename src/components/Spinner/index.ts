@@ -1,3 +1,3 @@
 export {
-  default as AptoSpinner
+  AptoSpinner
 } from './AptoSpinner';

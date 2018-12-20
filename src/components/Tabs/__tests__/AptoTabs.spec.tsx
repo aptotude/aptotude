@@ -1,6 +1,6 @@
 import React from 'react';
-import AptoTabs from '../AptoTabs';
-import AptoTab from '../../Tab/AptoTab';
+import { AptoTabs } from '../AptoTabs';
+import { AptoTab } from '../../Tab/AptoTab';
 import { HOME, END, RIGHT_ARROW, LEFT_ARROW } from '../../../utils/keycodes';
 import { render, fireEvent } from 'react-testing-library';
 

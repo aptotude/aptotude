@@ -9,7 +9,7 @@ interface Props extends StandardTypes {
   noPadding?: boolean;
 }
 
-export default class AptoCardContent extends React.Component<Props> {
+export class AptoCardContent extends React.Component<Props> {
   public render() {
     const {
       noPadding,

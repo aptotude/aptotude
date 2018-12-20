@@ -1,3 +1,3 @@
 export {
-  default as AptoRow
+  AptoRow
 } from './AptoRow';

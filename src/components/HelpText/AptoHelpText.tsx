@@ -10,7 +10,7 @@ interface Props extends StandardTypes {
 
 const COMPONENT_PREFIX = 'AptoHelpText';
 
-export default class AptoHelpText extends React.Component<Props> {
+export class AptoHelpText extends React.Component<Props> {
   public static defaultProps = {
     error: false,
     inline: false

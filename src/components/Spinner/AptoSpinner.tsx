@@ -10,7 +10,7 @@ interface Props extends StandardTypes {
 
 const COMPONENT_PREFIX = 'AptoSpinner';
 
-export default class AptoSpinner extends React.Component<Props> {
+export class AptoSpinner extends React.Component<Props> {
   public static defaultProps = {
     text: '',
     noOverlay: false

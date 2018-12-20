@@ -1,5 +1,5 @@
 import React from 'react';
-import AptoSpinner from '../AptoSpinner';
+import { AptoSpinner } from '../AptoSpinner';
 import { render } from 'react-testing-library';
 
 describe('Spinner Component', () => {

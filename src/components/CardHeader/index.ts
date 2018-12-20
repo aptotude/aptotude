@@ -1,3 +1,3 @@
 export {
-  default as AptoCardHeader
+  AptoCardHeader
 } from './AptoCardHeader';
