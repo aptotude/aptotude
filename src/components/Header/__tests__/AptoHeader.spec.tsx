@@ -1,5 +1,5 @@
 import React from 'react';
-import AptoHeader from '../AptoHeader';
+import { AptoHeader } from '../AptoHeader';
 import { render } from 'react-testing-library';
 
 describe('Header Component', () => {
