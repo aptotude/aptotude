@@ -11,6 +11,8 @@ fi
 git config user.email "$GIT_EMAIL"
 git config user.name "$GIT_USER"
 
+echo "git Email: $GIT_EMAIL Username: $GIT_USER"
+
 # Get the latest version from NPM
 LATEST_RELEASE_VERSION=$(npm view @apto/aptotude version)
 
