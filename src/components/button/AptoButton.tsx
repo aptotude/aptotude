@@ -6,7 +6,7 @@ import { StandardTypes } from '../../utils/standardTypes';
 export type ButtonKind = 'button' | 'link';
 export type ButtonVariant = 'primary' | 'secondary' | 'secondaryDark' | 'danger';
 
-interface Props extends StandardTypes {
+export interface AptoButtonDisplayProps extends StandardTypes {
   kind?: ButtonKind;
   variant?: ButtonVariant;
   active?: boolean;
@@ -24,7 +24,7 @@ function missingHref(href: undefined | string) {
 
 const COMPONENT_PREFIX = 'AptoButton';
 
-export class AptoButton extends React.Component<Props> {
+export class AptoButton extends React.PureComponent<AptoButtonDisplayProps> {
   public static defaultProps = {
     kind: 'button',
     variant: 'primary',
