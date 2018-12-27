@@ -18,7 +18,7 @@ jobs:
             - run: >
                 if [ "$CIRCLE_BRANCH" == "master" ]; then
                     echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
-                    npm run release
+                    yarn release
                 fi
 
 workflows:

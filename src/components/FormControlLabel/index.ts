@@ -1,0 +1,1 @@
+export { AptoFormControlLabel } from './AptoFormControlLabel';
