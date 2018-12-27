@@ -1,4 +1,4 @@
-export * from './Button';
+export { AptoButton, AptoButtonDisplayProps }  from './Button/AptoButton';
 export * from './Card';
 export * from './CardContent';
 export * from './CardFooter';
