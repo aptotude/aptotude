@@ -17,7 +17,7 @@ interface Props extends StandardTypes {
   align?: 'start' | 'center' | 'end' | null | undefined;
 }
 
-export class AptoCol extends React.Component<Props> {
+export class AptoCol extends React.PureComponent<Props> {
   public render() {
     const {
       children,

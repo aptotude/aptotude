@@ -9,7 +9,7 @@ interface Props extends StandardTypes {
 
 const COMPONENT_PREFIX = 'AptoHeader';
 
-export class AptoHeader extends React.Component<Props> {
+export class AptoHeader extends React.PureComponent<Props> {
   public static defaultProps = {
     type: '1'
   };

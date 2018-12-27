@@ -12,7 +12,7 @@ interface Props extends StandardTypes {
   justify?: 'start' | 'center' | 'end' | 'around' | 'between' | null | undefined;
 }
 
-export class AptoRow extends React.Component<Props> {
+export class AptoRow extends React.PureComponent<Props> {
   public static defaultProps = {
     noGutter: false
   };

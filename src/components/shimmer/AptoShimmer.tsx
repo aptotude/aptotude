@@ -5,7 +5,7 @@ import { StandardTypes } from '../../utils/standardTypes';
 
 const COMPONENT_PREFIX = 'AptoShimmer';
 
-export class AptoShimmer extends React.Component<StandardTypes> {
+export class AptoShimmer extends React.PureComponent<StandardTypes> {
   public render() {
     const {
       className,
