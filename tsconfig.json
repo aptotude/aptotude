@@ -5,6 +5,7 @@
     "lib": ["dom", "es6"],
     "jsx": "react",
     "moduleResolution": "node",
+    "declarationDir": "dist/types",
     "allowSyntheticDefaultImports": true,
     "declaration": true,
     "esModuleInterop": true,
