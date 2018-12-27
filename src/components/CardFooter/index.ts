@@ -1,3 +1,4 @@
 export {
-  AptoCardFooter
+  AptoCardFooter,
+  AptoCardFooterDisplayProps
 } from './AptoCardFooter';

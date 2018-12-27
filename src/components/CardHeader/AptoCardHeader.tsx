@@ -5,11 +5,11 @@ import { StandardTypes } from '../../utils/standardTypes';
 
 const COMPONENT_PREFIX = 'AptoCardHeader';
 
-interface Props extends StandardTypes {
+export interface AptoCardHeaderDisplayProps extends StandardTypes {
   padBottom?: boolean;
 }
 
-export class AptoCardHeader extends React.Component<Props> {
+export class AptoCardHeader extends React.Component<AptoCardHeaderDisplayProps> {
   public render() {
     const {
       padBottom,

@@ -1,3 +1,4 @@
 export {
-  AptoCardHeader
+  AptoCardHeader,
+  AptoCardHeaderDisplayProps
 } from './AptoCardHeader';

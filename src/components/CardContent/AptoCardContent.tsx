@@ -5,11 +5,11 @@ import { StandardTypes } from '../../utils/standardTypes';
 
 const COMPONENT_PREFIX = 'AptoCardContent';
 
-interface Props extends StandardTypes {
+export interface AptoCardContentDisplayProps extends StandardTypes {
   noPadding?: boolean;
 }
 
-export class AptoCardContent extends React.Component<Props> {
+export class AptoCardContent extends React.Component<AptoCardContentDisplayProps> {
   public render() {
     const {
       noPadding,

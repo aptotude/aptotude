@@ -5,12 +5,12 @@ import { StandardTypes } from '../../utils/standardTypes';
 
 const COMPONENT_PREFIX = 'AptoCardFooter';
 
-interface Props extends StandardTypes {
+export interface AptoCardFooterDisplayProps extends StandardTypes {
   padTop?: boolean;
   align?: 'left' | 'right' | 'center' | undefined
 }
 
-export class AptoCardFooter extends React.Component<Props> {
+export class AptoCardFooter extends React.Component<AptoCardFooterDisplayProps> {
   public render() {
     const {
       padTop,
