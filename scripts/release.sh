@@ -21,7 +21,7 @@ npm version $LATEST_RELEASE_VERSION --no-git-tag-version --allow-same-version
 npm version patch -f --allow-same-version
 
 # Build the lib
-yarn build
+NODE_ENV=prod npm run build:
 
 # Move to lib dist directory, pack and publish to NPM
 cd dist
