@@ -39,13 +39,6 @@ export default {
     postcss({
       modules: false
     }),
-    resolve({
-      jsnext: true,
-      preferBuiltins: true
-    }),
-    commonjs({
-      include: 'node_modules/**'
-    }),
     typescript({
       verbosity: 2,
       abortOnError: false,
@@ -53,6 +46,13 @@ export default {
         './src/**/__tests__/*',
         './src/**/*.stories.*'
       ]
+    }),
+    resolve({
+      jsnext: true,
+      preferBuiltins: true
+    }),
+    commonjs({
+      include: 'node_modules/**'
     }),
     minify({
       comments: false
