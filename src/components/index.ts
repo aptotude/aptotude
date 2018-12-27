@@ -6,7 +6,7 @@ export * from './CardHeader';
 export * from './Column';
 export * from './Container';
 // export * from './Header';
-// export * from './HelpText';
+export * from './HelpText';
 // export * from './List';
 // export * from './ListItem';
 // export * from './Paragraph';
