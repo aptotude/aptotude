@@ -31,7 +31,7 @@ export default {
     {
       globals: globalLibs,
       name: libraryName,
-      format: 'esm',
+      format: 'es',
       file: `dist/${pkg.module}`
     }
   ],
@@ -39,14 +39,21 @@ export default {
     postcss({
       modules: false
     }),
+    resolve({
+      jsnext: true,
+      preferBuiltins: true
+    }),
+    commonjs({
+      include: 'node_modules/**'
+    }),
     typescript({
+      verbosity: 2,
+      abortOnError: false,
       exclude: [
-        "./src/**/__tests__/*",
-        "./src/**/*.stories.*"
+        './src/**/__tests__/*',
+        './src/**/*.stories.*'
       ]
     }),
-    resolve(),
-    commonjs(),
     minify({
       comments: false
     }),
