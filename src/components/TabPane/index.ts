@@ -1,3 +1,1 @@
-export {
-  AptoTabPane
-} from './AptoTabPane';
+export * from './AptoTabPane';

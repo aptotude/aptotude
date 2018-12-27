@@ -2,7 +2,7 @@ import React from 'react';
 import './aptoTabPane.scss';
 import classNames from 'classnames';
 
-interface Props {
+export interface AptoTabPaneDisplayProps {
   group: number,
   index: number,
   active: boolean,
@@ -11,7 +11,7 @@ interface Props {
 
 const COMPONENT_PREFIX = 'AptoTabPane';
 
-export class AptoTabPane extends React.Component<Props> {
+export class AptoTabPane extends React.Component<AptoTabPaneDisplayProps> {
   public render() {
     const {
       children,

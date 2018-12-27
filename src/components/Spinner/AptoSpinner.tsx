@@ -3,14 +3,14 @@ import classNames from 'classnames';
 import './aptoSpinner.scss';
 import { StandardTypes } from '../../utils/standardTypes';
 
-interface Props extends StandardTypes {
+export interface AptoSpinnerDisplayProps extends StandardTypes {
   text?: string;
   noOverlay?: boolean;
 }
 
 const COMPONENT_PREFIX = 'AptoSpinner';
 
-export class AptoSpinner extends React.Component<Props> {
+export class AptoSpinner extends React.Component<AptoSpinnerDisplayProps> {
   public static defaultProps = {
     text: '',
     noOverlay: false

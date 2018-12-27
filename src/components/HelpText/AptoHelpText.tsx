@@ -3,14 +3,14 @@ import classNames from 'classnames';
 import './aptoHelpText.scss';
 import { StandardTypes } from '../../utils/standardTypes';
 
-interface Props extends StandardTypes {
+export interface AptoHelpTextDisplayProps extends StandardTypes {
   error?: boolean;
   inline?: boolean;
 }
 
 const COMPONENT_PREFIX = 'AptoHelpText';
 
-export class AptoHelpText extends React.Component<Props> {
+export class AptoHelpText extends React.Component<AptoHelpTextDisplayProps> {
   public static defaultProps = {
     error: false,
     inline: false

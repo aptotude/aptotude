@@ -9,12 +9,12 @@ $counterFontSize:       $font-size-sm;
 $disabledOpactiy:       0.3;
 $fieldFocusColor:       $blue-500;
 
-.AptoFormGroup {
+.AptoFormControl {
   position: relative;
   padding: $fieldPadding;
   font-family: $fieldFontFamily;
 
-  .AptoFormGroup-label {
+  .AptoFormControl-label {
     color: $labelColor;
     font-size: $labelFontSize;
     position: absolute;
@@ -22,31 +22,31 @@ $fieldFocusColor:       $blue-500;
     left: 0;
   }
 
-  .AptoFormGroup-errorMessage {
+  .AptoFormControl-errorMessage {
     color: $errorMessageColor;
     padding-top: 0.5rem;
     display: block;
   }
 
-  .AptoFormGroup-counterMessage {
+  .AptoFormControl-counterMessage {
     position: absolute;
     right: 0;
     font-size: $counterFontSize;
   }
 
-  &.AptoFormGroup--inline {
+  &.AptoFormControl--inline {
     display: inline-block;
   }
 
-  &.AptoFormGroup--disabled,
-  &.AptoFormGroup--readonly {
+  &.AptoFormControl--disabled,
+  &.AptoFormControl--readonly {
     opacity: $disabledOpactiy;
     cursor: default;
   }
 
-  input:focus ~ .AptoFormGroup-label,
-  textarea:focus ~ .AptoFormGroup-label,
-  select:focus ~ .AptoFormGroup-label {
+  input:focus ~ .AptoFormControl-label,
+  textarea:focus ~ .AptoFormControl-label,
+  select:focus ~ .AptoFormControl-label {
     color: $fieldFocusColor;
   }
 }

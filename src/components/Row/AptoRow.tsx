@@ -6,13 +6,13 @@ import capitalize from '../../utils/capitalize';
 
 const COMPONENT_PREFIX = 'AptoRow';
 
-interface Props extends StandardTypes {
+export interface AptoRowDisplayProps extends StandardTypes {
   noGutter?: boolean;
   align?: 'start' | 'center' | 'end' | null | undefined;
   justify?: 'start' | 'center' | 'end' | 'around' | 'between' | null | undefined;
 }
 
-export class AptoRow extends React.PureComponent<Props> {
+export class AptoRow extends React.PureComponent<AptoRowDisplayProps> {
   public static defaultProps = {
     noGutter: false
   };

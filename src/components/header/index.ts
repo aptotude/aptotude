@@ -1,3 +1,1 @@
-export {
-  AptoHeader
-} from './AptoHeader';
+export * from './AptoHeader';

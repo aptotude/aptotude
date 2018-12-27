@@ -1,3 +1,1 @@
-export {
-  AptoCol
-} from './AptoCol';
+export * from './AptoCol';

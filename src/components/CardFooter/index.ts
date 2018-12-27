@@ -1,4 +1,1 @@
-export {
-  AptoCardFooter,
-  AptoCardFooterDisplayProps
-} from './AptoCardFooter';
+export * from './AptoCardFooter';

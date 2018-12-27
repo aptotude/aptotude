@@ -5,12 +5,12 @@ import './aptoContainer.scss';
 
 const COMPONENT_PREFIX = 'AptoContainer';
 
-interface Props extends StandardTypes {
+export interface AptoContainerDisplayProps extends StandardTypes {
   scroll?: boolean;
   fixed?: boolean;
 }
 
-export class AptoContainer extends React.PureComponent<Props> {
+export class AptoContainer extends React.PureComponent<AptoContainerDisplayProps> {
   public static defaultProps = {
     scroll: false,
     fixed: false

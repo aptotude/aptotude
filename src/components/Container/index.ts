@@ -1,3 +1,1 @@
-export {
-  AptoContainer
-} from './AptoContainer';
+export * from './AptoContainer';

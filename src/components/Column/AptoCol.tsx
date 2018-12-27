@@ -6,18 +6,18 @@ import capitalize from '../../utils/capitalize';
 
 const COMPONENT_PREFIX = 'AptoCol';
 
-export type RowType = 'auto' | 'true' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '11' | '12';
+export type AptoColSize = 'auto' | 'true' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '11' | '12';
 
-interface Props extends StandardTypes {
-  xs?: RowType;
-  sm?: RowType;
-  md?: RowType;
-  lg?: RowType;
-  xl?: RowType;
+export interface AptoColDisplayProps extends StandardTypes {
+  xs?: AptoColSize;
+  sm?: AptoColSize;
+  md?: AptoColSize;
+  lg?: AptoColSize;
+  xl?: AptoColSize;
   align?: 'start' | 'center' | 'end' | null | undefined;
 }
 
-export class AptoCol extends React.PureComponent<Props> {
+export class AptoCol extends React.PureComponent<AptoColDisplayProps> {
   public render() {
     const {
       children,

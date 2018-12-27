@@ -4,14 +4,14 @@ import './aptoFormControlLabel.scss';
 
 const COMPONENT_PREFIX = 'AptoFormControlLabel';
 
-export interface AptoFormControlLabelProps {
+export interface AptoFormControlLabelDisplayProps {
   label?: React.ReactNode;
   error?: React.ReactNode;
   required?: boolean;
   id?: string;
 }
 
-export class AptoFormControlLabel extends React.Component<AptoFormControlLabelProps> {
+export class AptoFormControlLabel extends React.Component<AptoFormControlLabelDisplayProps> {
   public render() {
     const {
       label,

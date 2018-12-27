@@ -3,13 +3,13 @@ import classNames from 'classnames';
 import './aptoList.scss';
 import { StandardTypes } from '../../utils/standardTypes';
 
-interface Props extends StandardTypes {
+export interface AptoListDisplayProps extends StandardTypes {
   type?: 'ul' | 'ol' | undefined;
 }
 
 const COMPONENT_PREFIX = 'AptoList';
 
-export class AptoList extends React.Component<Props> {
+export class AptoList extends React.Component<AptoListDisplayProps> {
   public render() {
     const {
       type,

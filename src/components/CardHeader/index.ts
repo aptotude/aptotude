@@ -1,4 +1,1 @@
-export {
-  AptoCardHeader,
-  AptoCardHeaderDisplayProps
-} from './AptoCardHeader';
+export * from './AptoCardHeader';

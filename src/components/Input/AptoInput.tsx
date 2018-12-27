@@ -5,7 +5,7 @@ import { AptoFormControl, AptoFormControlProps } from '../FormControl/AptoFormCo
 
 const COMPONENT_PREFIX = 'AptoInput';
 
-export interface AptoInputProps {
+export interface AptoInputDisplayProps {
   className?: string;
   inputClasses?: string;
   defaultValue?: any;
@@ -30,7 +30,7 @@ export interface AptoInputProps {
   inline?: boolean;
 }
 
-export class AptoInput extends React.Component<AptoInputProps> {
+export class AptoInput extends React.Component<AptoInputDisplayProps> {
   public static defaultProps = {
     multiline: false,
     required: false,

@@ -1,5 +1,5 @@
 import path from 'path';
-import typescript from 'rollup-plugin-typescript2';
+import typescript from 'rollup-plugin-typescript';
 import packageJson from 'rollup-plugin-generate-package-json';
 import postcss from 'rollup-plugin-postcss';
 import copy from 'rollup-plugin-copy';
@@ -40,13 +40,13 @@ export default {
       modules: false
     }),
     typescript({
-      useTsconfigDeclarationDir: true,
-      verbosity: 2,
-      abortOnError: false,
-      exclude: [
-        './src/**/__tests__/*',
-        './src/**/*.stories.*'
-      ]
+      // useTsconfigDeclarationDir: true,
+      // verbosity: 2,
+      // abortOnError: false,
+      // exclude: [
+      //   './src/**/__tests__/*',
+      //   './src/**/*.stories.*'
+      // ]
     }),
     resolve({
       jsnext: true,

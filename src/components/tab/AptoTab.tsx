@@ -3,7 +3,7 @@ import { StandardTypes } from '../../utils/standardTypes';
 import './aptoTab.scss';
 import classNames from 'classnames';
 
-interface Props extends StandardTypes {
+export interface AptoTabDisplayProps extends StandardTypes {
   active?: boolean,
   tabGroupId?: number,
   tabIndex?: number
@@ -13,7 +13,7 @@ interface Props extends StandardTypes {
 
 const COMPONENT_PREFIX = 'AptoTabNav-item';
 
-export class AptoTab extends React.Component<Props> {
+export class AptoTab extends React.Component<AptoTabDisplayProps> {
   public static defaultProps = {
     tabGroupId: 0,
     tabIndex: 0,

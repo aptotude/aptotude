@@ -1,4 +1,1 @@
-export {
-  AptoCardContent,
-  AptoCardContentDisplayProps
-} from './AptoCardContent';
+export * from './AptoCardContent';

@@ -1,3 +1,1 @@
-export {
-  AptoShimmer
-} from './AptoShimmer';
+export * from './AptoShimmer';

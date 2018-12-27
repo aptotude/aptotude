@@ -6,6 +6,12 @@ import { StandardTypes } from '../../utils/standardTypes';
 export type ButtonKind = 'button' | 'link';
 export type ButtonVariant = 'primary' | 'secondary' | 'secondaryDark' | 'danger';
 
+function missingHref(href: undefined | string) {
+  return !href || href.trim() === '#';
+}
+
+const COMPONENT_PREFIX = 'AptoButton';
+
 export interface AptoButtonDisplayProps extends StandardTypes {
   kind?: ButtonKind;
   variant?: ButtonVariant;
@@ -17,12 +23,6 @@ export interface AptoButtonDisplayProps extends StandardTypes {
   title?: string;
   target?: string;
 }
-
-function missingHref(href: undefined | string) {
-  return !href || href.trim() === '#';
-}
-
-const COMPONENT_PREFIX = 'AptoButton';
 
 export class AptoButton extends React.PureComponent<AptoButtonDisplayProps> {
   public static defaultProps = {

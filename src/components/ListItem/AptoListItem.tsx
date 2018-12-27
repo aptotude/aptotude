@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import './aptoListItem.scss';
 import { StandardTypes } from '../../utils/standardTypes';
 
-interface Props extends StandardTypes {
+export interface AptoListItemDisplayProps extends StandardTypes {
   type?: 'li' | null | undefined;
   link?: boolean;
   active?: boolean;
@@ -12,7 +12,7 @@ interface Props extends StandardTypes {
 
 const COMPONENT_PREFIX = 'AptoListItem';
 
-export class AptoListItem extends React.Component<Props> {
+export class AptoListItem extends React.Component<AptoListItemDisplayProps> {
   public static defaultProps = {
     link: false,
     active: false,

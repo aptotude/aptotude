@@ -1,3 +1,1 @@
-export {
-  AptoHelpText
-} from './AptoHelpText';
+export * from './AptoHelpText';

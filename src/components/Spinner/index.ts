@@ -1,3 +1,1 @@
-export {
-  AptoSpinner
-} from './AptoSpinner';
+export * from './AptoSpinner';

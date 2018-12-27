@@ -1,3 +1,1 @@
-export {
-  AptoTab
-} from './AptoTab';
+export * from './AptoTab';

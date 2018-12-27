@@ -1,3 +1,1 @@
-export {
-  AptoListItem
-} from './AptoListItem';
+export * from './AptoListItem';

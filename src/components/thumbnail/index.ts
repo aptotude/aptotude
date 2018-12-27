@@ -1,3 +1,1 @@
-export {
-  AptoThumbnail
-} from './AptoThumbnail';
+export * from './AptoThumbnail';

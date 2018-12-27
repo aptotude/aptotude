@@ -1,1 +1,1 @@
-export { AptoButton, AptoButtonDisplayProps } from './AptoButton';
+export * from './AptoButton';

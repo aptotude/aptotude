@@ -1,1 +1,1 @@
-export { AptoFormControlLabel } from './AptoFormControlLabel';
+export * from './AptoFormControlLabel';

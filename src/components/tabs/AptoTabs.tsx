@@ -8,16 +8,16 @@ import { AptoCard } from '../Card/AptoCard';
 
 let nextId = 0;
 
-interface Props extends StandardTypes {
+export interface AptoTabsDisplayProps extends StandardTypes {
   activeIndex?: number;
   onActive?: (index: number) => void
 }
 
-interface State {
+export interface AptoTabDisplayState {
   activeIndex?: number;
 }
 
-export class AptoTabs extends React.Component<Props, State> {
+export class AptoTabs extends React.Component<AptoTabsDisplayProps, AptoTabDisplayState> {
   private tabCount = 0;
 
   constructor(props: Props = {}) {

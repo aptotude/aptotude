@@ -3,13 +3,13 @@ import classNames from 'classnames';
 import './aptoParagraph.scss';
 import { StandardTypes } from '../../utils/standardTypes';
 
-interface Props extends StandardTypes {
+export interface AptoParagraphDisplayProps extends StandardTypes {
   compact?: boolean;
 }
 
 const COMPONENT_PREFIX = 'AptoParagraph';
 
-export class AptoParagraph extends React.PureComponent<Props> {
+export class AptoParagraph extends React.PureComponent<AptoParagraphDisplayProps> {
   public static defaultProps = {
     compact: false
   };
