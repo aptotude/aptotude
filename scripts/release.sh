@@ -23,7 +23,7 @@ npm version $LATEST_RELEASE_VERSION --no-git-tag-version --allow-same-version
 npm version patch -f --allow-same-version
 
 # Build the lib
-NODE_ENV=prod npm run build:lib
+NODE_ENV=prod npm run build
 
 # Move to lib dist directory, pack and publish to NPM
 cd dist
