@@ -1,3 +1,1 @@
-export {
-  AptoCard
-} from './AptoCard';
+export { AptoCard } from './AptoCard';
