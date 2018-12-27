@@ -5,12 +5,12 @@ jobs:
         working_directory: ~/aptotude
         docker:
             # LTS version
-            - image: circleci/node:10.13.0-browsers
+            - image: circleci/node:10-browsers
         steps:
             - checkout
             - add_ssh_keys:
                 fingerprints:
-                    - "9f:c3:e6:09:34:eb:6f:00:c0:ab:1d:d9:05:06:e8:3b"
+                    - "11:a6:53:82:37:02:4a:b7:61:66:4b:2f:2c:41:48:17"
             - run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
             - run: yarn install
             - run: yarn lint
