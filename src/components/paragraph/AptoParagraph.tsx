@@ -4,16 +4,12 @@ import './aptoParagraph.scss';
 import { StandardTypes } from '../../utils/standardTypes';
 
 export interface AptoParagraphDisplayProps extends StandardTypes {
-  compact?: boolean;
+  compact?: boolean | undefined;
 }
 
 const COMPONENT_PREFIX = 'AptoParagraph';
 
 export class AptoParagraph extends React.PureComponent<AptoParagraphDisplayProps> {
-  public static defaultProps = {
-    compact: false
-  };
-
   public render() {
     const {
       compact,
