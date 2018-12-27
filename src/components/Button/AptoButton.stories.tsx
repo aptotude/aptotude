@@ -5,13 +5,7 @@ import { action } from '@storybook/addon-actions';
 
 storiesOf('Button', module)
   .add('Default', () => <AptoButton>Button</AptoButton>)
-  .add('Primary', () =>
-    <div>
-      <AptoButton>Button</AptoButton>
-      <br /><br />
-      <AptoButton variant="primary">Button</AptoButton>
-    </div>
-  )
+  .add('Primary', () => <AptoButton variant="primary">Button</AptoButton>)
   .add('Danger', () => <AptoButton variant="danger">Button</AptoButton>)
   .add('Link Default Button', () =>  <AptoButton kind="link">Link Button</AptoButton>)
   .add('Link Primary Button', () =>

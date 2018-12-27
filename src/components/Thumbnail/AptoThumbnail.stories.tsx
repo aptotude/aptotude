@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import AptoThumbnail from './AptoThumbnail';
+import { AptoThumbnail } from './AptoThumbnail';
 
 storiesOf('Thumbnail', module)
   .add('Default',  () =>

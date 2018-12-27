@@ -3,10 +3,10 @@ import typescript from 'rollup-plugin-typescript2';
 import packageJson from 'rollup-plugin-generate-package-json';
 import postcss from 'rollup-plugin-postcss';
 import copy from 'rollup-plugin-copy';
-import nodeResolve from 'rollup-plugin-node-resolve';
-import commonjs from 'rollup-plugin-commonjs';
-
+import minify from 'rollup-plugin-babel-minify';
 import pkg from './package.json';
+import commonjs from 'rollup-plugin-commonjs';
+import resolve from 'rollup-plugin-node-resolve';
 
 const libraryName = 'aptotude';
 const globalLibs = {
@@ -25,7 +25,7 @@ export default {
     {
       globals: globalLibs,
       name: libraryName,
-      format: 'umd',
+      format: 'cjs',
       file: `dist/${pkg.main}`
     },
     {
@@ -36,23 +36,23 @@ export default {
     }
   ],
   plugins: [
-    nodeResolve(),
-    commonjs({
-      include: 'node_modules/**'
-    }),
     postcss({
       modules: false
     }),
     typescript({
-      importHelpers: true,
       exclude: [
         "./src/**/__tests__/*",
         "./src/**/*.stories.*"
       ]
     }),
+    resolve(),
+    commonjs(),
+    minify({
+      comments: false
+    }),
     copy({
       'README.md': 'dist/README.md',
-      './src/scss/theme/variables.scss': 'dist/theme/variables.scss'
+      './src/scss/theme/variables.scss': 'dist/theme/theme.scss'
     }),
     packageJson({
       inputFile: path.resolve(__dirname, './package.json'),
