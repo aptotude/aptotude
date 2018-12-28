@@ -15,4 +15,4 @@ export * from './Row';
 export * from './Spinner';
 export * from './Tab';
 export * from './TabPane';
-// export * from './Thumbnail';
+export * from './Thumbnail';
