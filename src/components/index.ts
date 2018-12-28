@@ -13,6 +13,6 @@ export * from './ListItem';
 export * from './Row';
 // export * from './Shimmer';
 export * from './Spinner';
-// export * from './Tab';
-// export * from './TabPane';
+export * from './Tab';
+export * from './TabPane';
 // export * from './Thumbnail';
