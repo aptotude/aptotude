@@ -3,7 +3,7 @@ import typescript from 'rollup-plugin-typescript2';
 import packageJson from 'rollup-plugin-generate-package-json';
 import postcss from 'rollup-plugin-postcss';
 import copy from 'rollup-plugin-copy';
-// import minify from 'rollup-plugin-babel-minify';
+import minify from 'rollup-plugin-babel-minify';
 import pkg from './package.json';
 import commonjs from 'rollup-plugin-commonjs';
 import resolve from 'rollup-plugin-node-resolve';
@@ -41,12 +41,11 @@ export default {
     }),
     typescript({
       useTsconfigDeclarationDir: true,
-      verbosity: 2,
       abortOnError: false,
-      // exclude: [
-      //   './src/**/__tests__/*',
-      //   './src/**/*.stories.*'
-      // ]
+      exclude: [
+        './src/**/__tests__/*',
+        './src/**/*.stories.*'
+      ]
     }),
     resolve({
       jsnext: true,
@@ -55,9 +54,9 @@ export default {
     commonjs({
       include: 'node_modules/**'
     }),
-    // minify({
-    //   comments: false
-    // }),
+    minify({
+      comments: false
+    }),
     copy({
       'README.md': 'dist/README.md',
       './src/scss/theme/variables.scss': 'dist/theme/theme.scss'
