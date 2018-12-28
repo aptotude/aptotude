@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import './aptoInput.scss';
-import { AptoFormControl, AptoFormControlProps } from '../FormControl/AptoFormControl';
+import { AptoFormControl, AptoFormControlDisplayProps } from '../FormControl/AptoFormControl';
 
 const COMPONENT_PREFIX = 'AptoInput';
 
@@ -90,7 +90,7 @@ export class AptoInput extends React.Component<AptoInputDisplayProps> {
       inputClasses
     )
 
-    const formGroupProps: AptoFormControlProps = {
+    const formGroupProps: AptoFormControlDisplayProps = {
       className,
       label,
       error,

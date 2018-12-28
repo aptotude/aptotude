@@ -11,24 +11,20 @@ fi
 git config user.email "$GIT_EMAIL"
 git config user.name "$GIT_USER"
 
-echo "git Email: $GIT_EMAIL Username: $GIT_USER"
-
 # Get the latest version from NPM
 LATEST_RELEASE_VERSION=$(npm view @apto/aptotude version)
 
-echo "Latest npm version $LATEST_RELEASE_VERSION"
-
 # Bump the package.json version
 npm version $LATEST_RELEASE_VERSION --no-git-tag-version --allow-same-version
-npm version patch -f --allow-same-version
+npm version patch -m "Update to %s" --allow-same-version
 
 # Build the lib
 npm run build
 
-# Move to lib dist directory, pack and publish to NPM
+# Move to dist directory, pack and publish to NPM
 cd dist
 TARBALL=$(npm pack)
-npm publish $TARBALL --verbose
+npm publish $TARBALL
 
 # Push Git commit and tag to Github
 cd ../

@@ -1,0 +1,64 @@
+@import '../../scss/theme/variables.scss';
+$AptoTable-borderColor: $gray-500;
+$AptoTable-padding: 0.75rem;
+$AptoTableSmall-padding: 0.3rem;
+$AptoTable-th-fontWeight: $font-weight-bold;
+$AptoTable-striped-backgroundColor: $gray-200;
+$AptoTable-hover-backgroundColor: $gray-300;
+
+.AptoTable--responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.AptoTable {
+  width: 100%;
+  background-color: transparent;
+  border-collapse: collapse;
+  thead {
+    th {
+      vertical-align: bottom;
+      border-bottom: 2px solid $AptoTable-borderColor;
+    }
+  }
+  th {
+    font-weight: $AptoTable-th-fontWeight;
+  }
+  td, th {
+    padding: $AptoTable-padding;
+    vertical-align: top;
+    text-align: inherit;
+    border-top: 1px solid $AptoTable-borderColor;
+  }
+  &.AptoTable--small {
+    td, th {
+      padding: $AptoTableSmall-padding;
+    }
+  }
+  &.AptoTable--striped {
+    & tbody tr:nth-of-type(odd) {
+      background-color: $AptoTable-striped-backgroundColor;
+    }
+  }
+  &.AptoTable--bordered {
+    border: 1px solid $AptoTable-borderColor;
+    thead td, thead th {
+      border-bottom-width: 2px;
+    }
+    td, th {
+      border: 1px solid $AptoTable-borderColor;
+    }
+  }
+  &.AptoTable--borderless {
+    tbody+tbody, td, th, thead th {
+      border: 0;
+    }
+  }
+  &.AptoTable--hover {
+    tbody tr:hover {
+      background-color: $AptoTable-hover-backgroundColor;
+    }
+  }
+}

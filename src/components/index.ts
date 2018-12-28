@@ -17,3 +17,8 @@ export * from './Tabs';
 export * from './Tab';
 export * from './TabPane';
 export * from './Thumbnail';
+export * from './Table';
+export * from './TableHead';
+export * from './TableBody';
+export * from './TableRow';
+export * from './TableCell';

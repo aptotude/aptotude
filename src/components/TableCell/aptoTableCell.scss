@@ -1,0 +1,16 @@
+@import '../../scss/theme/variables.scss';
+
+.AptoTableCell {
+  &.AptoTableCell--danger {
+    background-color: $danger;
+  }
+  &.AptoTableCell--warning {
+    background-color: $warning;
+  }
+  &.AptoTableCell--success {
+    background-color: $success
+  }
+  &.AptoTableCell--primary {
+    background-color: $primary-blue
+  }
+}

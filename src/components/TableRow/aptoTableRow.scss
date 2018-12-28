@@ -1,0 +1,24 @@
+@import '../../scss/theme/variables.scss';
+
+.AptoTableRow {
+  &.AptoTableRow--danger {
+    td, th {
+      background-color: $danger;
+    }
+  }
+  &.AptoTableRow--warning {
+    td, th {
+      background-color: $warning;
+    }
+  }
+  &.AptoTableRow--success {
+    td, th {
+      background-color: $success
+    }
+  }
+  &.AptoTableRow--primary {
+    td, th {
+      background-color: $primary-blue
+    }
+  }
+}
