@@ -16,7 +16,7 @@ LATEST_RELEASE_VERSION=$(npm view @apto/aptotude version)
 
 # Bump the package.json version
 npm version $LATEST_RELEASE_VERSION --no-git-tag-version --allow-same-version
-npm version patch -m "Update to %s" --allow-same-version
+npm version patch -f --allow-same-version
 
 # Build the lib
 npm run build
