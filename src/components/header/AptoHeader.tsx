@@ -1,13 +1,13 @@
 import React from 'react';
 import classNames from 'classnames';
-import './aptoHeader.scss';
 import { StandardTypes } from '../../utils/standardTypes';
+import './aptoHeader.scss';
+
+const COMPONENT_PREFIX = 'AptoHeader';
 
 export interface AptoHeaderDisplayProps extends StandardTypes {
   type?: '1' | '2' | '3' | '4' | '5' | '6';
 }
-
-const COMPONENT_PREFIX = 'AptoHeader';
 
 export class AptoHeader extends React.PureComponent<AptoHeaderDisplayProps> {
   public static defaultProps = {
