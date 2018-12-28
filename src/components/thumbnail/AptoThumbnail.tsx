@@ -1,11 +1,11 @@
 import React from 'react';
 import classNames from 'classnames';
-import './aptoThumbnail.scss';
 import { StandardTypes } from '../../utils/standardTypes';
+import './aptoThumbnail.scss';
 
 const COMPONENT_PREFIX = 'AptoThumbnail';
 
-export class AptoThumbnail extends React.PureComponent<StandardTypes> {
+export class AptoThumbnail extends React.Component<StandardTypes> {
   public render() {
     const {
       className,
