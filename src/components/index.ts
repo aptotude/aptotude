@@ -13,6 +13,6 @@ export * from './Paragraph';
 export * from './Row';
 export * from './Shimmer';
 export * from './Spinner';
-export * from './Tab';
+export * from './Tab_';
 export * from './TabPane_';
 export * from './Thumbnail';
