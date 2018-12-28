@@ -14,5 +14,5 @@ export * from './Row';
 export * from './Shimmer';
 export * from './Spinner';
 export * from './Tab';
-export * from './TabPane';
+export * from './TabPane_';
 export * from './Thumbnail';

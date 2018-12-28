@@ -1,0 +1,8 @@
+.AptoTabPane {
+    display: none;
+    position: relative;
+    outline: none;
+    &.AptoTabPane--active {
+        display: block;
+    }
+}
