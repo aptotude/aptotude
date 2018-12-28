@@ -1,5 +1,5 @@
 import React from 'react';
-import { AptoShimmerPlaceholder } from '../AptoShimmerPlaceholder';
+import { AptoShimmer } from '../AptoShimmer';
 import { render } from 'react-testing-library';
 
 describe('Shimmer Component', () => {
@@ -7,7 +7,7 @@ describe('Shimmer Component', () => {
     const {
       container
     } = render(
-      <AptoShimmerPlaceholder/>
+      <AptoShimmer />
     );
 
     const node = container.querySelector('.AptoShimmer');
@@ -18,7 +18,7 @@ describe('Shimmer Component', () => {
     const {
       container
     } = render(
-      <AptoShimmerPlaceholder className="foo"/>
+      <AptoShimmer className="foo"/>
     );
 
     const node = container.querySelector('.AptoShimmer');

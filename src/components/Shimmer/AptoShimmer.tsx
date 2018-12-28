@@ -1,6 +1,7 @@
-import React from 'React';
+import React from 'react';
 import classNames from 'classnames';
 import { StandardTypes } from '../../utils/standardTypes';
+import './aptoShimmer.scss';
 
 const COMPONENT_PREFIX = 'AptoShimmer';
 

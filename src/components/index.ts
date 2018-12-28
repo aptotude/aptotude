@@ -12,7 +12,6 @@ export * from './ListItem';
 // export * from './Paragraph';
 export * from './Row';
 export * from './Shimmer';
-// export * from './ShimmerPlaceholder';
 export * from './Spinner';
 export * from './Tab';
 export * from './TabPane';
