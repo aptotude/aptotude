@@ -20,7 +20,7 @@ export interface AptoTabDisplayState {
 export class AptoTabs extends React.Component<AptoTabsDisplayProps, AptoTabDisplayState> {
   private tabCount = 0;
 
-  constructor(props: Props = {}) {
+  constructor(props: AptoTabsDisplayProps = {}) {
     super(props);
     this.state = {
       activeIndex: props.activeIndex || 0
