@@ -15,4 +15,4 @@ export * from './Shimmer';
 export * from './Spinner';
 export * from './Tab';
 export * from './TabPane';
-// export * from './Thumbnail';
+export * from './Thumbnail';
