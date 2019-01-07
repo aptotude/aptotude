@@ -1,11 +1,11 @@
-import path from 'path';
 import typescript from 'rollup-plugin-typescript2';
 import packageJson from 'rollup-plugin-generate-package-json';
 import postcss from 'rollup-plugin-postcss';
 import copy from 'rollup-plugin-copy';
+import resolve from 'rollup-plugin-node-resolve';
+import commonjs from 'rollup-plugin-commonjs';
 import pkg from './package.json';
 
-const libraryName = 'aptotude';
 const globalLibs = {
   "classnames": "classnames",
   "react": "React"
@@ -19,50 +19,43 @@ export default {
   input: './src/index.ts',
   external: externalLibs,
   output: [
-    {
-      globals: globalLibs,
-      name: libraryName,
-      format: 'cjs',
-      file: `dist/${pkg.main}`
-    },
-    {
-      globals: globalLibs,
-      name: libraryName,
-      format: 'es',
-      file: `dist/${pkg.module}`
-    }
+    { name: 'aptotude', globals: globalLibs, file: `./dist/${pkg.browser}`, format: 'umd' },
+    { name: 'aptotude', globals: globalLibs, file: `./dist/${pkg.main}`, format: 'cjs' },
+    { name: 'aptotude', globals: globalLibs, file: `./dist/${pkg.module}`, format: 'es' }
   ],
   plugins: [
     postcss({
       modules: false
     }),
+    resolve(),
+    commonjs(),
     typescript({
-      useTsconfigDeclarationDir: true,
-      abortOnError: false,
       exclude: [
-        './src/**/__tests__',
+        './src/**/*.spec.*',
         './src/**/*.stories.*'
       ]
     }),
     copy({
       'README.md': 'dist/README.md',
-      './src/scss/theme/variables.scss': 'dist/theme/theme.scss'
+      './src/scss/theme/variables.scss': './dist/theme/theme.scss'
     }),
     packageJson({
-      inputFile: path.resolve(__dirname, './package.json'),
-      outputFolder: path.resolve(__dirname, './dist'),
+      inputFile: './package.json',
+      outputFolder: './dist',
       baseContents: {
         "name": pkg.name,
         "version": pkg.version,
         "description": pkg.description,
-        "main": pkg.main,
-        "module": pkg.module,
+        "author": pkg.author,
         "homepage": pkg.homepage,
         "license": pkg.license,
         "repository": pkg.repository,
         "bugs": pkg.bugs,
-        "peerDependencies": pkg.peerDependencies,
-        "private": false
+        "private": false,
+        "main": pkg.main,
+        "module": pkg.module,
+        "browser": pkg.browser,
+        "peerDependencies": pkg.peerDependencies
       }
     })
   ]
