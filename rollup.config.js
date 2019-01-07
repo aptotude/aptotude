@@ -1,7 +1,6 @@
 import typescript from 'rollup-plugin-typescript2';
 import packageJson from 'rollup-plugin-generate-package-json';
 import postcss from 'rollup-plugin-postcss';
-import copy from 'rollup-plugin-copy';
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import pkg from './package.json';
@@ -34,10 +33,6 @@ export default {
         './src/**/*.spec.*',
         './src/**/*.stories.*'
       ]
-    }),
-    copy({
-      'README.md': 'dist/README.md',
-      './src/scss/theme/variables.scss': './dist/theme/theme.scss'
     }),
     packageJson({
       inputFile: './package.json',
