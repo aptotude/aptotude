@@ -13,3 +13,6 @@ yarn-error.log
 # storybook
 .out
 
+# idea
+.idea/
+
