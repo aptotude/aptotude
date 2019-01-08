@@ -29,6 +29,7 @@ export default {
     resolve(),
     commonjs(),
     typescript({
+      declaration: true,
       exclude: [
         './src/**/*.spec.*',
         './src/**/*.stories.*'
@@ -50,6 +51,7 @@ export default {
         "main": pkg.main,
         "module": pkg.module,
         "browser": pkg.browser,
+        "types": pkg.types,
         "peerDependencies": pkg.peerDependencies
       }
     })

@@ -33,6 +33,7 @@
   "main": "aptotude.cjs.js",
   "module": "aptotude.esm.js",
   "browser": "aptotude.umd.js",
+  "types": "index.d.ts",
   "dependencies": {
     "classnames": "^2.2.6",
     "react": "^16.6.3",
