@@ -2,7 +2,7 @@ import React from 'react';
 import { AptoNavbar } from '../AptoNavbar';
 import { render } from 'react-testing-library';
 
-fdescribe('Navbar Component', () => {
+describe('Navbar Component', () => {
     it('Navbar renders', () => {
         const {
             container

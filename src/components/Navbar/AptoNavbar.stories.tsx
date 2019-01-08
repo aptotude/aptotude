@@ -7,13 +7,13 @@ import { AptoButton } from "../Button";
 storiesOf('Navbar', module)
     .add('Default', () =>
         <AptoNavbar>
-            <AptoButton className="AptoNavbarItem--right">Login</AptoButton>
+            <AptoButton>Login</AptoButton>
         </AptoNavbar>
     )
     .add('Fixed', () =>
         <div className="navbarStoriesBody">
             <AptoNavbar>
-                <AptoButton className="AptoNavbarItem--right">Login</AptoButton>
+                <AptoButton>Login</AptoButton>
             </AptoNavbar>
         </div>
 );
