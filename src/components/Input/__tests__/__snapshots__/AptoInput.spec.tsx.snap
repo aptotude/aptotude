@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AptoInput renders 1`] = `
+<body>
+  <div>
+    <div
+      class="ui input"
+    >
+      <input
+        type="text"
+      />
+    </div>
+  </div>
+</body>
+`;
