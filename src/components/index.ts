@@ -9,6 +9,7 @@ export * from './Header';
 export * from './HelpText';
 export * from './List';
 export * from './ListItem';
+export * from './Navbar';
 export * from './Paragraph';
 export * from './Row';
 export * from './Shimmer';
