@@ -1,15 +1,10 @@
 import React from "react";
 import { render, fireEvent } from "react-testing-library";
-import { AptoInput } from "../AptoInput";
+import { AptoTextArea } from "../AptoTextArea";
 
-describe("AptoInput", () => {
+describe("AptoTextArea", () => {
   it("matches snapshot", () => {
-    const { asFragment } = render(<AptoInput />);
-    expect(asFragment()).toMatchSnapshot();
-  });
-
-  it("can error", () => {
-    const { asFragment } = render(<AptoInput error />);
+    const { asFragment } = render(<AptoTextArea />);
     expect(asFragment()).toMatchSnapshot();
   });
 
@@ -17,7 +12,7 @@ describe("AptoInput", () => {
     const onChangeMock = jest.fn();
     const placeholderText = "Full Name";
     const { getByPlaceholderText } = render(
-      <AptoInput onChange={onChangeMock} placeholder={placeholderText} />
+      <AptoTextArea onChange={onChangeMock} placeholder={placeholderText} />
     );
     const input = getByPlaceholderText(placeholderText);
     const newText = "Jane Doe";

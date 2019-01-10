@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AptoForm makes fields required 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="required field"
+    >
+      <label>
+        Name
+      </label>
+      <div
+        class="field"
+      >
+        <div
+          class="ui input"
+        >
+          <input
+            type="text"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
