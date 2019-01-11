@@ -1,7 +1,10 @@
 import React from 'react';
 import classNames from 'classnames';
 import './aptoInput.scss';
-import { AptoFormControl, AptoFormControlDisplayProps } from '../FormControl/AptoFormControl';
+import {
+  AptoFormControl,
+  AptoFormControlDisplayProps
+} from '../FormControl/AptoFormControl';
 
 const COMPONENT_PREFIX = 'AptoInput';
 
@@ -20,7 +23,9 @@ export interface AptoInputDisplayProps {
   onChange?: React.ChangeEventHandler<HTMLTextAreaElement | HTMLInputElement>;
   onClick?: React.MouseEventHandler<HTMLTextAreaElement | HTMLInputElement>;
   onFocus?: React.FocusEventHandler<HTMLTextAreaElement | HTMLInputElement>;
-  onKeyPress?: React.KeyboardEventHandler<HTMLTextAreaElement | HTMLInputElement>;
+  onKeyPress?: React.KeyboardEventHandler<
+    HTMLTextAreaElement | HTMLInputElement
+  >;
   placeholder?: string;
   readOnly?: boolean;
   required?: boolean;
@@ -40,10 +45,10 @@ export class AptoInput extends React.Component<AptoInputDisplayProps> {
 
   public inputNode: HTMLTextAreaElement | HTMLInputElement | null = null;
 
-  public handleChange = (event: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
-    const {
-      onChange
-    } = this.props;
+  public handleChange = (
+    event: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
+  ) => {
+    const { onChange } = this.props;
 
     if (onChange) {
       onChange(event);
@@ -88,7 +93,7 @@ export class AptoInput extends React.Component<AptoInputDisplayProps> {
       `${COMPONENT_PREFIX}--${multiline ? 'textarea' : 'input'}`,
       error && `${COMPONENT_PREFIX}--error`,
       inputClasses
-    )
+    );
 
     const formGroupProps: AptoFormControlDisplayProps = {
       className,
@@ -99,7 +104,7 @@ export class AptoInput extends React.Component<AptoInputDisplayProps> {
       disabled,
       inline,
       id
-    }
+    };
 
     return (
       <AptoFormControl {...formGroupProps}>
@@ -112,7 +117,8 @@ export class AptoInput extends React.Component<AptoInputDisplayProps> {
           rows={InputComponent === 'textarea' ? rows : undefined}
           onChange={this.handleChange}
           ref={this.setNode}
-          {...rest} />
+          {...rest}
+        />
       </AptoFormControl>
     );
   }

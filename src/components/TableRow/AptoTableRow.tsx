@@ -6,16 +6,14 @@ import './aptoTableRow.scss';
 const COMPONENT_PREFIX = 'AptoTableRow';
 
 export interface AptoTableRowDisplayProps extends StandardTypes {
-  highlight?: 'danger' | 'primary' | 'warning' | 'success' | undefined
+  highlight?: 'danger' | 'primary' | 'warning' | 'success' | undefined;
 }
 
-export class AptoTableRow extends React.PureComponent<AptoTableRowDisplayProps> {
+export class AptoTableRow extends React.PureComponent<
+  AptoTableRowDisplayProps
+> {
   public render() {
-    const {
-      highlight,
-      children,
-      ...rest
-    } = this.props;
+    const { highlight, children, ...rest } = this.props;
 
     const classes = classNames(
       COMPONENT_PREFIX,

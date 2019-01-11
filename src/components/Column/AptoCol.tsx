@@ -6,7 +6,21 @@ import capitalize from '../../utils/capitalize';
 
 const COMPONENT_PREFIX = 'AptoCol';
 
-export type AptoColSize = 'auto' | 'true' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '11' | '12';
+export type AptoColSize =
+  | 'auto'
+  | 'true'
+  | '1'
+  | '2'
+  | '3'
+  | '4'
+  | '5'
+  | '6'
+  | '7'
+  | '8'
+  | '9'
+  | '10'
+  | '11'
+  | '12';
 
 export interface AptoColDisplayProps extends StandardTypes {
   xs?: AptoColSize;
@@ -19,13 +33,7 @@ export interface AptoColDisplayProps extends StandardTypes {
 
 export class AptoCol extends React.PureComponent<AptoColDisplayProps> {
   public render() {
-    const {
-      children,
-      className,
-      forwardRef,
-      align,
-      ...rest
-    } = this.props;
+    const { children, className, forwardRef, align, ...rest } = this.props;
 
     const classes = classNames(
       COMPONENT_PREFIX,
@@ -35,10 +43,7 @@ export class AptoCol extends React.PureComponent<AptoColDisplayProps> {
     );
 
     return (
-      <div
-        {...rest}
-        ref={forwardRef}
-        className={classes}>
+      <div {...rest} ref={forwardRef} className={classes}>
         {children}
       </div>
     );
@@ -68,6 +73,8 @@ export class AptoCol extends React.PureComponent<AptoColDisplayProps> {
     if (size !== '') {
       size = `-${size}`;
     }
-    return count === 'true' ? `${COMPONENT_PREFIX}${size}` : `${COMPONENT_PREFIX}${size}-${count}`;
+    return count === 'true'
+      ? `${COMPONENT_PREFIX}${size}`
+      : `${COMPONENT_PREFIX}${size}-${count}`;
   }
 }

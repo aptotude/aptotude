@@ -17,8 +17,9 @@ export interface AptoFormControlDisplayProps {
   id?: string;
 }
 
-export class AptoFormControl extends React.Component<AptoFormControlDisplayProps> {
-
+export class AptoFormControl extends React.Component<
+  AptoFormControlDisplayProps
+> {
   public render() {
     const {
       className,
@@ -41,9 +42,16 @@ export class AptoFormControl extends React.Component<AptoFormControlDisplayProps
     return (
       <div className={classes}>
         {inputField}
-        <AptoFormControlLabel label={label} id={id} required={required} error={error} />
-        {error ? <p className={`${COMPONENT_PREFIX}-errorMessage`}>{error}</p> : null}
+        <AptoFormControlLabel
+          label={label}
+          id={id}
+          required={required}
+          error={error}
+        />
+        {error ? (
+          <p className={`${COMPONENT_PREFIX}-errorMessage`}>{error}</p>
+        ) : null}
       </div>
-    )
+    );
   }
 }

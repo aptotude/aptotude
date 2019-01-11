@@ -10,21 +10,24 @@ let nextId = 0;
 
 export interface AptoTabsDisplayProps extends StandardTypes {
   activeIndex?: number;
-  onActive?: (index: number) => void
+  onActive?: (index: number) => void;
 }
 
 export interface AptoTabDisplayState {
   activeIndex?: number;
 }
 
-export class AptoTabs extends React.Component<AptoTabsDisplayProps, AptoTabDisplayState> {
+export class AptoTabs extends React.Component<
+  AptoTabsDisplayProps,
+  AptoTabDisplayState
+> {
   private tabCount = 0;
 
   constructor(props: AptoTabsDisplayProps = {}) {
     super(props);
     this.state = {
       activeIndex: props.activeIndex || 0
-    }
+    };
     nextId += 1;
     this.keyDownHandler = this.keyDownHandler.bind(this);
   }
@@ -71,7 +74,7 @@ export class AptoTabs extends React.Component<AptoTabsDisplayProps, AptoTabDispl
         event.preventDefault();
         break;
       case LEFT_ARROW:
-        t = t - 1
+        t = t - 1;
         if (t < 0) {
           t = this.tabCount - 1;
         }
@@ -80,14 +83,10 @@ export class AptoTabs extends React.Component<AptoTabsDisplayProps, AptoTabDispl
         break;
       default:
     }
-  };
+  }
 
   public render() {
-    const {
-      children,
-      className,
-      ...rest
-    } = this.props;
+    const { children, className, ...rest } = this.props;
     delete rest.activeIndex;
     delete rest.onActive;
 
@@ -108,7 +107,8 @@ export class AptoTabs extends React.Component<AptoTabsDisplayProps, AptoTabDispl
           key={`AptoTabPane-${nextId}-${index}`}
           active={isTabActive}
           group={nextId}
-          index={index}>
+          index={index}
+        >
           {tabProps.children}
         </AptoTabPane>
       );
@@ -121,10 +121,7 @@ export class AptoTabs extends React.Component<AptoTabsDisplayProps, AptoTabDispl
       });
     });
 
-    const classes = classNames(
-      'AptoTabGroup',
-      className
-    );
+    const classes = classNames('AptoTabGroup', className);
 
     return (
       <div className={classes}>
@@ -132,13 +129,12 @@ export class AptoTabs extends React.Component<AptoTabsDisplayProps, AptoTabDispl
           <nav
             className="AptoTabNav"
             role="tablist"
-            onKeyDown={this.keyDownHandler}>
+            onKeyDown={this.keyDownHandler}
+          >
             {tabs}
           </nav>
         </AptoCard>
-        <div className="AptoTabPane-wrapper">
-          {tabContent}
-        </div>
+        <div className="AptoTabPane-wrapper">{tabContent}</div>
       </div>
     );
   }

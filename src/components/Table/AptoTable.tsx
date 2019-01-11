@@ -6,12 +6,12 @@ import './aptoTable.scss';
 const COMPONENT_PREFIX = 'AptoTable';
 
 export interface AptoTableDisplayProps extends StandardTypes {
-  striped?: boolean | undefined,
-  bordered?: boolean | undefined,
-  borderless?: boolean | undefined,
-  hover?: boolean | undefined,
-  small?: boolean | undefined,
-  responsive?: boolean | undefined,
+  striped?: boolean | undefined;
+  bordered?: boolean | undefined;
+  borderless?: boolean | undefined;
+  hover?: boolean | undefined;
+  small?: boolean | undefined;
+  responsive?: boolean | undefined;
 }
 
 export class AptoTable extends React.PureComponent<AptoTableDisplayProps> {
@@ -21,8 +21,8 @@ export class AptoTable extends React.PureComponent<AptoTableDisplayProps> {
     borderless: false,
     hover: false,
     small: false,
-    responsive: false,
-  }
+    responsive: false
+  };
   public render() {
     const {
       children,
@@ -41,7 +41,7 @@ export class AptoTable extends React.PureComponent<AptoTableDisplayProps> {
       bordered && `${COMPONENT_PREFIX}--bordered`,
       borderless && `${COMPONENT_PREFIX}--borderless`,
       hover && `${COMPONENT_PREFIX}--hover`,
-      small && `${COMPONENT_PREFIX}--small`,
+      small && `${COMPONENT_PREFIX}--small`
     );
 
     const tableDom = (
@@ -52,9 +52,7 @@ export class AptoTable extends React.PureComponent<AptoTableDisplayProps> {
 
     if (responsive) {
       return (
-        <div className={`${COMPONENT_PREFIX}--responsive`}>
-          {tableDom}
-        </div>
+        <div className={`${COMPONENT_PREFIX}--responsive`}>{tableDom}</div>
       );
     }
 

@@ -4,32 +4,24 @@ import { AptoCard } from '../AptoCard';
 
 describe('Card Header Component', () => {
   it('Renders', () => {
-    const {
-      container
-    } = render(
-      <AptoCard />
-    );
+    const { container } = render(<AptoCard />);
 
     const node = container.querySelector('.AptoCard');
     expect(node!.className).toEqual('AptoCard');
   });
 
   it('Renders custom className', () => {
-    const {
-      container
-    } = render(
-      <AptoCard className="foo" />
-    );
+    const { container } = render(<AptoCard className="foo" />);
 
     const node = container.querySelector('.AptoCard');
     expect(node!.className).toEqual('AptoCard foo');
   });
 
   it('Renders children', () => {
-    const {
-      container
-    } = render(
-      <AptoCard><div>foo</div></AptoCard>
+    const { container } = render(
+      <AptoCard>
+        <div>foo</div>
+      </AptoCard>
     );
 
     const node = container.querySelector('.AptoCard');

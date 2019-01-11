@@ -6,9 +6,7 @@ import { render, fireEvent } from 'react-testing-library';
 
 describe('Tab Component', () => {
   it('renders', () => {
-    const {
-      container
-    } = render(
+    const { container } = render(
       <AptoTabs>
         <AptoTab title="Tab 1">Tab 1 Content</AptoTab>
         <AptoTab title="Tab 2">Tab 2 Content</AptoTab>
@@ -16,7 +14,9 @@ describe('Tab Component', () => {
     );
 
     const node = container.querySelector('.AptoTabGroup');
-    const nav = container.querySelector('.AptoTabGroup .AptoTabNav-wrapper .AptoTabNav');
+    const nav = container.querySelector(
+      '.AptoTabGroup .AptoTabNav-wrapper .AptoTabNav'
+    );
     const panes = container.querySelector('.AptoTabGroup .AptoTabPane-wrapper');
 
     expect(node!.className).toEqual('AptoTabGroup');
@@ -24,12 +24,16 @@ describe('Tab Component', () => {
     expect(nav!.className).toEqual('AptoTabNav');
     expect(nav!.getAttribute('role')).toEqual('tablist');
     expect(nav!.children.length).toEqual(2);
-    expect(nav!.children[0].className).toEqual('AptoTabNav-item AptoTabNav-item--active');
+    expect(nav!.children[0].className).toEqual(
+      'AptoTabNav-item AptoTabNav-item--active'
+    );
     expect(nav!.children[1].className).toEqual('AptoTabNav-item');
 
     expect(panes!.className).toEqual('AptoTabPane-wrapper');
     expect(panes!.children.length).toEqual(2);
-    expect(panes!.children[0].className).toEqual('AptoTabPane AptoTabPane--active');
+    expect(panes!.children[0].className).toEqual(
+      'AptoTabPane AptoTabPane--active'
+    );
     expect(panes!.children[1].className).toEqual('AptoTabPane');
   });
 
@@ -38,28 +42,30 @@ describe('Tab Component', () => {
       activeIndex: 1
     };
 
-    const {
-      container
-    } = render(
+    const { container } = render(
       <AptoTabs {...props}>
         <AptoTab title="Tab 1">Tab 1 Content</AptoTab>
         <AptoTab title="Tab 2">Tab 2 Content</AptoTab>
       </AptoTabs>
     );
 
-    const nav = container.querySelector('.AptoTabGroup .AptoTabNav-wrapper .AptoTabNav');
+    const nav = container.querySelector(
+      '.AptoTabGroup .AptoTabNav-wrapper .AptoTabNav'
+    );
     const panes = container.querySelector('.AptoTabGroup .AptoTabPane-wrapper');
 
-    expect(nav!.children[1].className).toEqual('AptoTabNav-item AptoTabNav-item--active');
+    expect(nav!.children[1].className).toEqual(
+      'AptoTabNav-item AptoTabNav-item--active'
+    );
     expect(nav!.children[0].className).toEqual('AptoTabNav-item');
-    expect(panes!.children[1].className).toEqual('AptoTabPane AptoTabPane--active');
+    expect(panes!.children[1].className).toEqual(
+      'AptoTabPane AptoTabPane--active'
+    );
     expect(panes!.children[0].className).toEqual('AptoTabPane');
   });
 
   it('renders custom className', () => {
-    const {
-      container
-    } = render(
+    const { container } = render(
       <AptoTabs className="foo">
         <AptoTab title="Tab 1">Tab 1 Content</AptoTab>
         <AptoTab title="Tab 2">Tab 2 Content</AptoTab>
@@ -78,37 +84,49 @@ describe('Tab Component', () => {
       onActive
     };
 
-    const {
-      container
-    } = render(
+    const { container } = render(
       <AptoTabs {...props}>
         <AptoTab title="Tab 1">Tab 1 Content</AptoTab>
         <AptoTab title="Tab 2">Tab 2 Content</AptoTab>
       </AptoTabs>
     );
 
-    const nav = container.querySelector('.AptoTabGroup .AptoTabNav-wrapper .AptoTabNav');
+    const nav = container.querySelector(
+      '.AptoTabGroup .AptoTabNav-wrapper .AptoTabNav'
+    );
     const panes = container.querySelector('.AptoTabGroup .AptoTabPane-wrapper');
 
-    expect(nav!.children[0].className).toEqual('AptoTabNav-item AptoTabNav-item--active');
+    expect(nav!.children[0].className).toEqual(
+      'AptoTabNav-item AptoTabNav-item--active'
+    );
     expect(nav!.children[1].className).toEqual('AptoTabNav-item');
-    expect(panes!.children[0].className).toEqual('AptoTabPane AptoTabPane--active');
+    expect(panes!.children[0].className).toEqual(
+      'AptoTabPane AptoTabPane--active'
+    );
     expect(panes!.children[1].className).toEqual('AptoTabPane');
 
     fireEvent.click(nav!.children[1]);
 
-    expect(nav!.children[1].className).toEqual('AptoTabNav-item AptoTabNav-item--active');
+    expect(nav!.children[1].className).toEqual(
+      'AptoTabNav-item AptoTabNav-item--active'
+    );
     expect(nav!.children[0].className).toEqual('AptoTabNav-item');
-    expect(panes!.children[1].className).toEqual('AptoTabPane AptoTabPane--active');
+    expect(panes!.children[1].className).toEqual(
+      'AptoTabPane AptoTabPane--active'
+    );
     expect(panes!.children[0].className).toEqual('AptoTabPane');
 
     expect(onActive).toHaveBeenCalledWith(1);
 
     fireEvent.click(nav!.children[0]);
 
-    expect(nav!.children[0].className).toEqual('AptoTabNav-item AptoTabNav-item--active');
+    expect(nav!.children[0].className).toEqual(
+      'AptoTabNav-item AptoTabNav-item--active'
+    );
     expect(nav!.children[1].className).toEqual('AptoTabNav-item');
-    expect(panes!.children[0].className).toEqual('AptoTabPane AptoTabPane--active');
+    expect(panes!.children[0].className).toEqual(
+      'AptoTabPane AptoTabPane--active'
+    );
     expect(panes!.children[1].className).toEqual('AptoTabPane');
 
     expect(onActive).toHaveBeenCalledWith(0);
@@ -119,15 +137,15 @@ describe('Tab Component', () => {
     const props = {
       onActive
     };
-    const {
-      container
-    } = render(
+    const { container } = render(
       <AptoTabs {...props}>
         <AptoTab title="Tab 1">Tab 1 Content</AptoTab>
         <AptoTab title="Tab 2">Tab 2 Content</AptoTab>
       </AptoTabs>
     );
-    const nav = container.querySelector('.AptoTabGroup .AptoTabNav-wrapper .AptoTabNav');
+    const nav = container.querySelector(
+      '.AptoTabGroup .AptoTabNav-wrapper .AptoTabNav'
+    );
 
     it('home key', () => {
       if (nav) {

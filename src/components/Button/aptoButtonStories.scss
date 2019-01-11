@@ -1,0 +1,8 @@
+@import '../../scss/theme/variables.scss';
+
+.buttonStory {
+  &.whiteButton {
+    background-color: $blue-500;
+    padding: 3rem;
+  }
+}

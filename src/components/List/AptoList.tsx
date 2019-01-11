@@ -11,13 +11,7 @@ const COMPONENT_PREFIX = 'AptoList';
 
 export class AptoList extends React.Component<AptoListDisplayProps> {
   public render() {
-    const {
-      type,
-      className,
-      forwardRef,
-      children,
-      ...rest
-    } = this.props;
+    const { type, className, forwardRef, children, ...rest } = this.props;
 
     const classes = classNames(
       COMPONENT_PREFIX,
@@ -28,11 +22,8 @@ export class AptoList extends React.Component<AptoListDisplayProps> {
     const Component: any = type || 'div';
 
     return (
-      <Component
-        {...rest}
-        ref={forwardRef}
-        className={classes}>
-          {children}
+      <Component {...rest} ref={forwardRef} className={classes}>
+        {children}
       </Component>
     );
   }

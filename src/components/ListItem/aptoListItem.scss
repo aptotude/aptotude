@@ -1,51 +1,51 @@
 @import '../../scss/theme/variables.scss';
 
 .AptoListItem {
-    display: block;
-    width: 100%;
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background-color: $white;
+
+  .AptoListItem-content {
+    padding: 1.4rem 1.6rem;
     margin: 0;
-    padding: 0;
-    position: relative;
-    background-color: $white;
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 1px solid $gray-450;
+  }
 
+  &.AptoListItem--link {
+    cursor: pointer;
+    &:after {
+      content: '';
+      display: inline-block;
+      border-right: 2px solid $gray-550;
+      border-bottom: 2px solid $gray-550;
+      width: 8px;
+      height: 8px;
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: rotate(-45deg) translateY(-50%);
+    }
     .AptoListItem-content {
-        padding: 1.4rem 1.6rem;
-        margin: 0;
-        width: 100%;
-        overflow: hidden;
-        border-bottom: 1px solid $gray-450;
+      padding-right: 3.6rem;
     }
+  }
 
-    &.AptoListItem--link {
-        cursor: pointer;
-        &:after {
-            content: "";
-            display: inline-block;
-            border-right: 2px solid $gray-550;
-            border-bottom: 2px solid $gray-550;
-            width: 8px;
-            height: 8px;
-            position: absolute;
-            right: 15px;
-            top: 50%;
-            transform: rotate(-45deg) translateY(-50%);
-        }
-        .AptoListItem-content {
-            padding-right: 3.6rem;
-        }
+  &.AptoListItem--empty {
+    color: $gray-500;
+    .AptoListItem-content {
+      padding-left: 3.6rem;
+      padding-right: 3.6rem;
+      border-bottom-color: transparent;
     }
+  }
 
-    &.AptoListItem--empty {
-        color: $gray-500;
-        .AptoListItem-content {
-            padding-left: 3.6rem;
-            padding-right: 3.6rem;
-            border-bottom-color: transparent;
-        }
-    }
-
-    &.AptoListItem--link:hover,
-    &.AptoListItem--active {
-        background-color: $gray-300;
-    }
+  &.AptoListItem--link:hover,
+  &.AptoListItem--active {
+    background-color: $gray-300;
+  }
 }

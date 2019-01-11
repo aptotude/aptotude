@@ -10,7 +10,9 @@ export interface AptoContainerDisplayProps extends StandardTypes {
   fixed?: boolean;
 }
 
-export class AptoContainer extends React.PureComponent<AptoContainerDisplayProps> {
+export class AptoContainer extends React.PureComponent<
+  AptoContainerDisplayProps
+> {
   public static defaultProps = {
     scroll: false,
     fixed: false
@@ -34,10 +36,7 @@ export class AptoContainer extends React.PureComponent<AptoContainerDisplayProps
     );
 
     return (
-      <div
-        {...rest}
-        ref={forwardRef}
-        className={classes}>
+      <div {...rest} ref={forwardRef} className={classes}>
         {children}
       </div>
     );

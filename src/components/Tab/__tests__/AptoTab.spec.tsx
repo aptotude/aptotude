@@ -10,15 +10,15 @@ describe('Tab Component', () => {
       active: false,
       title: 'Tab'
     };
-    const {
-      container
-    } = render(
-      <AptoTab {...props} />
-    );
+    const { container } = render(<AptoTab {...props} />);
     const node = container.querySelector('button.AptoTabNav-item');
     expect(node!.className).toEqual('AptoTabNav-item');
-    expect(node!.getAttribute('id')).toEqual(`AptoTabNav-${props.tabGroupId}-${props.tabIndex}`);
-    expect(node!.getAttribute('aria-controls')).toEqual(`AptoTabPane-${props.tabGroupId}-${props.tabIndex}`);
+    expect(node!.getAttribute('id')).toEqual(
+      `AptoTabNav-${props.tabGroupId}-${props.tabIndex}`
+    );
+    expect(node!.getAttribute('aria-controls')).toEqual(
+      `AptoTabPane-${props.tabGroupId}-${props.tabIndex}`
+    );
     expect(node!.getAttribute('aria-selected')).toEqual('false');
     expect(node!.getAttribute('role')).toEqual('tab');
     expect(node!.getAttribute('tabIndex')).toEqual('-1');
@@ -29,11 +29,7 @@ describe('Tab Component', () => {
     const props = {
       active: true
     };
-    const {
-      container
-    } = render(
-      <AptoTab {...props} />
-    );
+    const { container } = render(<AptoTab {...props} />);
     const node = container.querySelector('button.AptoTabNav-item');
     expect(node!.className).toEqual('AptoTabNav-item AptoTabNav-item--active');
     expect(node!.getAttribute('aria-selected')).toEqual('true');
@@ -44,26 +40,16 @@ describe('Tab Component', () => {
     const props = {
       className: 'foo'
     };
-    const {
-      container
-    } = render(
-      <AptoTab {...props} />
-    );
+    const { container } = render(<AptoTab {...props} />);
     const node = container.querySelector('button.AptoTabNav-item');
     expect(node!.className).toEqual('AptoTabNav-item foo');
   });
 
   it('renders custom html title', () => {
     const props = {
-      title: (
-        <em>Some Title</em>
-      )
+      title: <em>Some Title</em>
     };
-    const {
-      container
-    } = render(
-      <AptoTab {...props} />
-    );
+    const { container } = render(<AptoTab {...props} />);
     const node = container.querySelector('button.AptoTabNav-item');
     expect(node!.innerHTML).toEqual('<em>Some Title</em>');
   });
@@ -73,11 +59,7 @@ describe('Tab Component', () => {
     const props = {
       onActivate
     };
-    const {
-      container
-    } = render(
-      <AptoTab {...props} />
-    );
+    const { container } = render(<AptoTab {...props} />);
     const node = container.querySelector('button.AptoTabNav-item');
     if (node) {
       fireEvent.click(node);

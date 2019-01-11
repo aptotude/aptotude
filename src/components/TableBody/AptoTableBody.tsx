@@ -6,14 +6,9 @@ const COMPONENT_PREFIX = 'AptoTableBody';
 
 export class AptoTableBody extends React.PureComponent<StandardTypes> {
   public render() {
-    const {
-      children,
-      ...rest
-    } = this.props;
+    const { children, ...rest } = this.props;
 
-    const classes = classNames(
-      COMPONENT_PREFIX
-    );
+    const classes = classNames(COMPONENT_PREFIX);
 
     return (
       <tbody className={classes} {...rest}>

@@ -11,27 +11,21 @@ export interface AptoFormControlLabelDisplayProps {
   id?: string;
 }
 
-export class AptoFormControlLabel extends React.Component<AptoFormControlLabelDisplayProps> {
+export class AptoFormControlLabel extends React.Component<
+  AptoFormControlLabelDisplayProps
+> {
   public render() {
-    const {
-      label,
-      error,
-      required,
-      id
-    } = this.props;
+    const { label, error, required, id } = this.props;
 
     const classes = classNames(
       COMPONENT_PREFIX,
       required && `${COMPONENT_PREFIX}--required`,
-      error && `${COMPONENT_PREFIX}--error`,
+      error && `${COMPONENT_PREFIX}--error`
     );
 
     if (label) {
       return (
-        <label
-          htmlFor={id || undefined}
-          className={classes}
-        >
+        <label htmlFor={id || undefined} className={classes}>
           {label} {required ? '*' : null}
         </label>
       );

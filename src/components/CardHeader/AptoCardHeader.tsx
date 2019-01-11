@@ -9,15 +9,11 @@ export interface AptoCardHeaderDisplayProps extends StandardTypes {
   padBottom?: boolean;
 }
 
-export class AptoCardHeader extends React.Component<AptoCardHeaderDisplayProps> {
+export class AptoCardHeader extends React.Component<
+  AptoCardHeaderDisplayProps
+> {
   public render() {
-    const {
-      padBottom,
-      className,
-      forwardRef,
-      children,
-      ...rest
-    } = this.props;
+    const { padBottom, className, forwardRef, children, ...rest } = this.props;
 
     const classes = classNames(
       COMPONENT_PREFIX,
@@ -26,11 +22,8 @@ export class AptoCardHeader extends React.Component<AptoCardHeaderDisplayProps> 
     );
 
     return (
-      <div
-        {...rest}
-        ref={forwardRef}
-        className={classes}>
-          {children}
+      <div {...rest} ref={forwardRef} className={classes}>
+        {children}
       </div>
     );
   }

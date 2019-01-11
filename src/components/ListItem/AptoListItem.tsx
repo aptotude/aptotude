@@ -43,13 +43,8 @@ export class AptoListItem extends React.Component<AptoListItemDisplayProps> {
     const Component: any = type || 'div';
 
     return (
-      <Component
-        {...rest}
-        ref={forwardRef}
-        className={classes}>
-          <div className="AptoListItem-content">
-            {children}
-          </div>
+      <Component {...rest} ref={forwardRef} className={classes}>
+        <div className="AptoListItem-content">{children}</div>
       </Component>
     );
   }

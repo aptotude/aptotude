@@ -4,9 +4,7 @@ import { AptoList } from '../AptoList';
 
 describe('List Component', () => {
   it('renders', () => {
-    const {
-      container
-    } = render(
+    const { container } = render(
       <AptoList>
         <div>a</div>
       </AptoList>
@@ -18,9 +16,7 @@ describe('List Component', () => {
   });
 
   it('renders custom className', () => {
-    const {
-      container
-    } = render(
+    const { container } = render(
       <AptoList className="foo">
         <div>a</div>
       </AptoList>
@@ -31,9 +27,7 @@ describe('List Component', () => {
   });
 
   it('renders ul', () => {
-    const {
-      container
-    } = render(
+    const { container } = render(
       <AptoList type="ul">
         <li>a</li>
       </AptoList>
@@ -44,9 +38,7 @@ describe('List Component', () => {
   });
 
   it('renders ol', () => {
-    const {
-      container
-    } = render(
+    const { container } = render(
       <AptoList type="ol">
         <li>a</li>
       </AptoList>
