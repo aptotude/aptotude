@@ -1,8 +1,10 @@
 import React from 'react';
-import { render } from 'react-testing-library';
+import { render, cleanup } from 'react-testing-library';
 import { AptoHelpText } from '../AptoHelpText';
 
 describe('Help Text Component', () => {
+  afterEach(cleanup);
+
   it('renders', () => {
     const { container } = render(<AptoHelpText>help me</AptoHelpText>);
 

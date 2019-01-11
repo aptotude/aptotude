@@ -1,8 +1,10 @@
 import React from 'react';
 import { AptoThumbnail } from '../AptoThumbnail';
-import { render } from 'react-testing-library';
+import { render, cleanup } from 'react-testing-library';
 
 describe('Thumbnail Component', () => {
+  afterEach(cleanup);
+
   it('Thumbnail renders', () => {
     const { container } = render(<AptoThumbnail />);
 

@@ -1,8 +1,10 @@
 import React from 'react';
-import { render } from 'react-testing-library';
+import { render, cleanup } from 'react-testing-library';
 import { AptoCardContent } from '../AptoCardContent';
 
 describe('Card Content Component', () => {
+  afterEach(cleanup);
+
   it('Renders', () => {
     const { container } = render(<AptoCardContent />);
 

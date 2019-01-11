@@ -1,8 +1,10 @@
 import React from 'react';
 import { AptoParagraph } from '../AptoParagraph';
-import { render } from 'react-testing-library';
+import { render, cleanup } from 'react-testing-library';
 
 describe('Paragraph Component', () => {
+  afterEach(cleanup);
+
   it('Paragraph renders', () => {
     const { container } = render(<AptoParagraph />);
 

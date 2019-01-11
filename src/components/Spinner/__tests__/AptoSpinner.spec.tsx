@@ -1,8 +1,10 @@
 import React from 'react';
 import { AptoSpinner } from '../AptoSpinner';
-import { render } from 'react-testing-library';
+import { render, cleanup } from 'react-testing-library';
 
 describe('Spinner Component', () => {
+  afterEach(cleanup);
+
   it('Spinner renders', () => {
     const { container } = render(<AptoSpinner />);
 

@@ -1,8 +1,10 @@
 import React from 'react';
 import { AptoShimmer } from '../AptoShimmer';
-import { render } from 'react-testing-library';
+import { render, cleanup } from 'react-testing-library';
 
 describe('Shimmer Component', () => {
+  afterEach(cleanup);
+
   it('Shimmer renders', () => {
     const { container } = render(<AptoShimmer />);
 

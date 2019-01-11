@@ -1,8 +1,10 @@
 import React from 'react';
 import { AptoContainer } from '../AptoContainer';
-import { render } from 'react-testing-library';
+import { render, cleanup } from 'react-testing-library';
 
 describe('Container Component', () => {
+  afterEach(cleanup);
+
   it('Container renders', () => {
     const { container } = render(<AptoContainer />);
     const node = container.querySelector('.AptoContainer');
