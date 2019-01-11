@@ -1,8 +1,10 @@
 import React from "react";
-import { render, fireEvent } from "react-testing-library";
+import { render, fireEvent, cleanup } from "react-testing-library";
 import { AptoInput } from "../AptoInput";
 
 describe("AptoInput", () => {
+  afterEach(cleanup);
+
   it("matches snapshot", () => {
     const { asFragment } = render(<AptoInput />);
     expect(asFragment()).toMatchSnapshot();

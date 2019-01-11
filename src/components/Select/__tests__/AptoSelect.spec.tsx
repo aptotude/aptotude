@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "react-testing-library";
+import { render, cleanup } from "react-testing-library";
 import { AptoSelect } from "../AptoSelect";
 
 const options = [
@@ -8,6 +8,8 @@ const options = [
 ];
 
 describe("AptoSelect", () => {
+  afterEach(cleanup);
+
   it("matches snapshot", () => {
     const { asFragment } = render(
       <AptoSelect placeholder="Select a Person" options={[options]} />

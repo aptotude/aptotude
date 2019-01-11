@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "react-testing-library";
+import { render, cleanup } from "react-testing-library";
 import { AptoForm } from "../AptoForm";
 
 const Form = () => (
@@ -12,6 +12,8 @@ const Form = () => (
 );
 
 describe("AptoForm", () => {
+  afterEach(cleanup);
+  
   it("makes fields required", () => {
     const { asFragment } = render(<Form />);
     expect(asFragment()).toMatchSnapshot();
