@@ -33,6 +33,14 @@ describe('Button Component', () => {
     );
   });
 
+  it('White Button renders', () => {
+    const { container } = render(<AptoButton variant="white" />);
+    const node = container.querySelector('button.AptoButton');
+    expect(node!.className).toEqual(
+      'AptoButton AptoButton--button AptoButton--white'
+    );
+  });
+
   it('SecondaryDark Button renders', () => {
     const { container } = render(<AptoButton variant="secondaryDark" />);
     const node = container.querySelector('button.AptoButton');
@@ -72,6 +80,16 @@ describe('Button Component', () => {
     const node = container.querySelector('button.AptoButton');
     expect(node!.className).toEqual(
       'AptoButton AptoButton--link AptoButton--secondary'
+    );
+  });
+
+  it('White Link button renders', () => {
+    const { container } = render(
+      <AptoButton kind="link" variant="white" />
+    );
+    const node = container.querySelector('button.AptoButton');
+    expect(node!.className).toEqual(
+      'AptoButton AptoButton--link AptoButton--white'
     );
   });
 

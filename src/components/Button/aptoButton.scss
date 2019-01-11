@@ -5,6 +5,7 @@ $button-font-size: 1.4rem !default; // 14px
 $button-font-weight: $font-weight-base !default;
 $button-padding: 0.7rem 2rem !default;
 $button-border-radius: 3px !default;
+
 $button-primary-color: $white !default;
 $button-primary-bg: $blue-500 !default;
 $button-primary-disabled-bg: $gray-400 !default;
@@ -42,15 +43,24 @@ $button-danger-link-disabled-color: lighten(
 ) !default;
 
 $button-danger-color: $white !default;
-$button-danger-BackgroundColor: $red-500 !default;
-$button-danger-hover-BackgroundColor: darken(
-  $button-danger-BackgroundColor,
+$button-danger-backgroundColor: $red-500 !default;
+$button-danger-hover-backgroundColor: darken(
+  $button-danger-backgroundColor,
   15%
 ) !default;
-$button-danger-disabled-BackgroundColor: lighten(
-  $button-danger-BackgroundColor,
+$button-danger-disabled-backgroundColor: lighten(
+  $button-danger-backgroundColor,
   15%
 ) !default;
+
+$button-white-color: $white !default;
+$button-white-backgroundColor: transparent !default;
+$button-white-disabled-backgroundColor: transparent;
+$button-white-hover-backgroundColor: rgba(255, 255, 255, 0.2);
+
+$button-white-link-color: $white !default;
+$button-white-link-hover-color: darken($button-white-color, 10%) !default;
+$button-white-link-disabled-color: rgba(255, 255, 255, 0.5);
 
 $button-holdProgressBar-backgroundColor: $red-500 !default;
 $button-holdPregressContainer-backgroundColor: $gray-500 !default;
@@ -94,20 +104,6 @@ $button-holdPregressContainer-size: 3px !default;
     background-color: $button-primary-disabled-bg;
   }
 }
-
-.AptoButton--danger {
-  color: $button-danger-color;
-  background-color: $button-danger-BackgroundColor;
-  &:hover,
-  &.AptoButton--active {
-    background-color: $button-danger-hover-BackgroundColor;
-  }
-  &:disabled,
-  &.AptoButton--disabled {
-    background-color: $button-danger-disabled-BackgroundColor;
-  }
-}
-
 .AptoButton--link.AptoButton--primary {
   color: $button-primary-link-color;
   background-color: transparent;
@@ -118,6 +114,56 @@ $button-holdPregressContainer-size: 3px !default;
   &:disabled,
   &.AptoButton--disabled {
     color: $button-primary-link-disabled-color;
+  }
+}
+
+.AptoButton--danger {
+  color: $button-danger-color;
+  background-color: $button-danger-backgroundColor;
+  &:hover,
+  &.AptoButton--active {
+    background-color: $button-danger-hover-backgroundColor;
+  }
+  &:disabled,
+  &.AptoButton--disabled {
+    background-color: $button-danger-disabled-backgroundColor;
+  }
+}
+.AptoButton--link.AptoButton--danger {
+  color: $button-danger-link-color;
+  background-color: transparent;
+  &:hover,
+  &.AptoButton--active {
+    color: $button-danger-link-hover-color;
+  }
+  &:disabled,
+  &.AptoButton--disabled {
+    color: $button-danger-link-disabled-color;
+  }
+}
+
+.AptoButton--white {
+  color: $button-white-color;
+  background-color: $button-white-backgroundColor;
+  &:hover,
+  &.AptoButton--active {
+    background-color: $button-white-hover-backgroundColor;
+  }
+  &:disabled,
+  &.AptoButton--disabled {
+    background-color: $button-white-disabled-backgroundColor;
+  }
+}
+.AptoButton--link.AptoButton--white {
+  color: $button-white-link-color;
+  background-color: transparent;
+  &:hover,
+  &.AptoButton--active {
+    color: $button-white-link-hover-color;
+  }
+  &:disabled,
+  &.AptoButton--disabled {
+    color: $button-white-link-disabled-color;
   }
 }
 
@@ -144,19 +190,6 @@ $button-holdPregressContainer-size: 3px !default;
   &:disabled,
   &.AptoButton--disabled {
     color: $button-secondaryDark-link-disabled-color;
-  }
-}
-
-.AptoButton--link.AptoButton--danger {
-  color: $button-danger-link-color;
-  background-color: transparent;
-  &:hover,
-  &.AptoButton--active {
-    color: $button-danger-link-hover-color;
-  }
-  &:disabled,
-  &.AptoButton--disabled {
-    color: $button-danger-link-disabled-color;
   }
 }
 

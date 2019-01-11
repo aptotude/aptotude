@@ -8,6 +8,7 @@ export type ButtonVariant =
   | 'primary'
   | 'secondary'
   | 'secondaryDark'
+  | 'white'
   | 'danger';
 
 function missingHref(href: undefined | string) {
