@@ -84,9 +84,7 @@ describe('Button Component', () => {
   });
 
   it('White Link button renders', () => {
-    const { container } = render(
-      <AptoButton kind="link" variant="white" />
-    );
+    const { container } = render(<AptoButton kind="link" variant="white" />);
     const node = container.querySelector('button.AptoButton');
     expect(node!.className).toEqual(
       'AptoButton AptoButton--link AptoButton--white'
