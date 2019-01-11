@@ -1,10 +1,9 @@
 @import '../../scss/theme/variables.scss';
 
-$labelFontFamily:       $font-family-base;
-$labelColor:            $gray-650;
-$labelFontSize:         $font-size-md;
-$fieldFocusColor:       $blue-500;
-
+$labelFontFamily: $font-family-base;
+$labelColor: $gray-650;
+$labelFontSize: $font-size-md;
+$fieldFocusColor: $blue-500;
 
 .AptoFormControl-label {
   color: $labelColor;

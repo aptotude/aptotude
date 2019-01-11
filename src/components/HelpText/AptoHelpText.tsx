@@ -34,11 +34,8 @@ export class AptoHelpText extends React.Component<AptoHelpTextDisplayProps> {
     );
 
     return (
-      <div
-        {...rest}
-        ref={forwardRef}
-        className={classes}>
-          {children}
+      <div {...rest} ref={forwardRef} className={classes}>
+        {children}
       </div>
     );
   }

@@ -1,38 +1,38 @@
 @import '../../scss/mixins/_grid.scss';
 
 .AptoRow {
-    @include make-apto-row();
-    &.AptoRow--noGutter {
-        margin-right: 0;
-        margin-left: 0;
-        > .AptoCol,
-        > [class*="AptoCol-"] {
-            padding-right: 0;
-            padding-left: 0;
-        }
+  @include make-apto-row();
+  &.AptoRow--noGutter {
+    margin-right: 0;
+    margin-left: 0;
+    > .AptoCol,
+    > [class*='AptoCol-'] {
+      padding-right: 0;
+      padding-left: 0;
     }
-    &.AptoRow--alignStart {
-        align-items: flex-start;
-    }
-    &.AptoRow--alignCenter {
-        align-items: center;
-    }
-    &.AptoRow--alignEnd {
-        align-items: flex-end;
-    }
-    &.AptoRow--justifyStart {
-        justify-content: flex-start;
-    }
-    &.AptoRow--justifyCenter {
-        justify-content: center;
-    }
-    &.AptoRow--justifyEnd {
-        justify-content: flex-end;
-    }
-    &.AptoRow--justifyAround {
-        justify-content: space-around;
-    }
-    &.AptoRow--justifyBetween {
-        justify-content: space-between;
-    }
+  }
+  &.AptoRow--alignStart {
+    align-items: flex-start;
+  }
+  &.AptoRow--alignCenter {
+    align-items: center;
+  }
+  &.AptoRow--alignEnd {
+    align-items: flex-end;
+  }
+  &.AptoRow--justifyStart {
+    justify-content: flex-start;
+  }
+  &.AptoRow--justifyCenter {
+    justify-content: center;
+  }
+  &.AptoRow--justifyEnd {
+    justify-content: flex-end;
+  }
+  &.AptoRow--justifyAround {
+    justify-content: space-around;
+  }
+  &.AptoRow--justifyBetween {
+    justify-content: space-between;
+  }
 }

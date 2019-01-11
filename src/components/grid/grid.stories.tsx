@@ -74,8 +74,12 @@ storiesOf('Grid', module)
     return (
       <AptoContainer className="gridStories">
         <AptoRow>
-          <AptoCol xs="12" sm="5" md="8" lg="6">xs="12" sm="5" md="8" lg="6"</AptoCol>
-          <AptoCol xs="6" sm="7" md="4" lg="6">xs="6" sm="7" md="4" lg="6"</AptoCol>
+          <AptoCol xs="12" sm="5" md="8" lg="6">
+            xs="12" sm="5" md="8" lg="6"
+          </AptoCol>
+          <AptoCol xs="6" sm="7" md="4" lg="6">
+            xs="6" sm="7" md="4" lg="6"
+          </AptoCol>
         </AptoRow>
       </AptoContainer>
     );
@@ -95,7 +99,7 @@ storiesOf('Grid', module)
     return (
       <AptoContainer className="gridStories gridStories-valign">
         <AptoRow align="start">
-         <AptoCol>start</AptoCol>
+          <AptoCol>start</AptoCol>
           <AptoCol>start</AptoCol>
           <AptoCol>start</AptoCol>
         </AptoRow>
@@ -180,5 +184,4 @@ storiesOf('Grid', module)
         </AptoRow>
       </AptoContainer>
     );
-  })
-;
+  });

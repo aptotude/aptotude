@@ -4,11 +4,11 @@ import './aptoTab.scss';
 import classNames from 'classnames';
 
 export interface AptoTabDisplayProps extends StandardTypes {
-  active?: boolean,
-  tabGroupId?: number,
-  tabIndex?: number
-  title?: string | JSX.Element,
-  onActivate?: () => void
+  active?: boolean;
+  tabGroupId?: number;
+  tabIndex?: number;
+  title?: string | JSX.Element;
+  onActivate?: () => void;
 }
 
 const COMPONENT_PREFIX = 'AptoTabNav-item';
@@ -50,7 +50,7 @@ export class AptoTab extends React.Component<AptoTabDisplayProps> {
       className
     );
 
-    return(
+    return (
       <button
         key={`AptoTabNav-${tabGroupId}-${tabIndex}`}
         ref={forwardRef}
@@ -61,7 +61,8 @@ export class AptoTab extends React.Component<AptoTabDisplayProps> {
         aria-controls={`AptoTabPane-${tabGroupId}-${tabIndex}`}
         aria-selected={active}
         onClick={this.onClickTab}
-        {...rest}>
+        {...rest}
+      >
         {title}
       </button>
     );

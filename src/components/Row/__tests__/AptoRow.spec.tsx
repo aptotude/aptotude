@@ -4,39 +4,25 @@ import { render } from 'react-testing-library';
 
 describe('Row Component', () => {
   it('renders', () => {
-    const {
-      container
-    } = render(
-      <AptoRow />
-    );
+    const { container } = render(<AptoRow />);
     const node = container.querySelector('.AptoRow');
     expect(node!.className).toEqual('AptoRow');
   });
 
   it('Row without gutter renders', () => {
-    const {
-      container
-    } = render(
-      <AptoRow noGutter />
-    );
+    const { container } = render(<AptoRow noGutter />);
     const node = container.querySelector('.AptoRow');
     expect(node!.className).toEqual('AptoRow AptoRow--noGutter');
   });
 
   it('Row adds custom className', () => {
-    const {
-      container
-    } = render(
-      <AptoRow className="foo" />
-    );
+    const { container } = render(<AptoRow className="foo" />);
     const node = container.querySelector('.AptoRow');
     expect(node!.className).toEqual('AptoRow foo');
   });
 
   it('Renders children', () => {
-    const {
-      container
-    } = render(
+    const { container } = render(
       <AptoRow>
         <div>Foo</div>
       </AptoRow>

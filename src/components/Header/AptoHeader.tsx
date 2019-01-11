@@ -15,13 +15,7 @@ export class AptoHeader extends React.PureComponent<AptoHeaderDisplayProps> {
   };
 
   public render() {
-    const {
-      type,
-      className,
-      forwardRef,
-      children,
-      ...rest
-    } = this.props;
+    const { type, className, forwardRef, children, ...rest } = this.props;
 
     let Component: any = 'h1';
 
@@ -54,11 +48,8 @@ export class AptoHeader extends React.PureComponent<AptoHeaderDisplayProps> {
     );
 
     return (
-      <Component
-        {...rest}
-        ref={forwardRef}
-        className={classes}>
-          {children}
+      <Component {...rest} ref={forwardRef} className={classes}>
+        {children}
       </Component>
     );
   }

@@ -9,15 +9,15 @@ describe('Tab Pane Component', () => {
       index: 0,
       active: false
     };
-    const {
-      container
-    } = render(
-      <AptoTabPane {...props}>Stuff</AptoTabPane>
-    );
+    const { container } = render(<AptoTabPane {...props}>Stuff</AptoTabPane>);
     const node = container.querySelector('.AptoTabPane');
     expect(node!.className).toEqual('AptoTabPane');
-    expect(node!.getAttribute('id')).toEqual(`AptoTabPane-${props.group}-${props.index}`);
-    expect(node!.getAttribute('aria-labelledby')).toEqual(`AptoTabNav-${props.group}-${props.index}`);
+    expect(node!.getAttribute('id')).toEqual(
+      `AptoTabPane-${props.group}-${props.index}`
+    );
+    expect(node!.getAttribute('aria-labelledby')).toEqual(
+      `AptoTabNav-${props.group}-${props.index}`
+    );
     expect(node!.getAttribute('aria-hidden')).toEqual('true');
     expect(node!.getAttribute('role')).toEqual('tabpanel');
     expect(node!.innerHTML).toEqual('');
@@ -29,11 +29,7 @@ describe('Tab Pane Component', () => {
       index: 0,
       active: true
     };
-    const {
-      container
-    } = render(
-      <AptoTabPane {...props}>Stuff</AptoTabPane>
-    );
+    const { container } = render(<AptoTabPane {...props}>Stuff</AptoTabPane>);
     const node = container.querySelector('.AptoTabPane');
     expect(node!.className).toEqual('AptoTabPane AptoTabPane--active');
     expect(node!.getAttribute('aria-hidden')).toEqual('false');
@@ -47,11 +43,7 @@ describe('Tab Pane Component', () => {
       active: true,
       className: 'foo'
     };
-    const {
-      container
-    } = render(
-      <AptoTabPane {...props} />
-    );
+    const { container } = render(<AptoTabPane {...props} />);
     const node = container.querySelector('.AptoTabPane');
     expect(node!.className).toEqual('AptoTabPane AptoTabPane--active foo');
   });

@@ -9,35 +9,36 @@ $tab-nav-active-font-weight: $font-weight-bold !default;
 $tab-nav-item-padding: 1.2rem 0 !default;
 
 .AptoTabNav-wrapper {
-    margin-bottom: $tab-nav-margin;
+  margin-bottom: $tab-nav-margin;
 }
 .AptoTabNav {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: -1px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: -1px;
 }
 .AptoTabNav-item {
-    display: inline-block;
-    flex: 1 1 auto;
-    line-height: 1;
-    text-align: center;
-    text-decoration: none;
-    padding: $tab-nav-item-padding;
-    color: $tab-nav-font-color;
-    font-size: $tab-nav-font-size;
-    border: none;
-    border-bottom: 2px solid transparent;
-    transition: color .15s ease-in-out, border-color .15s ease-in-out, font-weight .15s ease-in-out;
-    outline: none;
-    margin: 0;
-    border-radius: 0;
-    &.AptoTabNav-item--active {
-        border-bottom-color: $tab-nav-active-border-color;
-        color: $tab-nav-active-color;
-        font-weight: $tab-nav-active-font-weight;
-    }
-    &:focus,
-    &:hover {
-        color: $tab-nav-active-color;
-    }
+  display: inline-block;
+  flex: 1 1 auto;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  padding: $tab-nav-item-padding;
+  color: $tab-nav-font-color;
+  font-size: $tab-nav-font-size;
+  border: none;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    font-weight 0.15s ease-in-out;
+  outline: none;
+  margin: 0;
+  border-radius: 0;
+  &.AptoTabNav-item--active {
+    border-bottom-color: $tab-nav-active-border-color;
+    color: $tab-nav-active-color;
+    font-weight: $tab-nav-active-font-weight;
+  }
+  &:focus,
+  &:hover {
+    color: $tab-nav-active-color;
+  }
 }

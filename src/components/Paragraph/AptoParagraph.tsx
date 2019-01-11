@@ -9,15 +9,11 @@ export interface AptoParagraphDisplayProps extends StandardTypes {
 
 const COMPONENT_PREFIX = 'AptoParagraph';
 
-export class AptoParagraph extends React.PureComponent<AptoParagraphDisplayProps> {
+export class AptoParagraph extends React.PureComponent<
+  AptoParagraphDisplayProps
+> {
   public render() {
-    const {
-      compact,
-      className,
-      forwardRef,
-      children,
-      ...rest
-    } = this.props;
+    const { compact, className, forwardRef, children, ...rest } = this.props;
 
     const classes = classNames(
       COMPONENT_PREFIX,
@@ -26,11 +22,8 @@ export class AptoParagraph extends React.PureComponent<AptoParagraphDisplayProps
     );
 
     return (
-      <p
-        {...rest}
-        ref={forwardRef}
-        className={classes}>
-          {children}
+      <p {...rest} ref={forwardRef} className={classes}>
+        {children}
       </p>
     );
   }

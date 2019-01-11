@@ -7,10 +7,12 @@ const COMPONENT_PREFIX = 'AptoCardFooter';
 
 export interface AptoCardFooterDisplayProps extends StandardTypes {
   padTop?: boolean;
-  align?: 'left' | 'right' | 'center' | undefined
+  align?: 'left' | 'right' | 'center' | undefined;
 }
 
-export class AptoCardFooter extends React.Component<AptoCardFooterDisplayProps> {
+export class AptoCardFooter extends React.Component<
+  AptoCardFooterDisplayProps
+> {
   public render() {
     const {
       padTop,
@@ -29,11 +31,8 @@ export class AptoCardFooter extends React.Component<AptoCardFooterDisplayProps> 
     );
 
     return (
-      <div
-        {...rest}
-        ref={forwardRef}
-        className={classes}>
-          {children}
+      <div {...rest} ref={forwardRef} className={classes}>
+        {children}
       </div>
     );
   }

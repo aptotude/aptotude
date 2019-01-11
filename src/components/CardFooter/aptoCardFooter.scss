@@ -1,19 +1,19 @@
 @import '../Card/aptoCard.scss';
 
 .AptoCardFooter {
-    display: flex;
-    padding: $card-footer-padding;
-    justify-content: space-between;
-    &.AptoCardFooter--padTop {
-        padding-top: $card-footer-top-padding;
-    }
-    &.AptoCardFooter--left {
-        justify-content: flex-start;
-    }
-    &.AptoCardFooter--right {
-        justify-content: flex-end;
-    }
-    &.AptoCardFooter--center {
-        justify-content: center;
-    }
+  display: flex;
+  padding: $card-footer-padding;
+  justify-content: space-between;
+  &.AptoCardFooter--padTop {
+    padding-top: $card-footer-top-padding;
+  }
+  &.AptoCardFooter--left {
+    justify-content: flex-start;
+  }
+  &.AptoCardFooter--right {
+    justify-content: flex-end;
+  }
+  &.AptoCardFooter--center {
+    justify-content: center;
+  }
 }

@@ -1,21 +1,21 @@
 .gridStories {
-    .AptoCol {
-        padding-top: .75rem;
-        padding-bottom: .75rem;
-        background-color: #A9A9A9;
-        border: 1px solid #808080;
+  .AptoCol {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    background-color: #a9a9a9;
+    border: 1px solid #808080;
+  }
+  .scrollableWrapper {
+    height: 200px;
+  }
+  .scrollableHeight {
+    height: 500px;
+  }
+  &.gridStories-valign {
+    .AptoRow {
+      height: 100px;
+      margin-bottom: 1rem;
+      background: #dcdcdc;
     }
-    .scrollableWrapper {
-        height: 200px;
-    }
-    .scrollableHeight {
-        height: 500px;
-    }
-    &.gridStories-valign {
-        .AptoRow {
-            height: 100px;
-            margin-bottom: 1rem;
-            background: #DCDCDC;
-        }
-    }
+  }
 }

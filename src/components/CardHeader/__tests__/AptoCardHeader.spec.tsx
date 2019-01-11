@@ -4,43 +4,31 @@ import { AptoCardHeader } from '../AptoCardHeader';
 
 describe('Card Header Component', () => {
   it('Renders', () => {
-    const {
-      container
-    } = render(
-      <AptoCardHeader/>
-    );
+    const { container } = render(<AptoCardHeader />);
 
     const node = container.querySelector('.AptoCardHeader');
     expect(node!.className).toEqual('AptoCardHeader');
   });
 
   it('Renders padded bottom version', () => {
-    const {
-      container
-    } = render(
-      <AptoCardHeader padBottom />
-    );
+    const { container } = render(<AptoCardHeader padBottom />);
 
     const node = container.querySelector('.AptoCardHeader');
     expect(node!.className).toEqual('AptoCardHeader AptoCardHeader--padBottom');
   });
 
   it('Renders custom className', () => {
-    const {
-      container
-    } = render(
-      <AptoCardHeader className="foo" />
-    );
+    const { container } = render(<AptoCardHeader className="foo" />);
 
     const node = container.querySelector('.AptoCardHeader');
     expect(node!.className).toEqual('AptoCardHeader foo');
   });
 
   it('Renders children', () => {
-    const {
-      container
-    } = render(
-      <AptoCardHeader><div>foo</div></AptoCardHeader>
+    const { container } = render(
+      <AptoCardHeader>
+        <div>foo</div>
+      </AptoCardHeader>
     );
 
     const node = container.querySelector('.AptoCardHeader');

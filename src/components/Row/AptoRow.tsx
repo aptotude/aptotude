@@ -9,7 +9,14 @@ const COMPONENT_PREFIX = 'AptoRow';
 export interface AptoRowDisplayProps extends StandardTypes {
   noGutter?: boolean;
   align?: 'start' | 'center' | 'end' | null | undefined;
-  justify?: 'start' | 'center' | 'end' | 'around' | 'between' | null | undefined;
+  justify?:
+    | 'start'
+    | 'center'
+    | 'end'
+    | 'around'
+    | 'between'
+    | null
+    | undefined;
 }
 
 export class AptoRow extends React.PureComponent<AptoRowDisplayProps> {
@@ -37,10 +44,7 @@ export class AptoRow extends React.PureComponent<AptoRowDisplayProps> {
     );
 
     return (
-      <div
-        {...rest}
-        ref={forwardRef}
-        className={classes}>
+      <div {...rest} ref={forwardRef} className={classes}>
         {children}
       </div>
     );

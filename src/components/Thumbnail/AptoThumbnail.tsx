@@ -7,29 +7,16 @@ const COMPONENT_PREFIX = 'AptoThumbnail';
 
 class AptoThumbnail extends React.PureComponent<StandardTypes> {
   public render() {
-    const {
-      className,
-      forwardRef,
-      children,
-      ...rest
-    } = this.props;
+    const { className, forwardRef, children, ...rest } = this.props;
 
-    const classes = classNames(
-      COMPONENT_PREFIX,
-      className
-    );
+    const classes = classNames(COMPONENT_PREFIX, className);
 
     return (
-      <div
-        {...rest}
-        ref={forwardRef}
-        className={classes}>
-          {children}
+      <div {...rest} ref={forwardRef} className={classes}>
+        {children}
       </div>
     );
   }
 }
 
-export {
-  AptoThumbnail
-}
+export { AptoThumbnail };

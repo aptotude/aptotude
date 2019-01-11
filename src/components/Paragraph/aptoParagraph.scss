@@ -1,21 +1,21 @@
 @import '../../scss/theme/variables.scss';
 
 .AptoParagraph {
-    font-family: $font-family-base;
-    font-size: $font-size-base;
-    font-weight: $font-weight-base;
-    line-height: $line-height-base;
-    margin: 0;
-    padding: 0;
-    display: block;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  font-weight: $font-weight-base;
+  line-height: $line-height-base;
+  margin: 0;
+  padding: 0;
+  display: block;
 }
 
 // space successive paragraphs
 .AptoParagraph + .AptoParagraph {
-    padding-top: $grid-gutter-width-half;
+  padding-top: $grid-gutter-width-half;
 }
 
 // space successive compact paragraphs
 .AptoParagraph--compact + .AptoParagraph--compact {
-    padding-top: 0.2rem;
+  padding-top: 0.2rem;
 }

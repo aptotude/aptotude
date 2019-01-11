@@ -6,20 +6,16 @@ import './aptoTableCell.scss';
 const COMPONENT_PREFIX = 'AptoTableCell';
 
 export interface AptoTableCellDisplayProps extends StandardTypes {
-  type?: 'th' | 'td' | undefined,
-  scope?: 'col' | 'row' | undefined,
-  highlight?: 'danger' | 'primary' | 'warning' | 'success' | undefined
+  type?: 'th' | 'td' | undefined;
+  scope?: 'col' | 'row' | undefined;
+  highlight?: 'danger' | 'primary' | 'warning' | 'success' | undefined;
 }
 
-export class AptoTableCell extends React.PureComponent<AptoTableCellDisplayProps> {
+export class AptoTableCell extends React.PureComponent<
+  AptoTableCellDisplayProps
+> {
   public render() {
-    const {
-      type,
-      highlight,
-      scope,
-      children,
-      ...rest
-    } = this.props;
+    const { type, highlight, scope, children, ...rest } = this.props;
 
     const Component = type || 'td';
     const classes = classNames(
@@ -28,10 +24,7 @@ export class AptoTableCell extends React.PureComponent<AptoTableCellDisplayProps
     );
 
     return (
-      <Component
-        scope={scope || undefined}
-        className={classes}
-        {...rest}>
+      <Component scope={scope || undefined} className={classes} {...rest}>
         {children}
       </Component>
     );

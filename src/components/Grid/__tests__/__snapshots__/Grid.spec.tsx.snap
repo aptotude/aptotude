@@ -2,32 +2,32 @@
 
 exports[`Grid Component Grid renders 1`] = `
 <div
-  className="AptoContainer"
+  class="AptoContainer"
 >
   <div
-    className="AptoRow"
+    class="AptoRow"
   >
     <div
-      className="AptoCol"
+      class="AptoCol"
     >
       Foo
     </div>
     <div
-      className="AptoCol"
+      class="AptoCol"
     >
       Bar
     </div>
   </div>
   <div
-    className="AptoRow"
+    class="AptoRow"
   >
     <div
-      className="AptoCol"
+      class="AptoCol"
     >
       Baz
     </div>
     <div
-      className="AptoCol"
+      class="AptoCol"
     >
       Maz
     </div>

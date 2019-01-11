@@ -4,7 +4,11 @@ import './aptoButton.scss';
 import { StandardTypes } from '../../utils/standardTypes';
 
 export type ButtonKind = 'button' | 'link';
-export type ButtonVariant = 'primary' | 'secondary' | 'secondaryDark' | 'danger';
+export type ButtonVariant =
+  | 'primary'
+  | 'secondary'
+  | 'secondaryDark'
+  | 'danger';
 
 function missingHref(href: undefined | string) {
   return !href || href.trim() === '#';
@@ -17,7 +21,9 @@ export interface AptoButtonDisplayProps extends StandardTypes {
   variant?: ButtonVariant;
   active?: boolean;
   disabled?: boolean;
-  onClick?: (event: React.MouseEvent<HTMLButtonElement|HTMLAnchorElement>) => void;
+  onClick?: (
+    event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>
+  ) => void;
   href?: string;
   role?: string;
   title?: string;
@@ -38,8 +44,10 @@ export class AptoButton extends React.PureComponent<AptoButtonDisplayProps> {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  public handleClick(event: React.MouseEvent<HTMLButtonElement|HTMLAnchorElement>) {
-    const {disabled, href, onClick } = this.props;
+  public handleClick(
+    event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>
+  ) {
+    const { disabled, href, onClick } = this.props;
 
     if (disabled || missingHref(href)) {
       if (event) {
@@ -96,8 +104,9 @@ export class AptoButton extends React.PureComponent<AptoButtonDisplayProps> {
         href={href}
         disabled={disabled || undefined}
         onClick={this.handleClick}
-        className={classes}>
-          {children}
+        className={classes}
+      >
+        {children}
       </Component>
     );
   }

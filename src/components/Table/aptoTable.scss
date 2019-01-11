@@ -26,14 +26,16 @@ $AptoTable-hover-backgroundColor: $gray-300;
   th {
     font-weight: $AptoTable-th-fontWeight;
   }
-  td, th {
+  td,
+  th {
     padding: $AptoTable-padding;
     vertical-align: top;
     text-align: inherit;
     border-top: 1px solid $AptoTable-borderColor;
   }
   &.AptoTable--small {
-    td, th {
+    td,
+    th {
       padding: $AptoTableSmall-padding;
     }
   }
@@ -44,15 +46,20 @@ $AptoTable-hover-backgroundColor: $gray-300;
   }
   &.AptoTable--bordered {
     border: 1px solid $AptoTable-borderColor;
-    thead td, thead th {
+    thead td,
+    thead th {
       border-bottom-width: 2px;
     }
-    td, th {
+    td,
+    th {
       border: 1px solid $AptoTable-borderColor;
     }
   }
   &.AptoTable--borderless {
-    tbody+tbody, td, th, thead th {
+    tbody + tbody,
+    td,
+    th,
+    thead th {
       border: 0;
     }
   }
