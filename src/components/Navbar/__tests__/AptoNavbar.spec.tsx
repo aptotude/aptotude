@@ -3,6 +3,7 @@ import { AptoNavbar } from "../AptoNavbar";
 import { render, cleanup } from "react-testing-library";
 
 describe("Navbar Component", () => {
+  afterEach(cleanup);
   it("Navbar renders", () => {
     const { container } = render(<AptoNavbar />);
 
