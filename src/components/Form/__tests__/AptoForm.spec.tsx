@@ -1,6 +1,6 @@
-import React from "react";
-import { render, cleanup } from "react-testing-library";
-import { AptoForm } from "../AptoForm";
+import React from 'react';
+import { render, cleanup } from 'react-testing-library';
+import { AptoForm } from '../AptoForm';
 
 const Form = () => (
   <div>
@@ -11,10 +11,10 @@ const Form = () => (
   </div>
 );
 
-describe("AptoForm", () => {
+describe('AptoForm', () => {
   afterEach(cleanup);
-  
-  it("makes fields required", () => {
+
+  it('makes fields required', () => {
     const { asFragment } = render(<Form />);
     expect(asFragment()).toMatchSnapshot();
   });

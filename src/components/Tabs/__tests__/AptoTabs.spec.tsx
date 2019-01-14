@@ -1,11 +1,11 @@
-import React from "react";
-import { AptoTabs } from "../AptoTabs";
-import { AptoTab } from "../../Tab/AptoTab";
-import { HOME, END, RIGHT_ARROW, LEFT_ARROW } from "../../../utils/keycodes";
-import { render, fireEvent } from "react-testing-library";
+import React from 'react';
+import { AptoTabs } from '../AptoTabs';
+import { AptoTab } from '../../Tab/AptoTab';
+import { HOME, END, RIGHT_ARROW, LEFT_ARROW } from '../../../utils/keycodes';
+import { render, fireEvent } from 'react-testing-library';
 
-describe("Tab Component", () => {
-  it("renders", () => {
+describe('Tab Component', () => {
+  it('renders', () => {
     const { container } = render(
       <AptoTabs>
         <AptoTab title="Tab 1">Tab 1 Content</AptoTab>
@@ -13,31 +13,31 @@ describe("Tab Component", () => {
       </AptoTabs>
     );
 
-    const node = container.querySelector(".AptoTabGroup");
+    const node = container.querySelector('.AptoTabGroup');
     const nav = container.querySelector(
-      ".AptoTabGroup .AptoTabNav-wrapper .AptoTabNav"
+      '.AptoTabGroup .AptoTabNav-wrapper .AptoTabNav'
     );
-    const panes = container.querySelector(".AptoTabGroup .AptoTabPane-wrapper");
+    const panes = container.querySelector('.AptoTabGroup .AptoTabPane-wrapper');
 
-    expect(node!.className).toEqual("AptoTabGroup");
+    expect(node!.className).toEqual('AptoTabGroup');
 
-    expect(nav!.className).toEqual("AptoTabNav");
-    expect(nav!.getAttribute("role")).toEqual("tablist");
+    expect(nav!.className).toEqual('AptoTabNav');
+    expect(nav!.getAttribute('role')).toEqual('tablist');
     expect(nav!.children.length).toEqual(2);
     expect(nav!.children[0].className).toEqual(
-      "AptoTabNav-item AptoTabNav-item--active"
+      'AptoTabNav-item AptoTabNav-item--active'
     );
-    expect(nav!.children[1].className).toEqual("AptoTabNav-item");
+    expect(nav!.children[1].className).toEqual('AptoTabNav-item');
 
-    expect(panes!.className).toEqual("AptoTabPane-wrapper");
+    expect(panes!.className).toEqual('AptoTabPane-wrapper');
     expect(panes!.children.length).toEqual(2);
     expect(panes!.children[0].className).toEqual(
-      "AptoTabPane AptoTabPane--active"
+      'AptoTabPane AptoTabPane--active'
     );
-    expect(panes!.children[1].className).toEqual("AptoTabPane");
+    expect(panes!.children[1].className).toEqual('AptoTabPane');
   });
 
-  it("sets initial active tab", () => {
+  it('sets initial active tab', () => {
     const props = {
       activeIndex: 1
     };
@@ -50,21 +50,21 @@ describe("Tab Component", () => {
     );
 
     const nav = container.querySelector(
-      ".AptoTabGroup .AptoTabNav-wrapper .AptoTabNav"
+      '.AptoTabGroup .AptoTabNav-wrapper .AptoTabNav'
     );
-    const panes = container.querySelector(".AptoTabGroup .AptoTabPane-wrapper");
+    const panes = container.querySelector('.AptoTabGroup .AptoTabPane-wrapper');
 
     expect(nav!.children[1].className).toEqual(
-      "AptoTabNav-item AptoTabNav-item--active"
+      'AptoTabNav-item AptoTabNav-item--active'
     );
-    expect(nav!.children[0].className).toEqual("AptoTabNav-item");
+    expect(nav!.children[0].className).toEqual('AptoTabNav-item');
     expect(panes!.children[1].className).toEqual(
-      "AptoTabPane AptoTabPane--active"
+      'AptoTabPane AptoTabPane--active'
     );
-    expect(panes!.children[0].className).toEqual("AptoTabPane");
+    expect(panes!.children[0].className).toEqual('AptoTabPane');
   });
 
-  it("renders custom className", () => {
+  it('renders custom className', () => {
     const { container } = render(
       <AptoTabs className="foo">
         <AptoTab title="Tab 1">Tab 1 Content</AptoTab>
@@ -72,12 +72,12 @@ describe("Tab Component", () => {
       </AptoTabs>
     );
 
-    const node = container.querySelector(".AptoTabGroup");
+    const node = container.querySelector('.AptoTabGroup');
 
-    expect(node!.className).toEqual("AptoTabGroup foo");
+    expect(node!.className).toEqual('AptoTabGroup foo');
   });
 
-  it("toggles between tabs", () => {
+  it('toggles between tabs', () => {
     const onActive = jest.fn();
 
     const props = {
@@ -92,47 +92,47 @@ describe("Tab Component", () => {
     );
 
     const nav = container.querySelector(
-      ".AptoTabGroup .AptoTabNav-wrapper .AptoTabNav"
+      '.AptoTabGroup .AptoTabNav-wrapper .AptoTabNav'
     );
-    const panes = container.querySelector(".AptoTabGroup .AptoTabPane-wrapper");
+    const panes = container.querySelector('.AptoTabGroup .AptoTabPane-wrapper');
 
     expect(nav!.children[0].className).toEqual(
-      "AptoTabNav-item AptoTabNav-item--active"
+      'AptoTabNav-item AptoTabNav-item--active'
     );
-    expect(nav!.children[1].className).toEqual("AptoTabNav-item");
+    expect(nav!.children[1].className).toEqual('AptoTabNav-item');
     expect(panes!.children[0].className).toEqual(
-      "AptoTabPane AptoTabPane--active"
+      'AptoTabPane AptoTabPane--active'
     );
-    expect(panes!.children[1].className).toEqual("AptoTabPane");
+    expect(panes!.children[1].className).toEqual('AptoTabPane');
 
     fireEvent.click(nav!.children[1]);
 
     expect(nav!.children[1].className).toEqual(
-      "AptoTabNav-item AptoTabNav-item--active"
+      'AptoTabNav-item AptoTabNav-item--active'
     );
-    expect(nav!.children[0].className).toEqual("AptoTabNav-item");
+    expect(nav!.children[0].className).toEqual('AptoTabNav-item');
     expect(panes!.children[1].className).toEqual(
-      "AptoTabPane AptoTabPane--active"
+      'AptoTabPane AptoTabPane--active'
     );
-    expect(panes!.children[0].className).toEqual("AptoTabPane");
+    expect(panes!.children[0].className).toEqual('AptoTabPane');
 
     expect(onActive).toHaveBeenCalledWith(1);
 
     fireEvent.click(nav!.children[0]);
 
     expect(nav!.children[0].className).toEqual(
-      "AptoTabNav-item AptoTabNav-item--active"
+      'AptoTabNav-item AptoTabNav-item--active'
     );
-    expect(nav!.children[1].className).toEqual("AptoTabNav-item");
+    expect(nav!.children[1].className).toEqual('AptoTabNav-item');
     expect(panes!.children[0].className).toEqual(
-      "AptoTabPane AptoTabPane--active"
+      'AptoTabPane AptoTabPane--active'
     );
-    expect(panes!.children[1].className).toEqual("AptoTabPane");
+    expect(panes!.children[1].className).toEqual('AptoTabPane');
 
     expect(onActive).toHaveBeenCalledWith(0);
   });
 
-  describe("keyboard interaction", () => {
+  describe('keyboard interaction', () => {
     const onActive = jest.fn();
     const props = {
       onActive
@@ -144,13 +144,13 @@ describe("Tab Component", () => {
       </AptoTabs>
     );
     const nav = container.querySelector(
-      ".AptoTabGroup .AptoTabNav-wrapper .AptoTabNav"
+      '.AptoTabGroup .AptoTabNav-wrapper .AptoTabNav'
     );
 
-    it("home key", () => {
+    it('home key', () => {
       if (nav) {
         fireEvent.keyDown(nav, {
-          key: "Home",
+          key: 'Home',
           keyCode: HOME,
           which: HOME
         });
@@ -158,10 +158,10 @@ describe("Tab Component", () => {
       expect(onActive).toHaveBeenCalledWith(0);
     });
 
-    it("end key", () => {
+    it('end key', () => {
       if (nav) {
         fireEvent.keyDown(nav, {
-          key: "End",
+          key: 'End',
           keyCode: END,
           which: END
         });
@@ -169,15 +169,15 @@ describe("Tab Component", () => {
       expect(onActive).toHaveBeenCalledWith(1);
     });
 
-    it("right arrow", () => {
+    it('right arrow', () => {
       if (nav) {
         fireEvent.keyDown(nav, {
-          key: "Home",
+          key: 'Home',
           keyCode: HOME,
           which: HOME
         });
         fireEvent.keyDown(nav, {
-          key: "Right Arrow",
+          key: 'Right Arrow',
           keyCode: RIGHT_ARROW,
           which: RIGHT_ARROW
         });
@@ -185,15 +185,15 @@ describe("Tab Component", () => {
       expect(onActive).toHaveBeenCalledWith(1);
     });
 
-    it("left arrow", () => {
+    it('left arrow', () => {
       if (nav) {
         fireEvent.keyDown(nav, {
-          key: "End",
+          key: 'End',
           keyCode: END,
           which: END
         });
         fireEvent.keyDown(nav, {
-          key: "Left Arrow",
+          key: 'Left Arrow',
           keyCode: LEFT_ARROW,
           which: LEFT_ARROW
         });

@@ -1,1 +1,1 @@
-export * from "./AptoSelect";
+export * from './AptoSelect';

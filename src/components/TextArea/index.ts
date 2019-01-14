@@ -1,1 +1,1 @@
-export * from "./AptoTextArea";
+export * from './AptoTextArea';
