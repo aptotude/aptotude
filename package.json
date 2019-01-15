@@ -48,8 +48,8 @@
     "react-dom": "^16.6.3"
   },
   "devDependencies": {
-    "@babel/preset-react": "^7.0.0",
     "@babel/core": "^7.2.2",
+    "@babel/preset-react": "^7.0.0",
     "@storybook/addon-actions": "^4.1.4",
     "@storybook/addon-options": "^4.1.4",
     "@storybook/addon-storysource": "^4.1.4",
@@ -84,6 +84,7 @@
     "tslint": "^5.11.0",
     "tslint-config-prettier": "^1.16.0",
     "tslint-react": "^3.6.0",
-    "typescript": "^3.1.6"
+    "typescript": "^3.1.6",
+    "webpack": "^4.28.4"
   }
 }

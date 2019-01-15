@@ -29,6 +29,7 @@ export interface AptoButtonDisplayProps extends StandardTypes {
   role?: string;
   title?: string;
   target?: string;
+  type?: string;
 }
 
 export class AptoButton extends React.PureComponent<AptoButtonDisplayProps> {
