@@ -7,11 +7,13 @@ import pkg from './package.json';
 
 const globalLibs = {
   "classnames": "classnames",
-  "react": "React"
+  "react": "React",
+  "react-dom": "reactDom"
 };
 const externalLibs = [
   'classnames',
-  'react'
+  'react',
+  'react-dom'
 ];
 
 export default {
