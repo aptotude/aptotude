@@ -23,7 +23,7 @@
     "release": "./scripts/release.sh",
     "storybook:local": "start-storybook -p 9001 -s ./src/assets -c .storybook",
     "storybook:deploy": "storybook-to-ghpages",
-    "test": "jest --silent",
+    "test": "jest",
     "test:update": "jest --silent -u",
     "test:watch": "jest --silent --watch",
     "typecheck": "tsc --noEmit"

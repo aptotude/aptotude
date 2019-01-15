@@ -10,9 +10,7 @@ module.exports = {
     "ts",
     "tsx",
     "js",
-    "jsx",
-    "json",
-    "node"
+    "jsx"
   ],
   "moduleNameMapper": {
     "\\.(css|scss)$": "<rootDir>/__mocks__/styleMock.js"
