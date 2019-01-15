@@ -1,8 +1,10 @@
 import React from 'react';
 import { AptoHeader } from '../AptoHeader';
-import { render } from 'react-testing-library';
+import { render, cleanup } from 'react-testing-library';
 
 describe('Header Component', () => {
+  afterEach(cleanup);
+
   it('Header renders', () => {
     const { container } = render(<AptoHeader />);
     const node = container.querySelector('h1.AptoHeader');

@@ -1,8 +1,10 @@
 import React from 'react';
-import { render } from 'react-testing-library';
+import { render, cleanup } from 'react-testing-library';
 import { AptoCard } from '../AptoCard';
 
 describe('Card Header Component', () => {
+  afterEach(cleanup);
+
   it('Renders', () => {
     const { container } = render(<AptoCard />);
 

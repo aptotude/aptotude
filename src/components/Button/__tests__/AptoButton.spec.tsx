@@ -1,8 +1,10 @@
 import React from 'react';
 import { AptoButton } from '../AptoButton';
-import { render, fireEvent } from 'react-testing-library';
+import { render, fireEvent, cleanup } from 'react-testing-library';
 
 describe('Button Component', () => {
+  afterEach(cleanup);
+
   it('Button renders', () => {
     const { container } = render(<AptoButton />);
     const node = container.querySelector('button.AptoButton');

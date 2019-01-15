@@ -1,8 +1,9 @@
 import React from 'react';
 import { AptoNavbar } from '../AptoNavbar';
-import { render } from 'react-testing-library';
+import { render, cleanup } from 'react-testing-library';
 
 describe('Navbar Component', () => {
+  afterEach(cleanup);
   it('Navbar renders', () => {
     const { container } = render(<AptoNavbar />);
 

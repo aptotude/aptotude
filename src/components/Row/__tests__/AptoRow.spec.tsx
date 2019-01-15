@@ -1,8 +1,10 @@
 import React from 'react';
 import { AptoRow } from '../AptoRow';
-import { render } from 'react-testing-library';
+import { render, cleanup } from 'react-testing-library';
 
 describe('Row Component', () => {
+  afterEach(cleanup);
+
   it('renders', () => {
     const { container } = render(<AptoRow />);
     const node = container.querySelector('.AptoRow');

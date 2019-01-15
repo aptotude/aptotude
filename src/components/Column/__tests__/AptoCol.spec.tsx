@@ -1,8 +1,10 @@
 import React from 'react';
 import { AptoCol } from '../AptoCol';
-import { render } from 'react-testing-library';
+import { render, cleanup } from 'react-testing-library';
 
 describe('Column Component', () => {
+  afterEach(cleanup);
+
   it('Col renders', () => {
     const { container } = render(<AptoCol />);
 
