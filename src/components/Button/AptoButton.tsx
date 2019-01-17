@@ -11,10 +11,6 @@ export type ButtonVariant =
   | 'white'
   | 'danger';
 
-function missingHref(href: undefined | string) {
-  return !href || href.trim() === '#';
-}
-
 const COMPONENT_PREFIX = 'AptoButton';
 
 export interface AptoButtonDisplayProps extends StandardTypes {
