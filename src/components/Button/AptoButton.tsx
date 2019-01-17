@@ -49,9 +49,9 @@ export class AptoButton extends React.PureComponent<AptoButtonDisplayProps> {
   public handleClick(
     event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>
   ) {
-    const { disabled, href, onClick } = this.props;
+    const { disabled, onClick } = this.props;
 
-    if (disabled || missingHref(href)) {
+    if (disabled) {
       if (event) {
         event.preventDefault();
       }
