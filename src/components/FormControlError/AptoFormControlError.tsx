@@ -9,7 +9,7 @@ export interface AptoFormControlErrorDisplayProps extends StandardTypes {
   error?: string | undefined | null;
 }
 
-export class AptoFormControlError extends React.PureComponent<
+export class AptoFormControlError extends React.Component<
   AptoFormControlErrorDisplayProps
 > {
   public static defaultProps = {
