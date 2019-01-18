@@ -6,21 +6,22 @@ $inputColor: $gray-800;
 $inputPlaceholderColor: $gray-500;
 $inputFocusBorderColor: $blue-500;
 $inputErrorBorderColor: $orange-400;
-$inputDisabledOpactiy: 0.7;
+$inputDisabledOpactiy: 0.5;
 
-.ui.input {
-  input {
+.ui.selection {
+  &.dropdown {
     color: $inputColor;
-    cursor: pointer;
     padding: $inputPadding !important;
     border-top: none !important;
     border-left: none !important;
     border-right: none !important;
     border-radius: 0 !important;
     border-bottom: 1px solid $inputBorderColor;
-    &::placeholder {
-      color: $inputPlaceholderColor !important;
+    background-color: $white !important;
+    &.selection {
+      box-shadow: none !important;
     }
+    &:hover,
     &:focus {
       border-bottom-color: $inputFocusBorderColor !important;
     }
@@ -28,11 +29,17 @@ $inputDisabledOpactiy: 0.7;
       opacity: $inputDisabledOpactiy !important;
       cursor: default;
     }
-  }
-  &.error {
-    input {
-      color: $inputColor;
-      border-bottom-color: $inputErrorBorderColor;
+    .menu {
+      border: 1px solid $inputBorderColor !important;
+    }
+    &.error {
+      > .default.text {
+        color: $inputPlaceholderColor !important;
+      }
+      > .text {
+        color: $inputColor !important;
+      }
+      border-color: $inputErrorBorderColor !important;
     }
   }
   &.disabled {

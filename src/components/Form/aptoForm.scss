@@ -1,0 +1,18 @@
+@import '../../scss/theme/variables.scss';
+
+$inputFontFamily: $font-family-base;
+$inputFontSize: $font-size-md;
+
+.ui.form {
+  font-size: $inputFontSize !important;
+  font-family: $inputFontFamily !important;
+  .field {
+    margin: 0 0 1.5rem;
+    > label {
+      font-size: $font-size-md;
+      color: $gray-650;
+      margin: 0;
+      font-weight: $font-weight-light;
+    }
+  }
+}

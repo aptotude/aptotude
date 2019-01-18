@@ -1,0 +1,34 @@
+@import '../../scss/theme/variables.scss';
+
+$inputPadding: 0.8rem 0;
+$inputBorderColor: $gray-300;
+$inputColor: $gray-800;
+$inputPlaceholderColor: $gray-500;
+$inputFocusBorderColor: $blue-500;
+$inputErrorBorderColor: $orange-400;
+$inputDisabledOpactiy: 0.7;
+
+.ui.form textarea {
+  color: $inputColor;
+  cursor: pointer;
+  padding: $inputPadding !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-radius: 0 !important;
+  border-bottom: 1px solid $inputBorderColor;
+  &::placeholder {
+    color: $inputPlaceholderColor !important;
+  }
+  &:focus {
+    border-bottom-color: $inputFocusBorderColor !important;
+  }
+  &[disabled] {
+    opacity: $inputDisabledOpactiy !important;
+    cursor: default;
+  }
+  &.disabled {
+    opacity: $inputDisabledOpactiy !important;
+    cursor: default;
+  }
+}

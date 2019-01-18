@@ -1,0 +1,24 @@
+@import '../../scss/theme/variables.scss';
+
+.AptoAlert {
+  font-family: $font-family-base;
+  display: block;
+  line-height: $line-height-base;
+  margin: 0 0 2rem 0;
+  color: $body-text;
+  padding: 1rem;
+  border: 1px solid $primary-blue;
+  background-color: rgba($primary-blue, 0.1);
+  &.AptoAlert--warning {
+    border-color: $warning;
+    background-color: rgba($warning, 0.1);
+  }
+  &.AptoAlert--success {
+    border-color: $success;
+    background-color: rgba($success, 0.1);
+  }
+  &.AptoAlert--danger {
+    border-color: $danger;
+    background-color: rgba($danger, 0.1);
+  }
+}
