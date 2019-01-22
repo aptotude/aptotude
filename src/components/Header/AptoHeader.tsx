@@ -7,15 +7,24 @@ const COMPONENT_PREFIX = 'AptoHeader';
 
 export interface AptoHeaderDisplayProps extends StandardTypes {
   type?: '1' | '2' | '3' | '4' | '5' | '6';
+  transform: boolean;
 }
 
 export class AptoHeader extends React.PureComponent<AptoHeaderDisplayProps> {
   public static defaultProps = {
-    type: '1'
+    type: '1',
+    transform: true
   };
 
   public render() {
-    const { type, className, forwardRef, children, ...rest } = this.props;
+    const {
+      type,
+      transform,
+      className,
+      forwardRef,
+      children,
+      ...rest
+    } = this.props;
 
     let Component: any = 'h1';
 
@@ -44,6 +53,7 @@ export class AptoHeader extends React.PureComponent<AptoHeaderDisplayProps> {
     const classes = classNames(
       COMPONENT_PREFIX,
       type && `${COMPONENT_PREFIX}--h${type}`,
+      !transform ? `${COMPONENT_PREFIX}--noTransform` : null,
       className
     );
 

@@ -32,4 +32,7 @@
     font-size: $h6-font-size;
     font-weight: $font-weight-bold;
   }
+  &.AptoHeader--noTransform {
+    text-transform: none;
+  }
 }

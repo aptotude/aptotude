@@ -10,6 +10,7 @@ export * from './Form';
 export * from './FormControlError';
 export * from './Header';
 export * from './HelpText';
+export * from './Icon';
 export * from './Input';
 export * from './List';
 export * from './ListItem';

@@ -17,6 +17,14 @@ describe('Header Component', () => {
     expect(node!.className).toEqual('AptoHeader AptoHeader--h1');
   });
 
+  it('Header no transform', () => {
+    const { container } = render(<AptoHeader transform={false} />);
+    const node = container.querySelector('h1.AptoHeader');
+    expect(node!.className).toEqual(
+      'AptoHeader AptoHeader--h1 AptoHeader--noTransform'
+    );
+  });
+
   it('Header 2 renders', () => {
     const { container } = render(<AptoHeader type="2" />);
     const node = container.querySelector('h2.AptoHeader');
