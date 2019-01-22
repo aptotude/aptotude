@@ -4,49 +4,49 @@ import { AptoIcon } from './AptoIcon';
 import { AptoContainer } from '../Container';
 import { AptoRow } from '../Row';
 import { AptoCol } from '../Column';
-
-import property from './icons/Property';
-import company from './icons/Company';
-import space from './icons/Space';
-import home from './icons/Home';
-import email from './icons/Email';
-import phone from './icons/Phone';
-import fax from './icons/Fax';
-import smartPhone from './icons/SmartPhone';
-import folder from './icons/Folder';
-import file from './icons/File';
-import help from './icons/Help';
-import callList from './icons/CallList';
-import person from './icons/Person';
-import personCircle from './icons/PersonCircle';
-import people from './icons/People';
-import download from './icons/Download';
-import link from './icons/Link';
-import thumbUp from './icons/ThumbUp';
-import time from './icons/Time';
-import task from './icons/Task';
-import money from './icons/Money';
-import list from './icons/List';
-import menu from './icons/Menu';
-import meeting from './icons/Meeting';
-import assignment from './icons/Assignment';
-import peaks from './icons/Peaks';
-import loyalty from './icons/Loyalty';
-import trendingUp from './icons/TrendingUp';
-import trendingDown from './icons/TrendingDown';
-import apto from './icons/Apto';
-import briefCase from './icons/BriefCase';
-import left from './icons/Left';
-import right from './icons/Right';
-import up from './icons/Up';
-import down from './icons/Down';
-import dropDown from './icons/DropDown';
-import dropUp from './icons/DropUp';
-import arrowForward from './icons/ArrowForward';
-import arrowBack from './icons/ArrowBack';
-
 import './aptoIconStories.scss';
 import { AptoButton } from '../Button';
+import {
+  property,
+  company,
+  space,
+  email,
+  home,
+  phone,
+  fax,
+  smartPhone,
+  folder,
+  file,
+  help,
+  callList,
+  person,
+  personCircle,
+  people,
+  download,
+  thumbUp,
+  trendingDown,
+  trendingUp,
+  link,
+  time,
+  task,
+  money,
+  list,
+  meeting,
+  menu,
+  assignment,
+  peaks,
+  loyalty,
+  left,
+  right,
+  up,
+  down,
+  dropDown,
+  dropUp,
+  apto,
+  briefCase,
+  arrowBack,
+  arrowForward
+} from '@apto/icons';
 
 storiesOf('Icon', module).add('Default', () => (
   <AptoContainer className="aptoIconStories">

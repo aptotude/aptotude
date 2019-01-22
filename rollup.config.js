@@ -4,6 +4,7 @@ import postcss from 'rollup-plugin-postcss';
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import pkg from './package.json';
+import babel from 'rollup-plugin-babel';
 
 const globalLibs = {
   "classnames": "classnames",
@@ -27,6 +28,9 @@ export default {
   plugins: [
     postcss({
       modules: false
+    }),
+    babel({
+      exclude: 'node_modules/**'
     }),
     resolve(),
     commonjs(),
