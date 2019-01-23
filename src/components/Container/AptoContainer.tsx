@@ -10,9 +10,7 @@ export interface AptoContainerDisplayProps extends StandardTypes {
   fixed?: boolean;
 }
 
-export class AptoContainer extends React.Component<
-  AptoContainerDisplayProps
-> {
+export class AptoContainer extends React.Component<AptoContainerDisplayProps> {
   public static defaultProps = {
     scroll: false,
     fixed: false
