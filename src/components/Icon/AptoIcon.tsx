@@ -2,15 +2,17 @@ import React from 'react';
 import classNames from 'classnames';
 import './aptoIcon.scss';
 import capitalize from '../../utils/capitalize';
+import { StandardTypes } from '../../utils/standardTypes';
 const COMPONENT_PREFIX = 'AptoIcon';
 
-interface AptoIconProps {
+interface AptoIconProps extends StandardTypes {
   circleColor?: 'white' | 'blue' | 'orange' | 'gray' | 'lightGray';
   status?: 'warning' | 'danger';
   inline?: boolean;
   circle?: boolean;
   size?: 1 | 2 | 3 | 4 | 5 | 6 | '1' | '2' | '3' | '4' | '5' | '6';
   icon: React.ComponentClass<any> | React.StatelessComponent<any>;
+  onClick?: (event: React.MouseEvent<HTMLSpanElement>) => void;
 }
 
 class AptoIcon extends React.Component<AptoIconProps> {
