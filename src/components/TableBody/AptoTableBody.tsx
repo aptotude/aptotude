@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 const COMPONENT_PREFIX = 'AptoTableBody';
 
-export class AptoTableBody extends React.PureComponent<StandardTypes> {
+export class AptoTableBody extends React.Component<StandardTypes> {
   public render() {
     const { children, ...rest } = this.props;
 

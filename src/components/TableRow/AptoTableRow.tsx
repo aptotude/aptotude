@@ -9,7 +9,7 @@ export interface AptoTableRowDisplayProps extends StandardTypes {
   highlight?: 'danger' | 'primary' | 'warning' | 'success' | undefined;
 }
 
-export class AptoTableRow extends React.PureComponent<
+export class AptoTableRow extends React.Component<
   AptoTableRowDisplayProps
 > {
   public render() {

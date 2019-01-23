@@ -10,7 +10,7 @@ export interface AptoHeaderDisplayProps extends StandardTypes {
   transform: boolean;
 }
 
-export class AptoHeader extends React.PureComponent<AptoHeaderDisplayProps> {
+export class AptoHeader extends React.Component<AptoHeaderDisplayProps> {
   public static defaultProps = {
     type: '1',
     transform: true

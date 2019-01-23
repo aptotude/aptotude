@@ -9,7 +9,7 @@ export interface AptoAlertDisplayProps extends StandardTypes {
   variant?: 'info' | 'success' | 'warning' | 'danger';
 }
 
-export class AptoAlert extends React.PureComponent<AptoAlertDisplayProps> {
+export class AptoAlert extends React.Component<AptoAlertDisplayProps> {
   public static defaultProps = {
     variant: 'info'
   };

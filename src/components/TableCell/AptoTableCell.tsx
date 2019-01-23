@@ -11,7 +11,7 @@ export interface AptoTableCellDisplayProps extends StandardTypes {
   highlight?: 'danger' | 'primary' | 'warning' | 'success' | undefined;
 }
 
-export class AptoTableCell extends React.PureComponent<
+export class AptoTableCell extends React.Component<
   AptoTableCellDisplayProps
 > {
   public render() {

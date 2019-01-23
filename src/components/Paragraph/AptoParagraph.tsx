@@ -9,7 +9,7 @@ export interface AptoParagraphDisplayProps extends StandardTypes {
 
 const COMPONENT_PREFIX = 'AptoParagraph';
 
-export class AptoParagraph extends React.PureComponent<
+export class AptoParagraph extends React.Component<
   AptoParagraphDisplayProps
 > {
   public render() {

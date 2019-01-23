@@ -5,7 +5,7 @@ import './aptoThumbnail.scss';
 
 const COMPONENT_PREFIX = 'AptoThumbnail';
 
-class AptoThumbnail extends React.PureComponent<StandardTypes> {
+class AptoThumbnail extends React.Component<StandardTypes> {
   public render() {
     const { className, forwardRef, children, ...rest } = this.props;
 

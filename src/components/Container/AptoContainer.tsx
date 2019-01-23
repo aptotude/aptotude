@@ -10,7 +10,7 @@ export interface AptoContainerDisplayProps extends StandardTypes {
   fixed?: boolean;
 }
 
-export class AptoContainer extends React.PureComponent<
+export class AptoContainer extends React.Component<
   AptoContainerDisplayProps
 > {
   public static defaultProps = {

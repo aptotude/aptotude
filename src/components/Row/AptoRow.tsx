@@ -19,7 +19,7 @@ export interface AptoRowDisplayProps extends StandardTypes {
     | undefined;
 }
 
-export class AptoRow extends React.PureComponent<AptoRowDisplayProps> {
+export class AptoRow extends React.Component<AptoRowDisplayProps> {
   public static defaultProps = {
     noGutter: false
   };

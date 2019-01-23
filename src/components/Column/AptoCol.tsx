@@ -31,7 +31,7 @@ export interface AptoColDisplayProps extends StandardTypes {
   align?: 'start' | 'center' | 'end' | null | undefined;
 }
 
-export class AptoCol extends React.PureComponent<AptoColDisplayProps> {
+export class AptoCol extends React.Component<AptoColDisplayProps> {
   public render() {
     const { children, className, forwardRef, align, ...rest } = this.props;
 

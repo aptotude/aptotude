@@ -28,7 +28,7 @@ export interface AptoButtonDisplayProps extends StandardTypes {
   type?: string;
 }
 
-export class AptoButton extends React.PureComponent<AptoButtonDisplayProps> {
+export class AptoButton extends React.Component<AptoButtonDisplayProps> {
   public static defaultProps = {
     kind: 'button',
     variant: 'primary',

@@ -9,7 +9,7 @@ export interface AptoNavbarDisplayProps extends StandardTypes {
 
 const COMPONENT_PREFIX = 'AptoNavbar';
 
-export class AptoNavbar extends React.PureComponent<AptoNavbarDisplayProps> {
+export class AptoNavbar extends React.Component<AptoNavbarDisplayProps> {
   public render() {
     const { fixed, className, forwardRef, children, ...rest } = this.props;
 

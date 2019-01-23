@@ -14,7 +14,7 @@ export interface AptoTableDisplayProps extends StandardTypes {
   responsive?: boolean | undefined;
 }
 
-export class AptoTable extends React.PureComponent<AptoTableDisplayProps> {
+export class AptoTable extends React.Component<AptoTableDisplayProps> {
   public static defaultProps = {
     striped: false,
     bordered: false,
