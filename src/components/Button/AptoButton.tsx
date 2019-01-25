@@ -6,6 +6,7 @@ import { StandardTypes } from '../../utils/standardTypes';
 export type ButtonKind = 'button' | 'link';
 export type ButtonVariant =
   | 'primary'
+  | 'primaryInverse'
   | 'secondary'
   | 'secondaryDark'
   | 'white'

@@ -7,6 +7,7 @@ const COMPONENT_PREFIX = 'AptoIcon';
 
 interface AptoIconProps extends StandardTypes {
   circleColor?: 'white' | 'blue' | 'orange' | 'gray' | 'lightGray';
+  color?: 'white' | 'blue' | 'orange' | 'gray' | 'lightGray';
   status?: 'warning' | 'danger';
   inline?: boolean;
   circle?: boolean;
@@ -27,6 +28,7 @@ class AptoIcon extends React.Component<AptoIconProps> {
       inline,
       circle,
       size,
+      color,
       circleColor,
       icon: Component,
       status
@@ -37,8 +39,9 @@ class AptoIcon extends React.Component<AptoIconProps> {
       inline ? `${COMPONENT_PREFIX}--inline` : null,
       circle ? `${COMPONENT_PREFIX}--circle` : null,
       status ? `${COMPONENT_PREFIX}--status${capitalize(status)}` : null,
+      color ? `${COMPONENT_PREFIX}--color${capitalize(color)}` : null,
       circleColor
-        ? `${COMPONENT_PREFIX}--color${capitalize(circleColor)}`
+        ? `${COMPONENT_PREFIX}--circleColor${capitalize(circleColor)}`
         : null
     );
 

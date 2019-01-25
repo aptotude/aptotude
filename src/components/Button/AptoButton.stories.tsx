@@ -31,6 +31,21 @@ storiesOf('Button', module)
       </AptoButton>
     </div>
   ))
+  .add('Primary Inverse', () => (
+    <div>
+      <AptoButton variant="primaryInverse">Button</AptoButton>
+      <br />
+      <br />
+      <AptoButton variant="primaryInverse" disabled>
+        Disabled Button
+      </AptoButton>
+      <br />
+      <br />
+      <AptoButton variant="primaryInverse" active>
+        Active Button
+      </AptoButton>
+    </div>
+  ))
   .add('White', () => (
     <div className="buttonStory whiteButton">
       <AptoButton variant="white">Button</AptoButton>

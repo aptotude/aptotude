@@ -11,6 +11,17 @@ $button-primary-bg: $blue-500 !default;
 $button-primary-disabled-bg: $gray-400 !default;
 $button-primary-hover-color: darken($button-primary-bg, 15%) !default;
 
+$button-primaryInverse-color: $blue-500 !default;
+$button-primaryInverse-bg: $white !default;
+$button-primaryInverse-disabled-color: lighten(
+  $button-primaryInverse-color,
+  15%
+) !default;
+$button-primaryInverse-hover-color: darken(
+  $button-primaryInverse-color,
+  15%
+) !default;
+
 $button-primary-link-color: $blue-500 !default;
 $button-primary-link-hover-color: darken(
   $button-primary-link-color,
@@ -104,6 +115,20 @@ $button-holdPregressContainer-size: 3px !default;
     background-color: $button-primary-disabled-bg;
   }
 }
+
+.AptoButton--primaryInverse {
+  color: $button-primaryInverse-color;
+  background-color: $button-primaryInverse-bg;
+  &:hover,
+  &.AptoButton--active {
+    color: $button-primaryInverse-hover-color;
+  }
+  &:disabled,
+  &.AptoButton--disabled {
+    color: $button-primaryInverse-disabled-color;
+  }
+}
+
 .AptoButton--link.AptoButton--primary {
   color: $button-primary-link-color;
   background-color: transparent;

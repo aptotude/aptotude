@@ -288,6 +288,29 @@ storiesOf('Icon', module).add('Default', () => (
       circleColor="gray"
     </p>
 
+    <h3 className="heading">Color ("Color" attribute)</h3>
+    <p>
+      <AptoIcon inline icon={property} /> color=""
+    </p>
+    <p>
+      <span>
+        <AptoIcon inline color="white" icon={property} />
+      </span>
+      color="white"
+    </p>
+    <p>
+      <AptoIcon inline color="blue" icon={property} /> color="blue"
+    </p>
+    <p>
+      <AptoIcon inline color="orange" icon={property} /> color="orange"
+    </p>
+    <p>
+      <AptoIcon inline color="lightGray" icon={property} /> color="lightGray"
+    </p>
+    <p>
+      <AptoIcon inline color="gray" icon={property} /> color="gray"
+    </p>
+
     <h3 className="heading">Icon Status ("status" attribute)</h3>
     <p>
       <AptoIcon

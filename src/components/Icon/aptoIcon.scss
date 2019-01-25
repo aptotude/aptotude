@@ -11,6 +11,21 @@
   &.AptoIcon--inline {
     vertical-align: middle;
   }
+  &.AptoIcon--colorWhite {
+    fill: $white;
+  }
+  &.AptoIcon--colorBlue {
+    fill: $blue-500;
+  }
+  &.AptoIcon--colorOrange {
+    fill: $orange-500;
+  }
+  &.AptoIcon--colorGray {
+    fill: $gray-500;
+  }
+  &.AptoIcon--colorLightGray {
+    fill: $gray-300;
+  }
   &.AptoIcon--circle {
     border-radius: 50%;
     background-color: currentColor;
@@ -21,27 +36,27 @@
       display: table;
       padding-top: 100%;
     }
-    &.AptoIcon--colorWhite {
+    &.AptoIcon--circleColorWhite {
       background-color: $white;
       border-color: $white;
       fill: $blue-500;
     }
-    &.AptoIcon--colorBlue {
+    &.AptoIcon--circleColorBlue {
       background-color: $blue-500;
       border-color: $blue-500;
       fill: $white;
     }
-    &.AptoIcon--colorOrange {
+    &.AptoIcon--circleColorOrange {
       background-color: $orange-500;
       border-color: $orange-500;
       fill: $white;
     }
-    &.AptoIcon--colorGray {
+    &.AptoIcon--circleColorGray {
       background-color: $gray-500;
       border-color: $gray-500;
       fill: $white;
     }
-    &.AptoIcon--colorLightGray {
+    &.AptoIcon--circleColorLightGray {
       background-color: $gray-300;
       border-color: $gray-300;
       fill: $white;

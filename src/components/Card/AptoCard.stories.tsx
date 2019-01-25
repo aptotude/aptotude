@@ -5,6 +5,7 @@ import { AptoCardContent } from '../CardContent/AptoCardContent';
 import { AptoCardHeader } from '../CardHeader/AptoCardHeader';
 import { AptoCardFooter } from '../CardFooter/AptoCardFooter';
 import { AptoButton } from '../Button/AptoButton';
+import './aptoCardStories.scss';
 
 storiesOf('Card', module)
   .add('Default', () => (
@@ -16,6 +17,28 @@ storiesOf('Card', module)
         <AptoButton kind="link">Right</AptoButton>
       </AptoCardFooter>
     </AptoCard>
+  ))
+  .add('No Elevation', () => (
+    <AptoCard elevation="0">
+      <AptoCardHeader>Card Header</AptoCardHeader>
+      <AptoCardContent>This is content</AptoCardContent>
+      <AptoCardFooter>
+        <AptoButton kind="link">Left</AptoButton>
+        <AptoButton kind="link">Right</AptoButton>
+      </AptoCardFooter>
+    </AptoCard>
+  ))
+  .add('Transparent', () => (
+    <div className="AptoCardStories AptoCardStories-transparentExample">
+      <AptoCard transparent={true}>
+        <AptoCardHeader>Card Header</AptoCardHeader>
+        <AptoCardContent>This is content</AptoCardContent>
+        <AptoCardFooter>
+          <AptoButton kind="link">Left</AptoButton>
+          <AptoButton kind="link">Right</AptoButton>
+        </AptoCardFooter>
+      </AptoCard>
+    </div>
   ))
   .add('No Header', () => (
     <AptoCard>

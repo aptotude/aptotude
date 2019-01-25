@@ -26,7 +26,6 @@ $card-footer-top-padding: 1.3rem !default;
   margin: $card-margin;
   background: $card-bg;
   border: $card-border;
-  box-shadow: $card-box-shadow;
   border-radius: $card-border-radius;
   font-family: $card-font-family;
   font-weight: $card-font-weight;
@@ -34,4 +33,10 @@ $card-footer-top-padding: 1.3rem !default;
   padding: 0;
   display: block;
   position: relative;
+  &.AptoCard--elevation1 {
+    box-shadow: $card-box-shadow;
+  }
+  &.AptoCard--transparent {
+    background: transparent;
+  }
 }
