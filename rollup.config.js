@@ -7,14 +7,16 @@ import pkg from './package.json';
 import babel from 'rollup-plugin-babel';
 
 const globalLibs = {
-  "classnames": "classnames",
-  "react": "React",
-  "react-dom": "reactDom",
+  'classnames': 'classnames',
+  'react': 'React',
+  'react-dom': 'reactDom',
+  '@reach/router': 'Link',
 };
 const externalLibs = [
   'classnames',
   'react',
-  'react-dom'
+  'react-dom',
+  '@reach/router',
 ];
 
 export default {
