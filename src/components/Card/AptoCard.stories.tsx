@@ -18,19 +18,10 @@ storiesOf('Card', module)
       </AptoCardFooter>
     </AptoCard>
   ))
-  .add('No Elevation', () => (
-    <AptoCard elevation="0">
-      <AptoCardHeader>Card Header</AptoCardHeader>
-      <AptoCardContent>This is content</AptoCardContent>
-      <AptoCardFooter>
-        <AptoButton kind="link">Left</AptoButton>
-        <AptoButton kind="link">Right</AptoButton>
-      </AptoCardFooter>
-    </AptoCard>
-  ))
-  .add('Transparent', () => (
-    <div className="AptoCardStories AptoCardStories-transparentExample">
-      <AptoCard transparent={true}>
+  .add('Elevation', () => (
+    <React.Fragment>
+      <h3>No Elevation1</h3>
+      <AptoCard elevation="1">
         <AptoCardHeader>Card Header</AptoCardHeader>
         <AptoCardContent>This is content</AptoCardContent>
         <AptoCardFooter>
@@ -38,7 +29,16 @@ storiesOf('Card', module)
           <AptoButton kind="link">Right</AptoButton>
         </AptoCardFooter>
       </AptoCard>
-    </div>
+      <h3>Elevation 0</h3>
+      <AptoCard elevation="0">
+        <AptoCardHeader>Card Header</AptoCardHeader>
+        <AptoCardContent>This is content</AptoCardContent>
+        <AptoCardFooter>
+          <AptoButton kind="link">Left</AptoButton>
+          <AptoButton kind="link">Right</AptoButton>
+        </AptoCardFooter>
+      </AptoCard>
+    </React.Fragment>
   ))
   .add('No Header', () => (
     <AptoCard>

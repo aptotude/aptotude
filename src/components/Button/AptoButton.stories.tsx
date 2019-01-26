@@ -213,4 +213,14 @@ storiesOf('Button', module)
   .add('Aria Label', () => <AptoButton title="some title">Button</AptoButton>)
   .add('Click Handler', () => (
     <AptoButton onClick={action('button-click')}>Button</AptoButton>
+  ))
+  .add('Reach Router Link', () => (
+    <React.Fragment>
+      <p>
+        Just add the "to" attribute to turn the button into a Reach Router link
+      </p>
+      <AptoButton to="/foo" title="some title">
+        Button
+      </AptoButton>
+    </React.Fragment>
   ));

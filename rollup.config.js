@@ -9,7 +9,7 @@ import babel from 'rollup-plugin-babel';
 const globalLibs = {
   "classnames": "classnames",
   "react": "React",
-  "react-dom": "reactDom"
+  "react-dom": "reactDom",
 };
 const externalLibs = [
   'classnames',

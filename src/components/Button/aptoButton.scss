@@ -106,12 +106,15 @@ $button-holdPregressContainer-size: 3px !default;
 .AptoButton--primary {
   color: $button-primary-color;
   background-color: $button-primary-bg;
+  &[aria-current='page'],
   &:hover,
   &.AptoButton--active {
+    color: $button-primary-color;
     background-color: $button-primary-hover-color;
   }
   &:disabled,
   &.AptoButton--disabled {
+    color: $button-primary-color;
     background-color: $button-primary-disabled-bg;
   }
 }
@@ -119,50 +122,62 @@ $button-holdPregressContainer-size: 3px !default;
 .AptoButton--primaryInverse {
   color: $button-primaryInverse-color;
   background-color: $button-primaryInverse-bg;
+  &[aria-current='page'],
   &:hover,
   &.AptoButton--active {
     color: $button-primaryInverse-hover-color;
+    background-color: $button-primaryInverse-bg;
   }
   &:disabled,
   &.AptoButton--disabled {
     color: $button-primaryInverse-disabled-color;
+    background-color: $button-primaryInverse-bg;
   }
 }
 
 .AptoButton--link.AptoButton--primary {
   color: $button-primary-link-color;
   background-color: transparent;
+  &[aria-current='page'],
   &:hover,
   &.AptoButton--active {
     color: $button-primary-link-hover-color;
+    background-color: transparent;
   }
   &:disabled,
   &.AptoButton--disabled {
     color: $button-primary-link-disabled-color;
+    background-color: transparent;
   }
 }
 
 .AptoButton--danger {
   color: $button-danger-color;
   background-color: $button-danger-backgroundColor;
+  &[aria-current='page'],
   &:hover,
   &.AptoButton--active {
+    color: $button-danger-color;
     background-color: $button-danger-hover-backgroundColor;
   }
   &:disabled,
   &.AptoButton--disabled {
+    color: $button-danger-color;
     background-color: $button-danger-disabled-backgroundColor;
   }
 }
 .AptoButton--link.AptoButton--danger {
   color: $button-danger-link-color;
   background-color: transparent;
+  &[aria-current='page'],
   &:hover,
   &.AptoButton--active {
+    background-color: transparent;
     color: $button-danger-link-hover-color;
   }
   &:disabled,
   &.AptoButton--disabled {
+    background-color: transparent;
     color: $button-danger-link-disabled-color;
   }
 }
@@ -170,24 +185,30 @@ $button-holdPregressContainer-size: 3px !default;
 .AptoButton--white {
   color: $button-white-color;
   background-color: $button-white-backgroundColor;
+  &[aria-current='page'],
   &:hover,
   &.AptoButton--active {
+    color: $button-white-color;
     background-color: $button-white-hover-backgroundColor;
   }
   &:disabled,
   &.AptoButton--disabled {
+    color: $button-white-color;
     background-color: $button-white-disabled-backgroundColor;
   }
 }
 .AptoButton--link.AptoButton--white {
   color: $button-white-link-color;
   background-color: transparent;
+  &[aria-current='page'],
   &:hover,
   &.AptoButton--active {
+    background-color: transparent;
     color: $button-white-link-hover-color;
   }
   &:disabled,
   &.AptoButton--disabled {
+    background-color: transparent;
     color: $button-white-link-disabled-color;
   }
 }
@@ -195,26 +216,32 @@ $button-holdPregressContainer-size: 3px !default;
 .AptoButton--link.AptoButton--secondary {
   color: $button-secondary-link-color;
   background-color: transparent;
+  &[aria-current='page'],
   &:hover,
   &.AptoButton--active {
     color: $button-secondary-link-hover-color;
+    background-color: transparent;
   }
   &:disabled,
   &.AptoButton--disabled {
     color: $button-secondary-link-disabled-color;
+    background-color: transparent;
   }
 }
 
 .AptoButton--link.AptoButton--secondaryDark {
   color: $button-secondaryDark-link-color;
   background-color: transparent;
+  &[aria-current='page'],
   &:hover,
   &.AptoButton--active {
     color: $button-secondaryDark-link-hover-color;
+    background-color: transparent;
   }
   &:disabled,
   &.AptoButton--disabled {
     color: $button-secondaryDark-link-disabled-color;
+    background-color: transparent;
   }
 }
 

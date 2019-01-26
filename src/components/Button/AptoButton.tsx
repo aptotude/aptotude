@@ -2,6 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import './aptoButton.scss';
 import { StandardTypes } from '../../utils/standardTypes';
+import { Link } from '@reach/router';
 
 export type ButtonKind = 'button' | 'link';
 export type ButtonVariant =
@@ -27,6 +28,7 @@ export interface AptoButtonDisplayProps extends StandardTypes {
   title?: string;
   target?: string;
   type?: string;
+  to?: string;
 }
 
 export class AptoButton extends React.Component<AptoButtonDisplayProps> {
@@ -76,6 +78,7 @@ export class AptoButton extends React.Component<AptoButtonDisplayProps> {
       disabled,
       active,
       href,
+      to,
       title,
       ...rest
     } = this.props;
@@ -95,16 +98,25 @@ export class AptoButton extends React.Component<AptoButtonDisplayProps> {
       className
     );
 
+    const propList = {
+      ref: forwardRef,
+      'aria-label': title,
+      onClick: this.handleClick,
+      className: classes,
+      ...rest
+    };
+
+    // if we use the to attribute, we render the button as a reach router link
+    if (to) {
+      return (
+        <Link to={to} {...propList}>
+          {children}
+        </Link>
+      );
+    }
+
     return (
-      <Component
-        {...rest}
-        ref={forwardRef}
-        aria-label={title}
-        href={href}
-        disabled={disabled || undefined}
-        onClick={this.handleClick}
-        className={classes}
-      >
+      <Component href={href} disabled={disabled || undefined} {...propList}>
         {children}
       </Component>
     );
