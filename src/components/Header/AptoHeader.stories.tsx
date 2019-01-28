@@ -17,14 +17,14 @@ storiesOf('Header', module)
       <br />
       <AptoHeader type="6">Heading H6 (1 rem)</AptoHeader>
     </React.Fragment>
-))
-.add('No Transform', () => (
-  <AptoHeader transform={false} type="1">
-    Header with out text transform
-  </AptoHeader>
-))
-.add('Centered', () => (
-  <AptoHeader center type="1">
-    Centered Header
-  </AptoHeader>
-));
+  ))
+  .add('No Transform', () => (
+    <AptoHeader transform={false} type="1">
+      Header with out text transform
+    </AptoHeader>
+  ))
+  .add('Centered', () => (
+    <AptoHeader center type="1">
+      Centered Header
+    </AptoHeader>
+  ));
