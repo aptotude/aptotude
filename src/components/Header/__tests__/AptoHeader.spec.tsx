@@ -25,6 +25,14 @@ describe('Header Component', () => {
     );
   });
 
+  it('Header centered', () => {
+    const { container } = render(<AptoHeader center />);
+    const node = container.querySelector('h1.AptoHeader');
+    expect(node!.className).toEqual(
+      'AptoHeader AptoHeader--h1 AptoHeader--center'
+    );
+  });
+
   it('Header 2 renders', () => {
     const { container } = render(<AptoHeader type="2" />);
     const node = container.querySelector('h2.AptoHeader');
