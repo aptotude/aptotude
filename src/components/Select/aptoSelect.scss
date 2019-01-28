@@ -1,49 +1,49 @@
 @import '../../scss/theme/variables.scss';
 
-$inputPadding: 0.8rem 0;
-$inputBorderColor: $gray-300;
-$inputColor: $gray-800;
-$inputPlaceholderColor: $gray-500;
-$inputFocusBorderColor: $blue-500;
-$inputErrorBorderColor: $orange-400;
-$inputDisabledOpactiy: 0.5;
+$selectPadding: 0.8rem 0;
+$selectBorderColor: $gray-300;
+$selectColor: $gray-800;
+$selectPlaceholderColor: $gray-500;
+$selectFocusBorderColor: $blue-500;
+$selectErrorBorderColor: $orange-400;
+$selectDisabledOpactiy: 0.5;
 
 .ui.selection {
   &.dropdown {
-    color: $inputColor;
-    padding: $inputPadding !important;
+    color: $selectColor;
+    padding: $selectPadding !important;
     border-top: none !important;
     border-left: none !important;
     border-right: none !important;
     border-radius: 0 !important;
-    border-bottom: 1px solid $inputBorderColor;
+    border-bottom: 1px solid $selectBorderColor;
     background-color: $white !important;
     &.selection {
       box-shadow: none !important;
     }
     &:hover,
     &:focus {
-      border-bottom-color: $inputFocusBorderColor !important;
+      border-bottom-color: $selectFocusBorderColor !important;
     }
     &[disabled] {
-      opacity: $inputDisabledOpactiy !important;
+      opacity: $selectDisabledOpactiy !important;
       cursor: default;
     }
     .menu {
-      border: 1px solid $inputBorderColor !important;
+      border: 1px solid $selectBorderColor !important;
     }
     &.error {
       > .default.text {
-        color: $inputPlaceholderColor !important;
+        color: $selectPlaceholderColor !important;
       }
       > .text {
-        color: $inputColor !important;
+        color: $selectColor !important;
       }
-      border-color: $inputErrorBorderColor !important;
+      border-color: $selectErrorBorderColor !important;
     }
   }
   &.disabled {
-    opacity: $inputDisabledOpactiy !important;
+    opacity: $selectDisabledOpactiy !important;
     cursor: default;
   }
 }

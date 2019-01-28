@@ -5,6 +5,8 @@ import { AptoButton } from '../Button';
 import { AptoSelect } from '../Select';
 import { AptoInput } from '../Input';
 import { AptoTextArea } from '../TextArea';
+import { AptoRadio } from '../Radio';
+import { AptoCheckbox } from '../Checkbox';
 
 storiesOf('Form', module)
   .add('Default', () => {
@@ -29,6 +31,12 @@ storiesOf('Form', module)
         <AptoForm.Field required>
           <label>State</label>
           <AptoSelect placeholder="Select your country" options={options} />
+        </AptoForm.Field>
+        <AptoForm.Field>
+          <AptoRadio label="Radio Field" />
+        </AptoForm.Field>
+        <AptoForm.Field>
+          <AptoCheckbox label="Checkbox Field" />
         </AptoForm.Field>
         <AptoForm.Field required>
           <label>Message</label>

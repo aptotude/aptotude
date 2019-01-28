@@ -10,11 +10,6 @@ storiesOf('Input', module).add('Default', () => (
     <SemanticUIStyle />
     <AptoForm>
       <AptoForm.Field>
-        <label>Form Field</label>
-        <AptoInput error={true} placeholder="Enter Value" />
-        <AptoFormControlError error="This field is required" />
-      </AptoForm.Field>
-      <AptoForm.Field>
         <label>Another Form Field</label>
         <AptoInput value="Some Value" />
         <AptoFormControlError error={undefined} />
@@ -23,6 +18,11 @@ storiesOf('Input', module).add('Default', () => (
         <label>Another Form Field</label>
         <AptoInput />
         <AptoFormControlError error={undefined} />
+      </AptoForm.Field>
+      <AptoForm.Field>
+        <label>Form Field</label>
+        <AptoInput error={true} placeholder="Enter Value" />
+        <AptoFormControlError error="This field is required" />
       </AptoForm.Field>
       <AptoForm.Field>
         <label>Disabled Form Field</label>

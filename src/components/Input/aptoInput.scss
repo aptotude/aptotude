@@ -32,7 +32,7 @@ $inputDisabledOpactiy: 0.7;
   &.error {
     input {
       color: $inputColor;
-      border-bottom-color: $inputErrorBorderColor;
+      border-bottom: 1px solid $inputErrorBorderColor !important;
     }
   }
   &.disabled {

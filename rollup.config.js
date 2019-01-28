@@ -11,12 +11,19 @@ const globalLibs = {
   'react': 'React',
   'react-dom': 'reactDom',
   '@reach/router': 'Link',
+  'semantic-ui-react': 'Input',
+  'semantic-ui-react': 'Select',
+  'semantic-ui-react': 'TextArea',
+  'semantic-ui-react': 'Radio',
+  'semantic-ui-react': 'Checkbox',
 };
 const externalLibs = [
   'classnames',
   'react',
   'react-dom',
   '@reach/router',
+  'semantic-ui-react',
+  'semantic-ui-css'
 ];
 
 export default {

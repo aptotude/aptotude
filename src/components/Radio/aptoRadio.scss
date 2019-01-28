@@ -1,0 +1,78 @@
+@import '../../scss/theme/variables.scss';
+
+$radioDisabledOpacity: 0.5;
+$radioCheckedColor: $blue-500;
+$radioBorderColor: $gray-300;
+$radioHoverBorderColor: darken($radioBorderColor, 15%);
+$radioUnCheckedColor: $white;
+$radioLabelColor: $gray-650;
+$radioFontSize: $font-size-md;
+$radioFontWeight: $font-weight-light;
+
+.ui.radio.checkbox {
+  cursor: pointer;
+  label {
+    color: $radioLabelColor !important;
+    font-size: $radioFontSize;
+    font-weight: $radioFontWeight;
+    &:hover,
+    &:focus {
+      color: $radioLabelColor;
+    }
+  }
+  label,
+  .box {
+    padding-left: 2.5rem !important;
+  }
+
+  input ~ .box:hover:before,
+  input ~ label:hover:before {
+    border-color: $radioHoverBorderColor;
+  }
+
+  input:focus ~ .box:before,
+  input:focus ~ label:before,
+  input ~ .box:before,
+  input ~ label:before {
+    border-color: $radioBorderColor;
+  }
+
+  input:focus:checked ~ .box:before,
+  input:focus:checked ~ label:before,
+  input:checked ~ .box:before,
+  input:checked ~ label:before {
+    border-color: $radioCheckedColor;
+  }
+
+  input:focus ~ .box:after,
+  input:focus ~ label:after,
+  input ~ .box:after,
+  input ~ label:after {
+    background-color: $radioUnCheckedColor;
+  }
+
+  input:focus:checked ~ .box:after,
+  input:focus:checked ~ label:after,
+  input:checked ~ .box:after,
+  input:checked ~ label:after {
+    background-color: $radioCheckedColor !important;
+  }
+
+  .box:before,
+  label:before {
+    border-width: 2px;
+  }
+
+  .box:after,
+  label:after {
+    top: 0px;
+    left: -1px;
+    width: 17px;
+    height: 17px;
+  }
+
+  &.disabled {
+    opacity: $radioDisabledOpacity !important;
+    cursor: default;
+  }
+}

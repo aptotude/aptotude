@@ -19,15 +19,6 @@ storiesOf('Select', module).add('Default', () => {
       <SemanticUIStyle />
       <AptoForm>
         <AptoForm.Field>
-          <label>Error Form Field</label>
-          <AptoSelect
-            options={options}
-            error={true}
-            placeholder="Enter Value"
-          />
-          <AptoFormControlError error="This field is required" />
-        </AptoForm.Field>
-        <AptoForm.Field>
           <label>Form Field</label>
           <AptoSelect options={options} value="1" placeholder="Enter Value" />
           <AptoFormControlError />
@@ -36,6 +27,15 @@ storiesOf('Select', module).add('Default', () => {
           <label>Form Field</label>
           <AptoSelect options={options} placeholder="Enter Value" />
           <AptoFormControlError error={undefined} />
+        </AptoForm.Field>
+        <AptoForm.Field>
+          <label>Error Form Field</label>
+          <AptoSelect
+            options={options}
+            error={true}
+            placeholder="Enter Value"
+          />
+          <AptoFormControlError error="This field is required" />
         </AptoForm.Field>
         <AptoForm.Field>
           <label>Disabled Field</label>

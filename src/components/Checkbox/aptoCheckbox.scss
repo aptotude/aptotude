@@ -1,0 +1,78 @@
+@import '../../scss/theme/variables.scss';
+
+$checkboxDisabledOpacity: 0.5;
+$checkboxCheckedColor: $blue-500;
+$checkboxBorderColor: $gray-300;
+$checkboxHoverBorderColor: darken($checkboxBorderColor, 15%);
+$checkboxUnCheckedColor: $white;
+$checkboxLabelColor: $gray-650;
+$checkboxFontSize: $font-size-md;
+$checkboxFontWeight: $font-weight-light;
+
+.ui.checkbox {
+  cursor: pointer;
+  label {
+    color: $checkboxLabelColor !important;
+    font-size: $checkboxFontSize;
+    font-weight: $checkboxFontWeight;
+    &:hover,
+    &:focus {
+      color: $checkboxLabelColor;
+    }
+  }
+  label,
+  .box {
+    padding-left: 2.5rem !important;
+  }
+
+  input ~ .box:hover:before,
+  input ~ label:hover:before {
+    border-color: $checkboxHoverBorderColor;
+  }
+
+  input:focus ~ .box:before,
+  input:focus ~ label:before,
+  input ~ .box:before,
+  input ~ label:before {
+    border-color: $checkboxBorderColor;
+  }
+
+  input:focus:checked ~ .box:before,
+  input:focus:checked ~ label:before,
+  input:checked ~ .box:before,
+  input:checked ~ label:before {
+    border-color: $checkboxCheckedColor;
+  }
+
+  input:focus ~ .box:after,
+  input:focus ~ label:after,
+  input ~ .box:after,
+  input ~ label:after {
+    color: $checkboxUnCheckedColor;
+  }
+
+  input:focus:checked ~ .box:after,
+  input:focus:checked ~ label:after,
+  input:checked ~ .box:after,
+  input:checked ~ label:after {
+    color: $checkboxCheckedColor !important;
+  }
+
+  .box:before,
+  label:before {
+    border-width: 2px;
+  }
+
+  .box:after,
+  label:after {
+    top: 0px;
+    left: 0px;
+    width: 17px;
+    height: 17px;
+  }
+
+  &.disabled {
+    opacity: $checkboxDisabledOpacity !important;
+    cursor: default;
+  }
+}

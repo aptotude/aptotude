@@ -1,34 +1,34 @@
 @import '../../scss/theme/variables.scss';
 
-$inputPadding: 0.8rem 0;
-$inputBorderColor: $gray-300;
-$inputColor: $gray-800;
-$inputPlaceholderColor: $gray-500;
-$inputFocusBorderColor: $blue-500;
-$inputErrorBorderColor: $orange-400;
-$inputDisabledOpactiy: 0.7;
+$textAreaPadding: 0.8rem 0;
+$textAreaBorderColor: $gray-300;
+$textAreaColor: $gray-800;
+$textAreaPlaceholderColor: $gray-500;
+$textAreaFocusBorderColor: $blue-500;
+$textAreaErrorBorderColor: $orange-400;
+$textAreaDisabledOpactiy: 0.7;
 
 .ui.form textarea {
-  color: $inputColor;
+  color: $textAreaColor;
   cursor: pointer;
-  padding: $inputPadding !important;
+  padding: $textAreaPadding !important;
   border-top: none !important;
   border-left: none !important;
   border-right: none !important;
   border-radius: 0 !important;
-  border-bottom: 1px solid $inputBorderColor;
+  border-bottom: 1px solid $textAreaBorderColor;
   &::placeholder {
-    color: $inputPlaceholderColor !important;
+    color: $textAreaPlaceholderColor !important;
   }
   &:focus {
-    border-bottom-color: $inputFocusBorderColor !important;
+    border-bottom-color: $textAreaFocusBorderColor !important;
   }
   &[disabled] {
-    opacity: $inputDisabledOpactiy !important;
+    opacity: $textAreaDisabledOpactiy !important;
     cursor: default;
   }
   &.disabled {
-    opacity: $inputDisabledOpactiy !important;
+    opacity: $textAreaDisabledOpactiy !important;
     cursor: default;
   }
 }
