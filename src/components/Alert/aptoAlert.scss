@@ -8,17 +8,17 @@
   color: $body-text;
   padding: 1rem;
   border: 1px solid $primary-blue;
-  background-color: rgba($primary-blue, 0.1);
+  background-color: lighten($primary-blue, 20%);
   &.AptoAlert--warning {
     border-color: $warning;
-    background-color: rgba($warning, 0.1);
+    background-color: lighten($warning, 45%);
   }
   &.AptoAlert--success {
     border-color: $success;
-    background-color: rgba($success, 0.1);
+    background-color: lighten($success, 45%);
   }
   &.AptoAlert--danger {
     border-color: $danger;
-    background-color: rgba($danger, 0.1);
+    background-color: lighten($danger, 45%);
   }
 }
