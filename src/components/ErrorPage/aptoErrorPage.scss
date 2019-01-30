@@ -1,0 +1,14 @@
+.AptoErrorPage {
+  &.AptoRow {
+    min-height: 100vh;
+    text-align: center;
+  }
+  .AptoHeader {
+    color: #555;
+    font-size: 3.25rem;
+  }
+  .AptoParagraph {
+    margin: 0 auto;
+    width: 280px;
+  }
+}

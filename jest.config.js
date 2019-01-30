@@ -1,14 +1,8 @@
 module.exports = {
-  roots: [
-    "<rootDir>/src/client"
-  ],
   transform: {
-    "^.+\\.(js|jsx|ts|tsx)$": "ts-jest"
+    "^.+\\.(js|jsx|ts|tsx)$": "ts-jest",
+    "^.+\\.(css|scss|sass)$": "<rootDir>/config/jest/styleMock.js"
   },
-  transformIgnorePatterns: [
-    "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$",
-    "^.+\\.module\\.(css|sass|scss)$"
-  ],
   testMatch: [
     "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
     "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,ts,tsx}"
@@ -18,8 +12,5 @@ module.exports = {
     "tsx",
     "js",
     "jsx"
-  ],
-  moduleNameMapper: {
-    "\\.(css|sass|scss)$": "<rootDir>/__mocks__/styleMock.js"
-  }
+  ]
 }
