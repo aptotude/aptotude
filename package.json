@@ -24,8 +24,9 @@
     "storybook:local": "start-storybook -p 9001 -s ./src/assets -c .storybook",
     "storybook:deploy": "storybook-to-ghpages",
     "test": "jest",
-    "test:update": "jest --silent -u",
-    "test:watch": "jest --silent --watch",
+    "test:ci": "yarn test --maxWorkers=2",
+    "test:update": "yarn test -u",
+    "test:watch": "yarn test --watch",
     "typecheck": "tsc --noEmit"
   },
   "engines": {
