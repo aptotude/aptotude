@@ -31,7 +31,8 @@ class AptoIcon extends React.Component<AptoIconProps> {
       color,
       circleColor,
       icon: Component,
-      status
+      status,
+      className,
     } = this.props;
     const classes = classNames(
       COMPONENT_PREFIX,
@@ -42,7 +43,8 @@ class AptoIcon extends React.Component<AptoIconProps> {
       color ? `${COMPONENT_PREFIX}--color${capitalize(color)}` : null,
       circleColor
         ? `${COMPONENT_PREFIX}--circleColor${capitalize(circleColor)}`
-        : null
+        : null,
+      className,
     );
 
     const svgProps = {
