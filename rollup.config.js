@@ -10,17 +10,19 @@ const globalLibs = {
   'classnames': 'classnames',
   'react': 'React',
   'react-dom': 'reactDom',
+  'react-dropzone': 'Dropzone',
   '@reach/router': 'Link',
   'semantic-ui-react': 'Input',
   'semantic-ui-react': 'Select',
   'semantic-ui-react': 'TextArea',
   'semantic-ui-react': 'Radio',
-  'semantic-ui-react': 'Checkbox',
+  'semantic-ui-react': 'Checkbox'
 };
 const externalLibs = [
   'classnames',
   'react',
   'react-dom',
+  'react-dropzone',
   '@reach/router',
   'semantic-ui-react',
   'semantic-ui-css'

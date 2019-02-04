@@ -1,0 +1,45 @@
+@import '../../scss/mixins/_grid.scss';
+
+.dropzone {
+  margin: 0.8rem 0;
+  border: 1px dashed $gray-600;
+  border-radius: 2px;
+  padding: 1.5rem 1rem;
+  outline: none;
+  text-align: center;
+  position: relative;
+
+  .dropzone-cancel {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+
+  .dropzone-addIcon {
+    position: absolute;
+    top: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
+    left: 2.5rem;
+    color: $gray-500;
+    top: 2.5rem;
+  }
+
+  .fileList {
+    text-align: left;
+  }
+}
+
+.dropzone-previousImage {
+  display: inline-block;
+  text-align: right;
+  margin: 0.8rem 0;
+  img {
+    max-width: 115px;
+    max-height: 65px;
+    border: 1px solid $gray-600;
+    display: inline-block;
+    margin: 0 0 0 0;
+    padding: 0;
+  }
+}

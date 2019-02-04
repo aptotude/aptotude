@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AptoFileUpload Renders Component 1`] = `
+<div
+  class="dropzone"
+  tabindex="0"
+>
+  <span
+    class="AptoIcon AptoIcon--size5 dropzone-addIcon"
+  >
+    <svg
+      focusable="false"
+      height="100%"
+      preserveAspectRatio="xMidYMid meet"
+      viewBox="0 0 24 24"
+      width="100%"
+    >
+      <defs>
+        <path
+          d="M24 24H0V0h24v24z"
+          id="addPhoto_svg__a"
+        />
+      </defs>
+      <clippath
+        id="addPhoto_svg__b"
+      >
+        <use
+          overflow="visible"
+          xlink:href="#addPhoto_svg__a"
+        />
+      </clippath>
+      <path
+        clip-path="url(#addPhoto_svg__b)"
+        d="M3 4V1h2v3h3v2H5v3H3V6H0V4h3zm3 6V7h3V4h7l1.83 2H21c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2V10h3zm7 9c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-3.2-5c0 1.77 1.43 3.2 3.2 3.2s3.2-1.43 3.2-3.2-1.43-3.2-3.2-3.2-3.2 1.43-3.2 3.2z"
+      />
+    </svg>
+  </span>
+  <input
+    accept="image/png,image/jpeg"
+    autocomplete="off"
+    name="superName"
+    style="display: none;"
+    tabindex="-1"
+    type="file"
+  />
+  <div>
+    <span
+      class="AptoButton AptoButton--button AptoButton--primary"
+    >
+      Choose File
+       To Upload
+    </span>
+    <p
+      class="AptoParagraph"
+    >
+      or drag and drop file
+       here
+    </p>
+  </div>
+</div>
+`;
+
+exports[`AptoFileUpload Renders Component with previous image 1`] = `
+<div
+  class="dropzone-previousImage"
+>
+  <img
+    alt=""
+    src="http://foo.com/j.jpg"
+  />
+  <br />
+  <button
+    class="AptoButton AptoButton--link AptoButton--primary dropzone-change"
+  >
+    Change
+  </button>
+</div>
+`;

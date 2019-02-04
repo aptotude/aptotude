@@ -12,6 +12,7 @@
     "no-console": false,
     "jsx-boolean-value": false,
     "no-unused-expression": false,
-    "no-implicit-dependencies": false
+    "no-implicit-dependencies": false,
+    "jsx-no-lambda": false
   }
 }
