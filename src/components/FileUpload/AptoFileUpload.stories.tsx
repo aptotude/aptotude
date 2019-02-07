@@ -24,8 +24,8 @@ storiesOf('File Upload', module)
     const initialValues = {
       primary_photo_url: null
     };
-    const submitHandler = (values: any) => {
-      console.log(values);
+    const submitHandler = () => {
+      // do stuff
     };
     return (
       <Formik
@@ -56,8 +56,8 @@ storiesOf('File Upload', module)
     const initialValues = {
       primary_photo_url: 'https://www.apto.com/hs-fs/hubfs/AptoLogo.png'
     };
-    const submitHandler = (values: any) => {
-      console.log(values);
+    const submitHandler = () => {
+      // hi
     };
     return (
       <Formik
@@ -88,8 +88,8 @@ storiesOf('File Upload', module)
     const initialValues = {
       primary_photo_url: 'https://www.apto.com/hs-fs/hubfs/AptoLogo.png'
     };
-    const submitHandler = (values: any) => {
-      console.log(values);
+    const submitHandler = () => {
+      // hi
     };
     return (
       <Formik

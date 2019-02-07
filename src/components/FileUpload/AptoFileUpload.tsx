@@ -106,7 +106,6 @@ export class AptoFileUpload extends React.Component<
     if (this.state.hasPreviousImage) {
       const { imageComponent: Component } = this.props;
       let image = null;
-      console.log(typeof Component);
       if (this.originalValue && typeof Component === 'object') {
         image = Component;
       } else if (this.originalValue && Component) {
