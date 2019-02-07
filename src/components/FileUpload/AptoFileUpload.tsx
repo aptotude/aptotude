@@ -19,7 +19,10 @@ interface AptoFileUploadProps {
   minSize?: number;
   multiple?: boolean;
   accept?: string | undefined;
-  imageComponent?: Element | React.ComponentClass<any> | React.StatelessComponent<any>;
+  imageComponent?:
+    | Element
+    | React.ComponentClass<any>
+    | React.StatelessComponent<any>;
 }
 
 interface AptoFileUploadState {
