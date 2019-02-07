@@ -76,3 +76,19 @@ exports[`AptoFileUpload Renders Component with previous image 1`] = `
   </button>
 </div>
 `;
+
+exports[`AptoFileUpload Renders Custom Image Component 1`] = `
+<div
+  class="dropzone-previousImage"
+>
+  <div>
+    some custom image thingy
+  </div>
+  <br />
+  <button
+    class="AptoButton AptoButton--link AptoButton--primary dropzone-change"
+  >
+    Change
+  </button>
+</div>
+`;

@@ -6,18 +6,26 @@ afterEach(() => {
   cleanup();
 });
 
+const Img = () => {
+  return <div>some custom image thingy</div>;
+};
+
 describe('AptoFileUpload', () => {
   it('Renders Component', () => {
     const { container } = render(<AptoFileUpload name="superName" />);
     expect(container.firstChild).toMatchSnapshot();
   });
 
+  it('Renders Custom Image Component', () => {
+    const { container } = render(
+      <AptoFileUpload value="foo.jpg" imageComponent={Img} name="superName" />
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
   it('Renders Component with previous image', () => {
     const { container } = render(
-      <AptoFileUpload
-        previousPhotoUrl="http://foo.com/j.jpg"
-        name="superName"
-      />
+      <AptoFileUpload value="http://foo.com/j.jpg" name="superName" />
     );
     expect(container.firstChild).toMatchSnapshot();
   });
@@ -29,7 +37,7 @@ describe('AptoFileUpload', () => {
         onRemoveImage={() => {
           hitRemove = true;
         }}
-        previousPhotoUrl="http://foo.com/j.jpg"
+        value="http://foo.com/j.jpg"
         name="superName"
       />
     );
@@ -46,12 +54,14 @@ describe('AptoFileUpload', () => {
 
   it('toggles cancel', async () => {
     let hitCancel = false;
+    let old: string | null = null;
     const { container } = render(
       <AptoFileUpload
-        onCancel={() => {
+        onCancel={oldImage => {
           hitCancel = true;
+          old = oldImage;
         }}
-        previousPhotoUrl="http://foo.com/j.jpg"
+        value="http://foo.com/j.jpg"
         name="superName"
       />
     );
@@ -70,6 +80,7 @@ describe('AptoFileUpload', () => {
       const el = container.querySelector('.dropzone-previousImage');
       expect(el).not.toBeUndefined();
       expect(hitCancel).toBeTruthy();
+      expect(old).toEqual('http://foo.com/j.jpg');
     });
   });
 });

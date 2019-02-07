@@ -11,14 +11,15 @@ import { UploadIcon } from './UploadIcon';
 
 interface AptoFileUploadProps {
   name: string;
-  previousPhotoUrl?: string | undefined | null;
+  value?: string | undefined | null;
   onDrop?: (acceptedFiles: any, rejectedFiles: any) => void;
-  onCancel?: () => void;
+  onCancel?: (originalValue: string | null) => void;
   onRemoveImage?: () => void;
   maxSize?: number;
   minSize?: number;
   multiple?: boolean;
   accept?: string | undefined;
+  imageComponent?: React.ComponentClass<any> | React.StatelessComponent<any>;
 }
 
 interface AptoFileUploadState {
@@ -34,21 +35,19 @@ export class AptoFileUpload extends React.Component<
     maxSize: 5242880, // 5mb
     minSize: 0,
     accept: 'image/png,image/jpeg',
-    previousPhotoUrl: undefined,
+    value: null,
     multiple: false
   };
 
+  public originalValue: string | null = null;
+
   constructor(props: AptoFileUploadProps) {
     super(props);
-
-    let hasPreviousImage = false;
-    if (this.props.previousPhotoUrl && this.props.previousPhotoUrl !== '') {
-      hasPreviousImage = true;
-    }
-
+    this.originalValue = this.props.value || null;
     this.state = {
       files: [],
-      hasPreviousImage
+      hasPreviousImage:
+        this.originalValue && this.originalValue !== '' ? true : false
     };
   }
 
@@ -82,7 +81,7 @@ export class AptoFileUpload extends React.Component<
     e.stopPropagation();
 
     this.setState({
-      hasPreviousImage: this.props.previousPhotoUrl ? true : false
+      hasPreviousImage: this.originalValue ? true : false
     });
 
     this.onCancel();
@@ -96,17 +95,22 @@ export class AptoFileUpload extends React.Component<
     });
 
     if (onCancel) {
-      onCancel();
+      onCancel(this.originalValue);
     }
   };
 
   public render() {
     if (this.state.hasPreviousImage) {
+      const { imageComponent: Component } = this.props;
+      let image = null;
+      if (this.originalValue && Component) {
+        image = <Component />;
+      } else if (this.originalValue) {
+        image = <img src={this.originalValue} alt="" />;
+      }
       return (
         <div className="dropzone-previousImage">
-          {this.props.previousPhotoUrl && (
-            <img src={this.props.previousPhotoUrl} alt="" />
-          )}
+          {image}
           <br />
           <AptoButton
             className="dropzone-change"
@@ -171,7 +175,7 @@ export class AptoFileUpload extends React.Component<
                   {acceptedList}
                 </AptoList>
               )}
-              {this.props.previousPhotoUrl && (
+              {this.originalValue && (
                 <AptoButton
                   kind="link"
                   className="dropzone-cancel"
