@@ -20,9 +20,9 @@ interface AptoFileUploadProps {
   multiple?: boolean;
   accept?: string | undefined;
   imageComponent?:
-    | Element
     | React.ComponentClass<any>
-    | React.StatelessComponent<any>;
+    | React.StatelessComponent<any>
+    | any;
 }
 
 interface AptoFileUploadState {
@@ -106,7 +106,10 @@ export class AptoFileUpload extends React.Component<
     if (this.state.hasPreviousImage) {
       const { imageComponent: Component } = this.props;
       let image = null;
-      if (this.originalValue && Component) {
+      console.log(typeof Component);
+      if (this.originalValue && typeof Component === 'object') {
+        image = Component;
+      } else if (this.originalValue && Component) {
         image = <Component />;
       } else if (this.originalValue) {
         image = <img src={this.originalValue} alt="" />;

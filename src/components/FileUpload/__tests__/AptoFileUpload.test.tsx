@@ -10,15 +10,32 @@ const Img = () => {
   return <div>some custom image thingy</div>;
 };
 
+class Foo extends React.Component<any> {
+  public render() {
+    return <div>{this.props.bar}</div>;
+  }
+}
+
 describe('AptoFileUpload', () => {
   it('Renders Component', () => {
     const { container } = render(<AptoFileUpload name="superName" />);
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Renders Custom Image Component', () => {
+  it('Renders Custom Image Funcion Component', () => {
     const { container } = render(
       <AptoFileUpload value="foo.jpg" imageComponent={Img} name="superName" />
+    );
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('Renders Custom Image Component Class', () => {
+    const { container } = render(
+      <AptoFileUpload
+        value="foo.jpg"
+        imageComponent={<Foo bar="foo" />}
+        name="superName"
+      />
     );
     expect(container.firstChild).toMatchSnapshot();
   });
