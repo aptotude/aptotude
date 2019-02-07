@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AptoFormInputHelper should render  1`] = `
+<div
+  class="required field"
+>
+  <label
+    for="input-field"
+  >
+    Label
+  </label>
+  <div
+    class="ui input"
+  >
+    <input
+      id="input-field"
+      maxlength="24"
+      name="field"
+      required=""
+      type="text"
+      value="16"
+    />
+  </div>
+</div>
+`;
+
+exports[`AptoFormInputHelper should render error state 1`] = `
+<div
+  class="field"
+>
+  <label
+    for="input-field"
+  >
+    Label
+  </label>
+  <div
+    class="ui error input"
+  >
+    <input
+      id="input-field"
+      maxlength="255"
+      name="field"
+      type="text"
+      value="16"
+    />
+  </div>
+  <div
+    class="AptoFormControlError"
+  >
+    Broken Stuff
+  </div>
+</div>
+`;

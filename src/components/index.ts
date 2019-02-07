@@ -11,6 +11,7 @@ export * from './ErrorPage';
 export * from './FileUpload';
 export * from './Form';
 export * from './FormControlError';
+export * from './FormInputHelper';
 export * from './Header';
 export * from './HelpText';
 export * from './Icon';
