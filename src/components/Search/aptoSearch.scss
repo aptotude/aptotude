@@ -1,0 +1,57 @@
+@import '../../scss/theme/variables.scss';
+
+$searchPadding: 0.8rem 0 0.8rem 2.5rem;
+$searchBorderColor: $gray-300;
+$searchColor: $gray-800;
+$searchPlaceholderColor: $gray-500;
+$searchFocusBorderColor: $blue-500;
+$searchErrorBorderColor: $orange-400;
+$searchDisabledOpactiy: 0.7;
+
+.AptoSearch {
+  position: relative;
+  .AptoIcon {
+    position: absolute;
+    top: 6px;
+    left: 0;
+    color: $blue-500;
+  }
+  .AptoSpinner {
+    right: auto;
+    svg {
+      width: 20px;
+    }
+  }
+  .ui.search {
+    input {
+      color: $searchColor;
+      cursor: pointer;
+      padding: $searchPadding !important;
+      border-top: none !important;
+      border-left: none !important;
+      border-right: none !important;
+      border-radius: 0 !important;
+      border-bottom: 1px solid $searchBorderColor;
+      &::placeholder {
+        color: $searchPlaceholderColor !important;
+      }
+      &:focus {
+        border-bottom-color: $searchFocusBorderColor !important;
+      }
+      &[disabled] {
+        opacity: $searchDisabledOpactiy !important;
+        cursor: default;
+      }
+    }
+    &.error {
+      input {
+        color: $searchColor;
+        border-bottom: 1px solid $searchErrorBorderColor !important;
+      }
+    }
+    &.disabled {
+      opacity: $searchDisabledOpactiy !important;
+      cursor: default;
+    }
+  }
+}

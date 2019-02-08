@@ -16,7 +16,9 @@ const globalLibs = {
   'semantic-ui-react': 'Select',
   'semantic-ui-react': 'TextArea',
   'semantic-ui-react': 'Radio',
-  'semantic-ui-react': 'Checkbox'
+  'semantic-ui-react': 'Checkbox',
+  'semantic-ui-react': 'Search',
+  'semantic-ui-react': 'SearchProps',
 };
 const externalLibs = [
   'classnames',
@@ -25,7 +27,7 @@ const externalLibs = [
   'react-dropzone',
   '@reach/router',
   'semantic-ui-react',
-  'semantic-ui-css'
+  'semantic-ui-css',
 ];
 
 export default {

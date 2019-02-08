@@ -38,10 +38,12 @@
   "browser": "aptotude.umd.js",
   "types": "index.d.ts",
   "dependencies": {
-    "@apto/icons": "^1.0.3",
+    "@apto/icons": "^1.0.4",
     "@reach/router": "^1.2.1",
     "classnames": "^2.2.6",
+    "faker": "^4.1.0",
     "formik": "^1.4.3",
+    "lodash.debounce": "^4.0.8",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-dropzone": "^8.0.4",
@@ -49,7 +51,7 @@
     "semantic-ui-react": "0.84.0"
   },
   "peerDependencies": {
-    "@apto/icons": "^1.0.3"
+    "@apto/icons": "^1.0.4"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
@@ -60,7 +62,9 @@
     "@storybook/react": "^4.1.4",
     "@storybook/storybook-deployer": "^2.8.1",
     "@types/classnames": "^2.2.6",
+    "@types/faker": "^4.1.5",
     "@types/jest": "^23.3.9",
+    "@types/lodash.debounce": "^4.0.4",
     "@types/node": "^10.12.18",
     "@types/reach__router": "^1.2.3",
     "@types/react": "^16.7.6",

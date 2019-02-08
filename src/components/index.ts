@@ -22,6 +22,7 @@ export * from './Navbar';
 export * from './Paragraph';
 export * from './Row';
 export * from './Radio';
+export * from './Search';
 export * from './Select';
 export * from './SemanticUIStyle';
 export * from './Shimmer';

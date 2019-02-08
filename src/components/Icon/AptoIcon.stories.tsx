@@ -7,45 +7,56 @@ import { AptoCol } from '../Column';
 import './aptoIconStories.scss';
 import { AptoButton } from '../Button';
 import {
-  property,
-  company,
-  space,
-  email,
-  home,
-  phone,
-  fax,
-  smartPhone,
-  folder,
-  file,
-  help,
-  callList,
-  person,
-  personCircle,
-  people,
-  download,
-  thumbUp,
-  trendingDown,
-  trendingUp,
-  link,
-  time,
-  task,
-  money,
-  list,
-  meeting,
-  menu,
+  add,
+  addPhoto,
+  apto,
+  arrowBack,
+  arrowForward,
   assignment,
-  peaks,
-  loyalty,
-  left,
-  right,
-  up,
+  briefCase,
+  callList,
+  check,
+  checkboxChecked,
+  checkboxOutline,
+  checkCircle,
+  close,
+  company,
   down,
+  download,
   dropDown,
   dropUp,
-  apto,
-  briefCase,
-  arrowBack,
-  arrowForward
+  edit,
+  email,
+  fax,
+  file,
+  folder,
+  help,
+  home,
+  left,
+  link,
+  list,
+  loyalty,
+  meeting,
+  menu,
+  money,
+  peaks,
+  people,
+  person,
+  personCircle,
+  phone,
+  property,
+  radioOutline,
+  radioChecked,
+  right,
+  search,
+  smartPhone,
+  space,
+  task,
+  thumbUp,
+  time,
+  trendingUp,
+  trendingDown,
+  up
 } from '@apto/icons';
 
 storiesOf('Icon', module).add('Default', () => (
@@ -92,10 +103,6 @@ storiesOf('Icon', module).add('Default', () => (
         <span className="icon-meta">file</span>
       </AptoCol>
       <AptoCol sm="2">
-        <AptoIcon icon={help} />
-        <span className="icon-meta">help</span>
-      </AptoCol>
-      <AptoCol sm="2">
         <AptoIcon icon={callList} />
         <span className="icon-meta">callList</span>
       </AptoCol>
@@ -112,14 +119,6 @@ storiesOf('Icon', module).add('Default', () => (
         <span className="icon-meta">people</span>
       </AptoCol>
       <AptoCol sm="2">
-        <AptoIcon icon={download} />
-        <span className="icon-meta">download</span>
-      </AptoCol>
-      <AptoCol sm="2">
-        <AptoIcon icon={link} />
-        <span className="icon-meta">link</span>
-      </AptoCol>
-      <AptoCol sm="2">
         <AptoIcon icon={thumbUp} />
         <span className="icon-meta">thumbUp</span>
       </AptoCol>
@@ -134,14 +133,6 @@ storiesOf('Icon', module).add('Default', () => (
       <AptoCol sm="2">
         <AptoIcon icon={money} />
         <span className="icon-meta">money</span>
-      </AptoCol>
-      <AptoCol sm="2">
-        <AptoIcon icon={list} />
-        <span className="icon-meta">list</span>
-      </AptoCol>
-      <AptoCol sm="2">
-        <AptoIcon icon={menu} />
-        <span className="icon-meta">menu</span>
       </AptoCol>
       <AptoCol sm="2">
         <AptoIcon icon={meeting} />
@@ -174,6 +165,74 @@ storiesOf('Icon', module).add('Default', () => (
       <AptoCol sm="2">
         <AptoIcon icon={briefCase} />
         <span className="icon-meta">briefCase</span>
+      </AptoCol>
+    </AptoRow>
+
+    <h3 className="heading">Controls</h3>
+    <AptoRow className="icon-set-list">
+      <AptoCol sm="2">
+        <AptoIcon icon={search} />
+        <span className="icon-meta">search</span>
+      </AptoCol>
+      <AptoCol sm="2">
+        <AptoIcon icon={edit} />
+        <span className="icon-meta">edit</span>
+      </AptoCol>
+      <AptoCol sm="2">
+        <AptoIcon icon={help} />
+        <span className="icon-meta">help</span>
+      </AptoCol>
+      <AptoCol sm="2">
+        <AptoIcon icon={addPhoto} />
+        <span className="icon-meta">addPhoto</span>
+      </AptoCol>
+      <AptoCol sm="2">
+        <AptoIcon icon={add} />
+        <span className="icon-meta">add</span>
+      </AptoCol>
+      <AptoCol sm="2">
+        <AptoIcon icon={check} />
+        <span className="icon-meta">check</span>
+      </AptoCol>
+      <AptoCol sm="2">
+        <AptoIcon icon={checkboxChecked} />
+        <span className="icon-meta">checkboxChecked</span>
+      </AptoCol>
+      <AptoCol sm="2">
+        <AptoIcon icon={checkboxOutline} />
+        <span className="icon-meta">checkboxOutline</span>
+      </AptoCol>
+      <AptoCol sm="2">
+        <AptoIcon icon={checkCircle} />
+        <span className="icon-meta">checkCircle</span>
+      </AptoCol>
+      <AptoCol sm="2">
+        <AptoIcon icon={close} />
+        <span className="icon-meta">close</span>
+      </AptoCol>
+      <AptoCol sm="2">
+        <AptoIcon icon={radioOutline} />
+        <span className="icon-meta">radioOutline</span>
+      </AptoCol>
+      <AptoCol sm="2">
+        <AptoIcon icon={radioChecked} />
+        <span className="icon-meta">radioChecked</span>
+      </AptoCol>
+      <AptoCol sm="2">
+        <AptoIcon icon={download} />
+        <span className="icon-meta">download</span>
+      </AptoCol>
+      <AptoCol sm="2">
+        <AptoIcon icon={link} />
+        <span className="icon-meta">link</span>
+      </AptoCol>
+      <AptoCol sm="2">
+        <AptoIcon icon={list} />
+        <span className="icon-meta">list</span>
+      </AptoCol>
+      <AptoCol sm="2">
+        <AptoIcon icon={menu} />
+        <span className="icon-meta">menu</span>
       </AptoCol>
     </AptoRow>
 
