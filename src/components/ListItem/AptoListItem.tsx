@@ -2,7 +2,14 @@ import React from 'react';
 import classNames from 'classnames';
 import './aptoListItem.scss';
 import { StandardTypes } from '../../utils/standardTypes';
-import { AptoIcon, AptoIconStatus, AptoIconColors, AptoIconSize, AptoIconIcon, AptoIconCircle } from '../Icon';
+import {
+  AptoIcon,
+  AptoIconStatus,
+  AptoIconColors,
+  AptoIconSize,
+  AptoIconIcon,
+  AptoIconCircle
+} from '../Icon';
 
 export interface AptoListItemDisplayProps extends StandardTypes {
   type?: 'li' | null | undefined;
@@ -25,7 +32,7 @@ export class AptoListItem extends React.Component<AptoListItemDisplayProps> {
     link: false,
     active: false,
     empty: false,
-    icon: undefined,
+    icon: undefined
   };
 
   public render() {

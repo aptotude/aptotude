@@ -65,22 +65,20 @@ class SearchComponentExample extends React.Component<
   }
 }
 
-storiesOf('Search', module)
-  .add('Default', () => {
-    return (
-      <React.Fragment>
-        <SemanticUIStyle />
-        <AptoForm>
-          <AptoForm.Field>
-            <label>Search Field</label>
-            <SearchComponentExample />
-          </AptoForm.Field>
-        </AptoForm>
-        <br />
-        <br />
-        This is a Semantic-UI component. You can see more examples{' '}
-        <a href="https://react.semantic-ui.com/elements/input/">here</a>
-      </React.Fragment>
-    );
-  })
-;
+storiesOf('Search', module).add('Default', () => {
+  return (
+    <React.Fragment>
+      <SemanticUIStyle />
+      <AptoForm>
+        <AptoForm.Field>
+          <label>Search Field</label>
+          <SearchComponentExample />
+        </AptoForm.Field>
+      </AptoForm>
+      <br />
+      <br />
+      This is a Semantic-UI component. You can see more examples{' '}
+      <a href="https://react.semantic-ui.com/elements/input/">here</a>
+    </React.Fragment>
+  );
+});

@@ -5,10 +5,31 @@ import capitalize from '../../utils/capitalize';
 import { StandardTypes } from '../../utils/standardTypes';
 const COMPONENT_PREFIX = 'AptoIcon';
 
-export type AptoIconColors = 'white' | 'blue' | 'orange' | 'gray' | 'lightGray' | undefined;
+export type AptoIconColors =
+  | 'white'
+  | 'blue'
+  | 'orange'
+  | 'gray'
+  | 'lightGray'
+  | undefined;
 export type AptoIconStatus = 'warning' | 'danger' | undefined;
-export type AptoIconIcon = React.ComponentClass<any> | React.StatelessComponent<any>
-export type AptoIconSize = 1 | 2 | 3 | 4 | 5 | 6 | '1' | '2' | '3' | '4' | '5' | '6' | undefined;
+export type AptoIconIcon =
+  | React.ComponentClass<any>
+  | React.StatelessComponent<any>;
+export type AptoIconSize =
+  | 1
+  | 2
+  | 3
+  | 4
+  | 5
+  | 6
+  | '1'
+  | '2'
+  | '3'
+  | '4'
+  | '5'
+  | '6'
+  | undefined;
 export type AptoIconCircle = boolean | undefined;
 export type AptoIconInline = boolean | undefined;
 
