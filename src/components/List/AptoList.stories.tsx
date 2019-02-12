@@ -5,12 +5,25 @@ import { AptoListItem } from '../ListItem/AptoListItem';
 import { AptoCard } from '../Card/AptoCard';
 import { AptoCardContent } from '../CardContent/AptoCardContent';
 import { AptoCardHeader } from '../CardHeader/AptoCardHeader';
+import { person } from '@apto/icons';
+import { AptoParagraph } from '../Paragraph';
 
 storiesOf('List', module)
   .add('Default', () => (
     <AptoList>
       <AptoListItem>A</AptoListItem>
       <AptoListItem>B</AptoListItem>
+    </AptoList>
+  ))
+  .add('Icon List', () => (
+    <AptoList>
+      <AptoListItem iconCircle iconCircleColor="lightGray" iconSize="5" icon={person}>
+        A
+        <AptoParagraph>some list item description</AptoParagraph>
+      </AptoListItem>
+      <AptoListItem iconCircle iconCircleColor="lightGray" iconSize="5" icon={person}>B</AptoListItem>
+      <AptoListItem iconCircle iconCircleColor="lightGray" iconSize="5" icon={person}>C</AptoListItem>
+      <AptoListItem iconCircle iconCircleColor="lightGray" iconSize="5" icon={person}>D</AptoListItem>
     </AptoList>
   ))
   .add('Unordered List', () => (

@@ -3,7 +3,6 @@ import { storiesOf } from '@storybook/react';
 import { AptoForm } from '../Form';
 import { SemanticUIStyle } from '../SemanticUIStyle';
 import { AptoSearch } from './AptoSearch';
-import debounce from 'lodash.debounce';
 import { SearchProps } from 'semantic-ui-react';
 import * as faker from 'faker';
 
@@ -60,28 +59,28 @@ class SearchComponentExample extends React.Component<
         results={results}
         value={value}
         onResultSelect={this.handleResultSelect}
-        onSearchChange={debounce(this.handleSearchChange, 500, {
-          leading: true
-        })}
+        onSearchChange={this.handleSearchChange}
       />
     );
   }
 }
 
-storiesOf('Search', module).add('Default', () => {
-  return (
-    <React.Fragment>
-      <SemanticUIStyle />
-      <AptoForm>
-        <AptoForm.Field>
-          <label>Search Field</label>
-          <SearchComponentExample />
-        </AptoForm.Field>
-      </AptoForm>
-      <br />
-      <br />
-      This is a Semantic-UI component. You can see more examples{' '}
-      <a href="https://react.semantic-ui.com/elements/input/">here</a>
-    </React.Fragment>
-  );
-});
+storiesOf('Search', module)
+  .add('Default', () => {
+    return (
+      <React.Fragment>
+        <SemanticUIStyle />
+        <AptoForm>
+          <AptoForm.Field>
+            <label>Search Field</label>
+            <SearchComponentExample />
+          </AptoForm.Field>
+        </AptoForm>
+        <br />
+        <br />
+        This is a Semantic-UI component. You can see more examples{' '}
+        <a href="https://react.semantic-ui.com/elements/input/">here</a>
+      </React.Fragment>
+    );
+  })
+;
