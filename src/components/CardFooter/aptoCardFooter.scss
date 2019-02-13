@@ -16,4 +16,16 @@
   &.AptoCardFooter--center {
     justify-content: center;
   }
+  .AptoCardFooter-Left,
+  .AptoCardFooter-Right {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+  .AptoCardFooter-Right {
+    text-align: right;
+  }
+  .AptoButton + .AptoButton {
+    margin-left: 3rem;
+  }
 }

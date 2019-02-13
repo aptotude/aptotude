@@ -82,6 +82,24 @@ storiesOf('Card', module)
       </AptoCardFooter>
     </AptoCard>
   ))
+  .add('Left And Right Align Footer', () => (
+    <AptoCard>
+      <AptoCardHeader>Card Header</AptoCardHeader>
+      <AptoCardContent>This is content</AptoCardContent>
+      <AptoCardFooter>
+        <AptoCardFooter.Left>
+          <AptoButton kind="link">Left</AptoButton>
+          <AptoButton>Left</AptoButton>
+          <AptoButton kind="link">Left</AptoButton>
+        </AptoCardFooter.Left>
+        <AptoCardFooter.Right>
+          <AptoButton kind="link">right</AptoButton>
+          <AptoButton kind="link">right</AptoButton>
+          <AptoButton>right</AptoButton>
+        </AptoCardFooter.Right>
+      </AptoCardFooter>
+    </AptoCard>
+  ))
   .add('No Padding Content', () => (
     <AptoCard>
       <AptoCardHeader>Card Header</AptoCardHeader>

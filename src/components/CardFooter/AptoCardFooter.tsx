@@ -2,6 +2,8 @@ import React from 'react';
 import classNames from 'classnames';
 import './aptoCardFooter.scss';
 import { StandardTypes } from '../../utils/standardTypes';
+import { AptoCardFooterRight } from './AptoCardFooterRight';
+import { AptoCardFooterLeft } from './AptoCardFooterLeft';
 
 const COMPONENT_PREFIX = 'AptoCardFooter';
 
@@ -13,6 +15,9 @@ export interface AptoCardFooterDisplayProps extends StandardTypes {
 export class AptoCardFooter extends React.Component<
   AptoCardFooterDisplayProps
 > {
+  public static Left: any = AptoCardFooterLeft;
+  public static Right: any = AptoCardFooterRight;
+
   public render() {
     const {
       padTop,
