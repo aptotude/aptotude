@@ -1,7 +1,7 @@
 {
   "name": "@apto/aptotude",
   "license": "MIT",
-  "version": "1.0.64",
+  "version": "1.0.65",
   "private": false,
   "description": "Apto UI for React",
   "author": "Apto",
