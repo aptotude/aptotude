@@ -7,7 +7,7 @@ import './aptoPager.scss';
 interface AptoPagerProps extends StandardTypes {
   current: number;
   total: number;
-  onClick?: (page: number, event: React.MouseEvent) => void;
+  onPageClick?: (page: number, event: React.MouseEvent) => void;
   linkCount?: number;
   pages?: boolean;
   nextPrev?: boolean;
@@ -37,9 +37,10 @@ export class AptoPager extends React.Component<AptoPagerProps> {
   public clickHandler = (
     e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>
   ) => {
-    const { onClick } = this.props;
-    if (onClick) {
-      onClick(Number(e.currentTarget.dataset.page), e);
+    const { onPageClick, current } = this.props;
+    const clickedPage = Number(e.currentTarget.dataset.page);
+    if (onPageClick && clickedPage !== current) {
+      onPageClick(clickedPage, e);
     }
   };
 

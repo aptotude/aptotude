@@ -108,4 +108,24 @@ storiesOf('Card', module)
         <AptoButton kind="link">Left</AptoButton>
       </AptoCardFooter>
     </AptoCard>
+  ))
+  .add('Loading State', () => (
+    <AptoCard loading>
+      <AptoCardHeader>Card Header</AptoCardHeader>
+      <AptoCardContent>This is content</AptoCardContent>
+      <AptoCardFooter>
+        <AptoButton kind="link">Left</AptoButton>
+        <AptoButton kind="link">Right</AptoButton>
+      </AptoCardFooter>
+    </AptoCard>
+  ))
+  .add('Loading State with message', () => (
+    <AptoCard loading loadingText="loading stuff">
+      <AptoCardHeader>Card Header</AptoCardHeader>
+      <AptoCardContent>This is content</AptoCardContent>
+      <AptoCardFooter>
+        <AptoButton kind="link">Left</AptoButton>
+        <AptoButton kind="link">Right</AptoButton>
+      </AptoCardFooter>
+    </AptoCard>
   ));

@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, cleanup } from 'react-testing-library';
+import { render, cleanup, getByText } from 'react-testing-library';
 import { AptoCard } from '../AptoCard';
 
 describe('Card Header Component', () => {
@@ -31,6 +31,20 @@ describe('Card Header Component', () => {
 
     const node = container.querySelector('.AptoCard');
     expect(node!.className).toEqual('AptoCard AptoCard--elevation1 foo');
+  });
+
+  it('Renders spinner', () => {
+    const { container } = render(<AptoCard loading />);
+
+    const node = container.querySelector('.AptoCard .AptoSpinner');
+    expect(node).toBeDefined();
+  });
+
+  it('Renders spinner with text', () => {
+    const { container } = render(
+      <AptoCard loading loadingText="hey i am loading" />
+    );
+    expect(getByText(container, 'hey i am loading')).toBeDefined();
   });
 
   it('Renders children', () => {

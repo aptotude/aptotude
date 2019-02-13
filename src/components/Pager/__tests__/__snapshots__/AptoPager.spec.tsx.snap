@@ -86,6 +86,92 @@ exports[`AptoPager Renders Component 1`] = `
 </div>
 `;
 
+exports[`AptoPager Renders Component with classnames 1`] = `
+<div
+  class="AptoPager fooo"
+>
+  <ul>
+    <li
+      class="AptoPager--item AptoPager--prev"
+    >
+      <button
+        class="AptoButton AptoButton--link AptoButton--primary"
+        data-page="1"
+        type="button"
+      >
+        &lt; Previous
+      </button>
+    </li>
+    <li
+      class="AptoPager--item"
+    >
+      <button
+        class="AptoButton AptoButton--link AptoButton--primary"
+        data-page="1"
+        type="button"
+      >
+        1
+      </button>
+    </li>
+    <li
+      class="AptoPager--item"
+    >
+      <button
+        class="AptoButton AptoButton--link AptoButton--primary activePage"
+        data-page="2"
+        type="button"
+      >
+        2
+      </button>
+    </li>
+    <li
+      class="AptoPager--item"
+    >
+      <button
+        class="AptoButton AptoButton--link AptoButton--primary"
+        data-page="3"
+        type="button"
+      >
+        3
+      </button>
+    </li>
+    <li
+      class="AptoPager--item"
+    >
+      <button
+        class="AptoButton AptoButton--link AptoButton--primary"
+        data-page="4"
+        type="button"
+      >
+        4
+      </button>
+    </li>
+    <li
+      class="AptoPager--item"
+    >
+      <button
+        class="AptoButton AptoButton--link AptoButton--primary"
+        data-page="5"
+        type="button"
+      >
+        5
+      </button>
+    </li>
+    <li
+      class="AptoPager--item AptoPager--next"
+    >
+      <button
+        class="AptoButton AptoButton--link AptoButton--primary"
+        data-page="3"
+        type="button"
+      >
+        Next &gt;
+      </button>
+    </li>
+  </ul>
+</div>
+`;
+
 exports[`AptoPager Renders Component with more links 1`] = `
 <div
   class="AptoPager"

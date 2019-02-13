@@ -87,7 +87,7 @@ storiesOf('Button', module)
       <br />
       <br />
       <AptoButton kind="link" active>
-        Acive Link
+        Active Link
       </AptoButton>
       <br />
       <br />
@@ -106,7 +106,7 @@ storiesOf('Button', module)
       <br />
       <br />
       <AptoButton kind="link" variant="primary" active>
-        Acive Link
+        Active Link
       </AptoButton>
       <br />
       <br />
@@ -125,7 +125,7 @@ storiesOf('Button', module)
       <br />
       <br />
       <AptoButton kind="link" variant="secondary" active>
-        Acive Link
+        Active Link
       </AptoButton>
       <br />
       <br />
@@ -144,7 +144,7 @@ storiesOf('Button', module)
       <br />
       <br />
       <AptoButton kind="link" variant="secondaryDark" active>
-        Acive Link
+        Active Link
       </AptoButton>
       <br />
       <br />
@@ -163,7 +163,7 @@ storiesOf('Button', module)
       <br />
       <br />
       <AptoButton kind="link" variant="white" active>
-        Acive Link
+        Active Link
       </AptoButton>
       <br />
       <br />
@@ -182,7 +182,7 @@ storiesOf('Button', module)
       <br />
       <br />
       <AptoButton kind="link" variant="danger" active>
-        Acive Link
+        Active Link
       </AptoButton>
       <br />
       <br />

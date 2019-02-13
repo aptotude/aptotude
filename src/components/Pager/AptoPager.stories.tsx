@@ -5,7 +5,7 @@ import { action } from '@storybook/addon-actions';
 
 storiesOf('Pager', module)
   .add('Default', () => (
-    <AptoPager onClick={action('clicked page')} current={4} total={10} />
+    <AptoPager onPageClick={action('clicked page')} current={4} total={10} />
   ))
   .add('No Next/Prev', () => (
     <AptoPager nextPrev={false} current={4} total={10} />
