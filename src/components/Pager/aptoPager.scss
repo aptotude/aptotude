@@ -1,0 +1,26 @@
+@import '../../scss/theme/variables.scss';
+
+.AptoPager {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  .AptoPager--item {
+    .AptoButton {
+      padding-left: 0.8rem;
+      padding-right: 0.8rem;
+      &.activePage {
+        font-weight: $font-weight-bold;
+        color: $gray-600;
+      }
+    }
+  }
+  .AptoPager--prev {
+    margin-right: 1rem;
+  }
+  .AptoPager--next {
+    margin-left: 1rem;
+  }
+}
