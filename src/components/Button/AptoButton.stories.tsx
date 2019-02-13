@@ -210,9 +210,34 @@ storiesOf('Button', module)
       </AptoButton>
     </div>
   ))
+  .add('Hold To Complete Action', () => (
+    <div>
+      <AptoButton hold onHold={action('button-hold')}>
+        Hold To Delete
+      </AptoButton>
+      <br />
+      <br />
+      <AptoButton
+        hold
+        onHold={action('button-hold')}
+        kind="link"
+        variant="danger"
+      >
+        Hold To Delete
+      </AptoButton>
+    </div>
+  ))
+
   .add('Aria Label', () => <AptoButton title="some title">Button</AptoButton>)
   .add('Click Handler', () => (
-    <AptoButton onClick={action('button-click')}>Button</AptoButton>
+    <React.Fragment>
+      <AptoButton onClick={action('button-click')}>Button</AptoButton>
+      <br />
+      <br />
+      <AptoButton disabled onClick={action('button-click')}>
+        Button
+      </AptoButton>
+    </React.Fragment>
   ))
   .add('Reach Router Link', () => (
     <React.Fragment>

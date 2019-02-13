@@ -20,6 +20,7 @@ export interface AptoButtonDisplayProps extends StandardTypes {
   variant?: ButtonVariant;
   active?: boolean;
   disabled?: boolean;
+  onHold?: () => void;
   onClick?: (
     event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>
   ) => void;
@@ -29,34 +30,73 @@ export interface AptoButtonDisplayProps extends StandardTypes {
   target?: string;
   type?: string;
   to?: string;
+  hold?: boolean;
 }
 
 export class AptoButton extends React.Component<AptoButtonDisplayProps> {
+  public buttonRef: React.RefObject<{}>;
+  public holdTimer: any = null;
   public static defaultProps = {
     kind: 'button',
     variant: 'primary',
     active: false,
-    disabled: false
+    disabled: false,
+    hold: false
   };
 
   public constructor(props = {}) {
     super(props);
-
+    this.buttonRef = React.createRef();
     this.handleClick = this.handleClick.bind(this);
+    this.handleMouseDown = this.handleMouseDown.bind(this);
+    this.handleMouseUp = this.handleMouseUp.bind(this);
+  }
+
+  public handleMouseDown(
+    event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>
+  ) {
+    const { onHold, disabled } = this.props;
+
+    if (disabled) {
+      return;
+    }
+
+    this.setHoldStatus(true);
+
+    if (this.holdTimer) {
+      clearTimeout(this.holdTimer);
+    }
+
+    this.holdTimer = setTimeout(() => {
+      this.setHoldStatus(false);
+      if (onHold) {
+        onHold();
+      }
+    }, 2000);
+  }
+
+  public handleMouseUp(
+    event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>
+  ) {
+    this.setHoldStatus(false);
+
+    if (this.holdTimer) {
+      clearTimeout(this.holdTimer);
+    }
   }
 
   public handleClick(
     event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>
   ) {
-    const { disabled, onClick } = this.props;
+    const { disabled, onClick, hold } = this.props;
 
-    if (disabled) {
+    if (disabled || hold) {
       if (event) {
         event.preventDefault();
       }
     }
 
-    if (disabled) {
+    if (disabled || hold) {
       if (event) {
         event.stopPropagation();
       }
@@ -72,7 +112,6 @@ export class AptoButton extends React.Component<AptoButtonDisplayProps> {
     const {
       variant,
       kind,
-      forwardRef,
       className,
       children,
       disabled,
@@ -80,6 +119,9 @@ export class AptoButton extends React.Component<AptoButtonDisplayProps> {
       href,
       to,
       title,
+      hold,
+      onHold,
+      target,
       ...rest
     } = this.props;
 
@@ -93,18 +135,28 @@ export class AptoButton extends React.Component<AptoButtonDisplayProps> {
       COMPONENT_PREFIX,
       `${COMPONENT_PREFIX}--${kind}`,
       `${COMPONENT_PREFIX}--${variant}`,
+      hold && `${COMPONENT_PREFIX}Hold`,
       disabled && `${COMPONENT_PREFIX}--disabled`,
       active && `${COMPONENT_PREFIX}--active`,
       className
     );
 
-    const propList = {
-      ref: forwardRef,
+    const propList: any = {
       'aria-label': title,
       onClick: this.handleClick,
       className: classes,
+      target,
       ...rest
     };
+
+    if (hold) {
+      propList.onMouseDown = this.handleMouseDown;
+      propList.onMouseUp = this.handleMouseUp;
+    }
+
+    if (propList.target && propList.target === '_blank') {
+      propList.rel = 'noopener noreferrer';
+    }
 
     // if we use the to attribute, we render the button as a reach router link
     if (to) {
@@ -116,9 +168,26 @@ export class AptoButton extends React.Component<AptoButtonDisplayProps> {
     }
 
     return (
-      <Component href={href} disabled={disabled || undefined} {...propList}>
+      <Component
+        ref={this.buttonRef}
+        href={href}
+        disabled={disabled || undefined}
+        {...propList}
+      >
         {children}
+        {hold && <span className="AptoButtonHold-progressBar">&nbsp;</span>}
       </Component>
     );
+  }
+
+  private setHoldStatus(active = true) {
+    const node: any = this.buttonRef && this.buttonRef.current;
+    if (node) {
+      if (active) {
+        node.classList.add('AptoButtonHold--processing');
+      } else {
+        node.classList.remove('AptoButtonHold--processing');
+      }
+    }
   }
 }

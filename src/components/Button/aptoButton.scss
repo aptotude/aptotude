@@ -245,22 +245,16 @@ $button-holdPregressContainer-size: 3px !default;
   }
 }
 
-.AptoHold {
-  background-color: $button-holdPregressContainer-backgroundColor;
-  border-radius: $button-holdPregressContainer-size;
-  height: $button-holdPregressContainer-size;
-  display: block;
-  visibility: hidden;
-  .AptoHold-progressBar {
+.AptoButtonHold {
+  .AptoButtonHold-progressBar {
     background-color: $button-holdProgressBar-backgroundColor;
     border-radius: $button-holdPregressContainer-size;
     height: $button-holdPregressContainer-size;
     width: 0;
     display: block;
   }
-  &.AptoHold--active {
-    visibility: visible;
-    .AptoHold-progressBar {
+  &.AptoButtonHold--processing {
+    .AptoButtonHold-progressBar {
       width: 100%;
       transition: width 2s linear;
     }
