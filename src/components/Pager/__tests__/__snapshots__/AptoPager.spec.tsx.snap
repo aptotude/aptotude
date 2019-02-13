@@ -1,0 +1,473 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AptoPager Renders Component 1`] = `
+<div
+  class="AptoPager"
+>
+  <ul>
+    <li
+      class="AptoPager--item AptoPager--prev"
+    >
+      <button
+        class="AptoButton AptoButton--link AptoButton--primary"
+        data-page="1"
+        type="button"
+      >
+        &lt; Previous
+      </button>
+    </li>
+    <li
+      class="AptoPager--item"
+    >
+      <button
+        class="AptoButton AptoButton--link AptoButton--primary"
+        data-page="1"
+        type="button"
+      >
+        1
+      </button>
+    </li>
+    <li
+      class="AptoPager--item"
+    >
+      <button
+        class="AptoButton AptoButton--link AptoButton--primary activePage"
+        data-page="2"
+        type="button"
+      >
+        2
+      </button>
+    </li>
+    <li
+      class="AptoPager--item"
+    >
+      <button
+        class="AptoButton AptoButton--link AptoButton--primary"
+        data-page="3"
+        type="button"
+      >
+        3
+      </button>
+    </li>
+    <li
+      class="AptoPager--item"
+    >
+      <button
+        class="AptoButton AptoButton--link AptoButton--primary"
+        data-page="4"
+        type="button"
+      >
+        4
+      </button>
+    </li>
+    <li
+      class="AptoPager--item"
+    >
+      <button
+        class="AptoButton AptoButton--link AptoButton--primary"
+        data-page="5"
+        type="button"
+      >
+        5
+      </button>
+    </li>
+    <li
+      class="AptoPager--item AptoPager--next"
+    >
+      <button
+        class="AptoButton AptoButton--link AptoButton--primary"
+        data-page="3"
+        type="button"
+      >
+        Next &gt;
+      </button>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`AptoPager Renders Component with more links 1`] = `
+<div
+  class="AptoPager"
+>
+  <ul>
+    <li
+      class="AptoPager--item AptoPager--prev"
+    >
+      <button
+        class="AptoButton AptoButton--link AptoButton--primary"
+        data-page="1"
+        type="button"
+      >
+        &lt; Previous
+      </button>
+    </li>
+    <li
+      class="AptoPager--item"
+    >
+      <button
+        class="AptoButton AptoButton--link AptoButton--primary"
+        data-page="1"
+        type="button"
+      >
+        1
+      </button>
+    </li>
+    <li
+      class="AptoPager--item"
+    >
+      <button
+        class="AptoButton AptoButton--link AptoButton--primary activePage"
+        data-page="2"
+        type="button"
+      >
+        2
+      </button>
+    </li>
+    <li
+      class="AptoPager--item"
+    >
+      <button
+        class="AptoButton AptoButton--link AptoButton--primary"
+        data-page="3"
+        type="button"
+      >
+        3
+      </button>
+    </li>
+    <li
+      class="AptoPager--item"
+    >
+      <button
+        class="AptoButton AptoButton--link AptoButton--primary"
+        data-page="4"
+        type="button"
+      >
+        4
+      </button>
+    </li>
+    <li
+      class="AptoPager--item"
+    >
+      <button
+        class="AptoButton AptoButton--link AptoButton--primary"
+        data-page="5"
+        type="button"
+      >
+        5
+      </button>
+    </li>
+    <li
+      class="AptoPager--item"
+    >
+      <button
+        class="AptoButton AptoButton--link AptoButton--primary"
+        data-page="6"
+        type="button"
+      >
+        6
+      </button>
+    </li>
+    <li
+      class="AptoPager--item"
+    >
+      <button
+        class="AptoButton AptoButton--link AptoButton--primary"
+        data-page="7"
+        type="button"
+      >
+        7
+      </button>
+    </li>
+    <li
+      class="AptoPager--item"
+    >
+      <button
+        class="AptoButton AptoButton--link AptoButton--primary"
+        data-page="8"
+        type="button"
+      >
+        8
+      </button>
+    </li>
+    <li
+      class="AptoPager--item"
+    >
+      <button
+        class="AptoButton AptoButton--link AptoButton--primary"
+        data-page="9"
+        type="button"
+      >
+        9
+      </button>
+    </li>
+    <li
+      class="AptoPager--item"
+    >
+      <button
+        class="AptoButton AptoButton--link AptoButton--primary"
+        data-page="10"
+        type="button"
+      >
+        10
+      </button>
+    </li>
+    <li
+      class="AptoPager--item AptoPager--next"
+    >
+      <button
+        class="AptoButton AptoButton--link AptoButton--primary"
+        data-page="3"
+        type="button"
+      >
+        Next &gt;
+      </button>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`AptoPager Renders next/prev 1`] = `
+<div
+  class="AptoPager"
+>
+  <ul>
+    <li
+      class="AptoPager--item AptoPager--prev"
+    >
+      <button
+        class="AptoButton AptoButton--link AptoButton--primary"
+        data-page="1"
+        type="button"
+      >
+        &lt; Previous
+      </button>
+    </li>
+    <li
+      class="AptoPager--item AptoPager--next"
+    >
+      <button
+        class="AptoButton AptoButton--link AptoButton--primary"
+        data-page="3"
+        type="button"
+      >
+        Next &gt;
+      </button>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`AptoPager Renders no next 1`] = `
+<div
+  class="AptoPager"
+>
+  <ul>
+    <li
+      class="AptoPager--item AptoPager--prev"
+    >
+      <button
+        class="AptoButton AptoButton--link AptoButton--primary"
+        data-page="9"
+        type="button"
+      >
+        &lt; Previous
+      </button>
+    </li>
+    <li
+      class="AptoPager--item"
+    >
+      <button
+        class="AptoButton AptoButton--link AptoButton--primary"
+        data-page="6"
+        type="button"
+      >
+        6
+      </button>
+    </li>
+    <li
+      class="AptoPager--item"
+    >
+      <button
+        class="AptoButton AptoButton--link AptoButton--primary"
+        data-page="7"
+        type="button"
+      >
+        7
+      </button>
+    </li>
+    <li
+      class="AptoPager--item"
+    >
+      <button
+        class="AptoButton AptoButton--link AptoButton--primary"
+        data-page="8"
+        type="button"
+      >
+        8
+      </button>
+    </li>
+    <li
+      class="AptoPager--item"
+    >
+      <button
+        class="AptoButton AptoButton--link AptoButton--primary"
+        data-page="9"
+        type="button"
+      >
+        9
+      </button>
+    </li>
+    <li
+      class="AptoPager--item"
+    >
+      <button
+        class="AptoButton AptoButton--link AptoButton--primary activePage"
+        data-page="10"
+        type="button"
+      >
+        10
+      </button>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`AptoPager Renders no prev 1`] = `
+<div
+  class="AptoPager"
+>
+  <ul>
+    <li
+      class="AptoPager--item"
+    >
+      <button
+        class="AptoButton AptoButton--link AptoButton--primary activePage"
+        data-page="1"
+        type="button"
+      >
+        1
+      </button>
+    </li>
+    <li
+      class="AptoPager--item"
+    >
+      <button
+        class="AptoButton AptoButton--link AptoButton--primary"
+        data-page="2"
+        type="button"
+      >
+        2
+      </button>
+    </li>
+    <li
+      class="AptoPager--item"
+    >
+      <button
+        class="AptoButton AptoButton--link AptoButton--primary"
+        data-page="3"
+        type="button"
+      >
+        3
+      </button>
+    </li>
+    <li
+      class="AptoPager--item"
+    >
+      <button
+        class="AptoButton AptoButton--link AptoButton--primary"
+        data-page="4"
+        type="button"
+      >
+        4
+      </button>
+    </li>
+    <li
+      class="AptoPager--item"
+    >
+      <button
+        class="AptoButton AptoButton--link AptoButton--primary"
+        data-page="5"
+        type="button"
+      >
+        5
+      </button>
+    </li>
+    <li
+      class="AptoPager--item AptoPager--next"
+    >
+      <button
+        class="AptoButton AptoButton--link AptoButton--primary"
+        data-page="2"
+        type="button"
+      >
+        Next &gt;
+      </button>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`AptoPager Renders pages 1`] = `
+<div
+  class="AptoPager"
+>
+  <ul>
+    <li
+      class="AptoPager--item"
+    >
+      <button
+        class="AptoButton AptoButton--link AptoButton--primary"
+        data-page="1"
+        type="button"
+      >
+        1
+      </button>
+    </li>
+    <li
+      class="AptoPager--item"
+    >
+      <button
+        class="AptoButton AptoButton--link AptoButton--primary activePage"
+        data-page="2"
+        type="button"
+      >
+        2
+      </button>
+    </li>
+    <li
+      class="AptoPager--item"
+    >
+      <button
+        class="AptoButton AptoButton--link AptoButton--primary"
+        data-page="3"
+        type="button"
+      >
+        3
+      </button>
+    </li>
+    <li
+      class="AptoPager--item"
+    >
+      <button
+        class="AptoButton AptoButton--link AptoButton--primary"
+        data-page="4"
+        type="button"
+      >
+        4
+      </button>
+    </li>
+    <li
+      class="AptoPager--item"
+    >
+      <button
+        class="AptoButton AptoButton--link AptoButton--primary"
+        data-page="5"
+        type="button"
+      >
+        5
+      </button>
+    </li>
+  </ul>
+</div>
+`;

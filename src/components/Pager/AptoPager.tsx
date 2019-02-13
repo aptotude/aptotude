@@ -9,6 +9,8 @@ interface AptoPagerProps extends StandardTypes {
   total: number;
   onClick?: (page: number, event: React.MouseEvent) => void;
   linkCount?: number;
+  pages?: boolean;
+  nextPrev?: boolean;
 }
 
 const COMPONENT_PREFIX = 'AptoPager';
@@ -27,6 +29,11 @@ const getPagingRange = (
 };
 
 export class AptoPager extends React.Component<AptoPagerProps> {
+  public static defaultProps = {
+    pages: true,
+    nextPrev: true,
+    linkCount: 5
+  };
   public clickHandler = (
     e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>
   ) => {
@@ -37,11 +44,18 @@ export class AptoPager extends React.Component<AptoPagerProps> {
   };
 
   public render() {
-    const { total, current, linkCount, className } = this.props;
+    const {
+      pages,
+      nextPrev,
+      total,
+      current,
+      linkCount,
+      className
+    } = this.props;
     const classes = classNames(COMPONENT_PREFIX, className);
     const links: number[] = getPagingRange(current, {
       total,
-      length: linkCount ? linkCount : 5
+      length: linkCount
     });
     const prev = current > 1 ? current - 1 : null;
     const next = current < total ? current + 1 : null;
@@ -49,7 +63,7 @@ export class AptoPager extends React.Component<AptoPagerProps> {
     return (
       <div className={classes}>
         <ul>
-          {prev && (
+          {prev && nextPrev && (
             <li className="AptoPager--item AptoPager--prev">
               <AptoButton
                 kind="link"
@@ -61,31 +75,32 @@ export class AptoPager extends React.Component<AptoPagerProps> {
               </AptoButton>
             </li>
           )}
-          {links.map(l => (
-            <li className="AptoPager--item" key={`${l}`}>
-              {(l === current && (
-                <AptoButton
-                  kind="link"
-                  type="button"
-                  className="activePage"
-                  onClick={this.clickHandler}
-                  data-page={l}
-                >
-                  {l}
-                </AptoButton>
-              )) || (
-                <AptoButton
-                  kind="link"
-                  type="button"
-                  onClick={this.clickHandler}
-                  data-page={l}
-                >
-                  {l}
-                </AptoButton>
-              )}
-            </li>
-          ))}
-          {next && (
+          {pages &&
+            links.map(l => (
+              <li className="AptoPager--item" key={`${l}`}>
+                {(l === current && (
+                  <AptoButton
+                    kind="link"
+                    type="button"
+                    className="activePage"
+                    onClick={this.clickHandler}
+                    data-page={l}
+                  >
+                    {l}
+                  </AptoButton>
+                )) || (
+                  <AptoButton
+                    kind="link"
+                    type="button"
+                    onClick={this.clickHandler}
+                    data-page={l}
+                  >
+                    {l}
+                  </AptoButton>
+                )}
+              </li>
+            ))}
+          {next && nextPrev && (
             <li className="AptoPager--item AptoPager--next">
               <AptoButton
                 kind="link"
