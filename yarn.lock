@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@apto/icons@^1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@apto/icons/-/icons-1.0.4.tgz#3ba3c7741998bc61815f1e01f29f9c44b9dcc227"
-  integrity sha512-3OlLkRlhxew9xgRXjUX1Oqemig5oSwNQdS0lK29J9QbsfFG7+7cJK2yWz7a+fquTuNZXScjCzZgOB8xhXvLQPQ==
+"@apto/icons@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@apto/icons/-/icons-1.0.5.tgz#befd08834c9dc535178194a5f7b0bafb64e27452"
+  integrity sha512-MDConZIBogR+GQvEUjikqMKZkVht1VtEdkuKu43B8fUePbCt0oZG5ifb3oi50nYI2Yl2ctpcgEMtuua/pON2RA==
   dependencies:
     react "^16.6.3"
 

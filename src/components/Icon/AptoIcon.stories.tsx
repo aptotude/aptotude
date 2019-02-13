@@ -39,6 +39,7 @@ import {
   meeting,
   menu,
   money,
+  newRelease,
   peaks,
   people,
   person,
@@ -121,6 +122,10 @@ storiesOf('Icon', module).add('Default', () => (
       <AptoCol sm="2">
         <AptoIcon icon={thumbUp} />
         <span className="icon-meta">thumbUp</span>
+      </AptoCol>
+      <AptoCol sm="2">
+        <AptoIcon icon={newRelease} />
+        <span className="icon-meta">newRelease</span>
       </AptoCol>
       <AptoCol sm="2">
         <AptoIcon icon={time} />
