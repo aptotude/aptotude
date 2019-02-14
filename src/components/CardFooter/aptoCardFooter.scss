@@ -4,6 +4,7 @@
   display: flex;
   padding: $card-footer-padding;
   justify-content: space-between;
+  align-items: center;
   &.AptoCardFooter--padTop {
     padding-top: $card-footer-top-padding;
   }

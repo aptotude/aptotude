@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AptoFormControlError Renders Component with extra class 1`] = `
+<div
+  class="AptoFormControlError foo"
+>
+  no bueno
+</div>
+`;
+
+exports[`AptoFormControlError Renders Component with message 1`] = `
+<div
+  class="AptoFormControlError"
+>
+  no bueno
+</div>
+`;
+
+exports[`AptoFormControlError Renders null with no data 1`] = `null`;

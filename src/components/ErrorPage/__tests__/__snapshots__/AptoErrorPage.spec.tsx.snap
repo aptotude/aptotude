@@ -1,0 +1,140 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AptoErrorPage Renders 400 1`] = `
+<div
+  class="AptoRow AptoRow--alignCenter AptoErrorPage AptoErrorPage--400"
+>
+  <div
+    class="AptoCol"
+  >
+    <h2
+      class="AptoHeader AptoHeader--h2 AptoHeader--noTransform"
+    >
+      Bad Request
+    </h2>
+    <p
+      class="AptoParagraph"
+    >
+      Sorry, there was something 
+    </p>
+  </div>
+</div>
+`;
+
+exports[`AptoErrorPage Renders 403 1`] = `
+<div
+  class="AptoRow AptoRow--alignCenter AptoErrorPage AptoErrorPage--403"
+>
+  <div
+    class="AptoCol"
+  >
+    <h2
+      class="AptoHeader AptoHeader--h2 AptoHeader--noTransform"
+    >
+      Unauthorized
+    </h2>
+    <p
+      class="AptoParagraph"
+    >
+      Sorry, you do not have permission to view this page.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`AptoErrorPage Renders 404 1`] = `
+<div
+  class="AptoRow AptoRow--alignCenter AptoErrorPage AptoErrorPage--404"
+>
+  <div
+    class="AptoCol"
+  >
+    <h2
+      class="AptoHeader AptoHeader--h2 AptoHeader--noTransform"
+    >
+      Page Not Found
+    </h2>
+    <p
+      class="AptoParagraph"
+    >
+      Sorry, but the page you were trying to view does not exist.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`AptoErrorPage Renders 500 1`] = `
+<div
+  class="AptoRow AptoRow--alignCenter AptoErrorPage AptoErrorPage--500"
+>
+  <div
+    class="AptoCol"
+  >
+    <h2
+      class="AptoHeader AptoHeader--h2 AptoHeader--noTransform"
+    >
+      Internal Server Error
+    </h2>
+    <p
+      class="AptoParagraph"
+    >
+      An internal server error occurred.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`AptoErrorPage Renders Component 1`] = `
+<div
+  class="AptoRow AptoRow--alignCenter AptoErrorPage"
+>
+  <div
+    class="AptoCol"
+  >
+    <h2
+      class="AptoHeader AptoHeader--h2 AptoHeader--noTransform"
+    >
+      Server Error
+    </h2>
+    
+  </div>
+</div>
+`;
+
+exports[`AptoErrorPage Renders message 1`] = `
+<div
+  class="AptoRow AptoRow--alignCenter AptoErrorPage"
+>
+  <div
+    class="AptoCol"
+  >
+    <h2
+      class="AptoHeader AptoHeader--h2 AptoHeader--noTransform"
+    >
+      Server Error
+    </h2>
+    <p
+      class="AptoParagraph"
+    >
+      cat is fat
+    </p>
+  </div>
+</div>
+`;
+
+exports[`AptoErrorPage Renders title 1`] = `
+<div
+  class="AptoRow AptoRow--alignCenter AptoErrorPage"
+>
+  <div
+    class="AptoCol"
+  >
+    <h2
+      class="AptoHeader AptoHeader--h2 AptoHeader--noTransform"
+    >
+      hi title
+    </h2>
+    
+  </div>
+</div>
+`;

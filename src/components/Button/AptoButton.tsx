@@ -61,7 +61,6 @@ export class AptoButton extends React.Component<AptoButtonDisplayProps> {
       return;
     }
 
-    console.log(event);
     this.setHoldStatus(true);
 
     if (this.holdTimer) {

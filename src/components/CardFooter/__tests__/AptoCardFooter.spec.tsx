@@ -40,6 +40,22 @@ describe('Card Footer Component', () => {
     expect(node!.className).toEqual('AptoCardFooter AptoCardFooter--left');
   });
 
+  it('Renders Compound components', () => {
+    const { container } = render(
+      <AptoCardFooter>
+        <AptoCardFooter.Left>Left</AptoCardFooter.Left>
+        <AptoCardFooter.Right>Right</AptoCardFooter.Right>
+      </AptoCardFooter>
+    );
+
+    const node = container.querySelector('.AptoCardFooter');
+    const left = container.querySelector('.AptoCardFooter-Left');
+    const right = container.querySelector('.AptoCardFooter-Right');
+    expect(node!.className).toEqual('AptoCardFooter');
+    expect(left!.innerHTML).toEqual('Left');
+    expect(right!.innerHTML).toEqual('Right');
+  });
+
   it('Renders custom className', () => {
     const { container } = render(<AptoCardFooter className="foo" />);
 

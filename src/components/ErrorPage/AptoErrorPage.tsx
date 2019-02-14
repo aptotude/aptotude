@@ -37,6 +37,8 @@ export const AptoErrorPage = (props: AptoErrorPageProps) => {
   } else if (type === '500') {
     pageTitle = 'Internal Server Error';
     pageMessage = 'An internal server error occurred.';
+  } else {
+    pageTitle = 'Server Error';
   }
 
   if (message) {
