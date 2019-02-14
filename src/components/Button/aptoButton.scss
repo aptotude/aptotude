@@ -246,10 +246,23 @@ $button-holdPregressContainer-size: 3px !default;
 }
 
 .AptoButtonHold {
+  position: relative;
+  .AptoButtonHold-progressBarWrapper {
+    position: absolute;
+    bottom: 3px;
+    left: 2rem;
+    right: 2rem;
+    height: 2px;
+    border-radius: $button-holdPregressContainer-size;
+    overflow: hidden;
+  }
+  &.AptoButton--link .AptoButtonHold-progressBarWrapper {
+    left: 0;
+    right: 0;
+    bottom: -2px;
+  }
   .AptoButtonHold-progressBar {
     background-color: $button-holdProgressBar-backgroundColor;
-    border-radius: $button-holdPregressContainer-size;
-    height: $button-holdPregressContainer-size;
     width: 0;
     display: block;
   }

@@ -61,6 +61,7 @@ export class AptoButton extends React.Component<AptoButtonDisplayProps> {
       return;
     }
 
+    console.log(event);
     this.setHoldStatus(true);
 
     if (this.holdTimer) {
@@ -151,6 +152,7 @@ export class AptoButton extends React.Component<AptoButtonDisplayProps> {
 
     if (hold) {
       propList.onMouseDown = this.handleMouseDown;
+      propList.onMouseOut = this.handleMouseUp;
       propList.onMouseUp = this.handleMouseUp;
     }
 
@@ -175,7 +177,11 @@ export class AptoButton extends React.Component<AptoButtonDisplayProps> {
         {...propList}
       >
         {children}
-        {hold && <span className="AptoButtonHold-progressBar">&nbsp;</span>}
+        {hold && (
+          <span className="AptoButtonHold-progressBarWrapper">
+            <span className="AptoButtonHold-progressBar">&nbsp;</span>
+          </span>
+        )}
       </Component>
     );
   }
