@@ -38,7 +38,7 @@
   "browser": "aptotude.umd.js",
   "types": "index.d.ts",
   "dependencies": {
-    "@apto/icons": "^1.0.5",
+    "@apto/icons": "^1.0.6",
     "@reach/router": "^1.2.1",
     "classnames": "^2.2.6",
     "faker": "^4.1.0",

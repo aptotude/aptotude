@@ -50,6 +50,7 @@ import {
   radioChecked,
   right,
   search,
+  share,
   smartPhone,
   space,
   task,
@@ -102,6 +103,10 @@ storiesOf('Icon', module).add('Default', () => (
       <AptoCol sm="2">
         <AptoIcon icon={file} />
         <span className="icon-meta">file</span>
+      </AptoCol>
+      <AptoCol sm="2">
+        <AptoIcon icon={share} />
+        <span className="icon-meta">share</span>
       </AptoCol>
       <AptoCol sm="2">
         <AptoIcon icon={callList} />
