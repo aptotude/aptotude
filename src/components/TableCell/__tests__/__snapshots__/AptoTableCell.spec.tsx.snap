@@ -1,0 +1,143 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AptoTableCell Renders Component 1`] = `
+<table>
+  <tbody>
+    <tr>
+      <td
+        class="AptoTableCell"
+      >
+        hi
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`AptoTableCell Renders extra classes 1`] = `
+<table>
+  <tbody>
+    <tr>
+      <td
+        class="foo"
+      >
+        hi
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`AptoTableCell Renders scope col 1`] = `
+<table>
+  <tbody>
+    <tr>
+      <td
+        class="AptoTableCell"
+        scope="col"
+      >
+        hi
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`AptoTableCell Renders scope row 1`] = `
+<table>
+  <tbody>
+    <tr>
+      <td
+        class="AptoTableCell"
+        scope="row"
+      >
+        hi
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`AptoTableCell Renders type td 1`] = `
+<table>
+  <tbody>
+    <tr>
+      <td
+        class="AptoTableCell"
+      >
+        hi
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`AptoTableCell Renders type th 1`] = `
+<table>
+  <tbody>
+    <tr>
+      <th
+        class="AptoTableCell"
+      >
+        hi
+      </th>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`AptoTableCell highlight shows danger 1`] = `
+<table>
+  <tbody>
+    <tr>
+      <td
+        class="AptoTableCell AptoTableCell--danger"
+      >
+        hi
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`AptoTableCell highlight shows primary 1`] = `
+<table>
+  <tbody>
+    <tr>
+      <td
+        class="AptoTableCell AptoTableCell--primary"
+      >
+        hi
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`AptoTableCell highlight shows success 1`] = `
+<table>
+  <tbody>
+    <tr>
+      <td
+        class="AptoTableCell AptoTableCell--success"
+      >
+        hi
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`AptoTableCell highlight shows warning 1`] = `
+<table>
+  <tbody>
+    <tr>
+      <td
+        class="AptoTableCell AptoTableCell--warning"
+      >
+        hi
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;

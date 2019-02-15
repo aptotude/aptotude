@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AptoTextArea Renders Component 1`] = `
+<textarea
+  rows="3"
+/>
+`;
+
+exports[`AptoTextArea Renders disabled 1`] = `
+<textarea
+  disabled=""
+  name="foo"
+  rows="3"
+>
+  bar
+</textarea>
+`;
+
+exports[`AptoTextArea Renders with name/value 1`] = `
+<textarea
+  name="foo"
+  rows="3"
+>
+  bar
+</textarea>
+`;

@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AptoTableBody Renders Component 1`] = `
+<table>
+  <tbody
+    class="AptoTableBody"
+  >
+    <tr>
+      <td>
+        hi
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`AptoTableBody Renders extra classes 1`] = `
+<table>
+  <tbody
+    class="foo"
+  >
+    <tr>
+      <td>
+        hi
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;

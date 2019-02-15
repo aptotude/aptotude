@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AptoInput Renders Component 1`] = `
+<div
+  class="ui input"
+>
+  <input
+    type="text"
+  />
+</div>
+`;
+
+exports[`AptoInput Renders disabled 1`] = `
+<div
+  class="ui disabled input"
+>
+  <input
+    disabled=""
+    name="foo"
+    tabindex="-1"
+    type="text"
+    value="bar"
+  />
+</div>
+`;
+
+exports[`AptoInput Renders with name/value 1`] = `
+<div
+  class="ui input"
+>
+  <input
+    name="foo"
+    type="text"
+    value="bar"
+  />
+</div>
+`;

@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AptoRadio Renders Component 1`] = `
+<div
+  class="ui fitted radio checkbox"
+>
+  <input
+    class="hidden"
+    readonly=""
+    tabindex="0"
+    type="radio"
+    value=""
+  />
+  <label />
+</div>
+`;
+
+exports[`AptoRadio Renders checked 1`] = `
+<div
+  class="ui checked fitted radio checkbox"
+>
+  <input
+    checked=""
+    class="hidden"
+    name="foo"
+    readonly=""
+    tabindex="0"
+    type="radio"
+    value="bar"
+  />
+  <label />
+</div>
+`;
+
+exports[`AptoRadio Renders disabled 1`] = `
+<div
+  class="ui disabled fitted radio checkbox"
+>
+  <input
+    class="hidden"
+    disabled=""
+    name="foo"
+    readonly=""
+    tabindex="-1"
+    type="radio"
+    value="bar"
+  />
+  <label />
+</div>
+`;
+
+exports[`AptoRadio Renders with name/value 1`] = `
+<div
+  class="ui fitted radio checkbox"
+>
+  <input
+    class="hidden"
+    name="foo"
+    readonly=""
+    tabindex="0"
+    type="radio"
+    value="bar"
+  />
+  <label />
+</div>
+`;

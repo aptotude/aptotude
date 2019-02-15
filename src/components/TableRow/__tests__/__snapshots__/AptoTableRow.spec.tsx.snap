@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AptoTableRow Renders Component 1`] = `
+<table>
+  <tbody>
+    <tr
+      class="AptoTableRow"
+    >
+      <td>
+        hi
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`AptoTableRow Renders extra class names 1`] = `
+<table>
+  <tbody>
+    <tr
+      class="foo"
+    >
+      <td>
+        hi
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`AptoTableRow highlight shows danger 1`] = `
+<table>
+  <tbody>
+    <tr
+      class="AptoTableRow AptoTableRow--danger"
+    >
+      <td>
+        hi
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`AptoTableRow highlight shows primary 1`] = `
+<table>
+  <tbody>
+    <tr
+      class="AptoTableRow AptoTableRow--primary"
+    >
+      <td>
+        hi
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`AptoTableRow highlight shows success 1`] = `
+<table>
+  <tbody>
+    <tr
+      class="AptoTableRow AptoTableRow--success"
+    >
+      <td>
+        hi
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`AptoTableRow highlight shows warning 1`] = `
+<table>
+  <tbody>
+    <tr
+      class="AptoTableRow AptoTableRow--warning"
+    >
+      <td>
+        hi
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;

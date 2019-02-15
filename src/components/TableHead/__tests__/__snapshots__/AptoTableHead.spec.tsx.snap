@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AptoTableHead Renders Component 1`] = `
+<table>
+  <thead
+    class="AptoTableHead"
+  >
+    <tr>
+      <th>
+        heading
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        hi
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`AptoTableHead Renders extra class names 1`] = `
+<table>
+  <thead
+    class="foo"
+  >
+    <tr>
+      <th>
+        heading
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        hi
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;

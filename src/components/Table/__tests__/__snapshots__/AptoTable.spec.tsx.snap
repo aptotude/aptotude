@@ -1,0 +1,117 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AptoTable Renders Component 1`] = `
+<table
+  class="AptoTable"
+>
+  <tbody>
+    <tr>
+      <td>
+        hi
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`AptoTable Renders bordered 1`] = `
+<table
+  class="AptoTable AptoTable--bordered"
+>
+  <tbody>
+    <tr>
+      <td>
+        hi
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`AptoTable Renders borderless 1`] = `
+<table
+  class="AptoTable AptoTable--borderless"
+>
+  <tbody>
+    <tr>
+      <td>
+        hi
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`AptoTable Renders extra classes 1`] = `
+<table
+  class="foo"
+>
+  <tbody>
+    <tr>
+      <td>
+        hi
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`AptoTable Renders hover 1`] = `
+<table
+  class="AptoTable AptoTable--hover"
+>
+  <tbody>
+    <tr>
+      <td>
+        hi
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`AptoTable Renders responsive 1`] = `
+<div
+  class="AptoTable--responsive"
+>
+  <table
+    class="AptoTable"
+  >
+    <tbody>
+      <tr>
+        <td>
+          hi
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`AptoTable Renders small 1`] = `
+<table
+  class="AptoTable AptoTable--small"
+>
+  <tbody>
+    <tr>
+      <td>
+        hi
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`AptoTable Renders striped 1`] = `
+<table
+  class="AptoTable AptoTable--striped"
+>
+  <tbody>
+    <tr>
+      <td>
+        hi
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;

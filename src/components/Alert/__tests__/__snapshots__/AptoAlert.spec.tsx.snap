@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AptoAlert Renders Component 1`] = `
+<div
+  class="AptoAlert AptoAlert--info"
+>
+  scary
+</div>
+`;
+
+exports[`AptoAlert Renders danger 1`] = `
+<div
+  class="AptoAlert AptoAlert--danger"
+>
+  scary
+</div>
+`;
+
+exports[`AptoAlert Renders extra classes 1`] = `
+<div
+  class="AptoAlert AptoAlert--info foo"
+>
+  scary
+</div>
+`;
+
+exports[`AptoAlert Renders info 1`] = `
+<div
+  class="AptoAlert AptoAlert--info"
+>
+  scary
+</div>
+`;
+
+exports[`AptoAlert Renders success 1`] = `
+<div
+  class="AptoAlert AptoAlert--success"
+>
+  scary
+</div>
+`;
+
+exports[`AptoAlert Renders warning 1`] = `
+<div
+  class="AptoAlert AptoAlert--warning"
+>
+  scary
+</div>
+`;

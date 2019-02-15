@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AptoCheckbox Renders Component 1`] = `
+<div
+  class="ui fitted checkbox"
+>
+  <input
+    class="hidden"
+    readonly=""
+    tabindex="0"
+    type="checkbox"
+    value=""
+  />
+  <label />
+</div>
+`;
+
+exports[`AptoCheckbox Renders checked 1`] = `
+<div
+  class="ui checked fitted checkbox"
+>
+  <input
+    checked=""
+    class="hidden"
+    name="foo"
+    readonly=""
+    tabindex="0"
+    type="checkbox"
+    value="bar"
+  />
+  <label />
+</div>
+`;
+
+exports[`AptoCheckbox Renders disabled 1`] = `
+<div
+  class="ui disabled fitted checkbox"
+>
+  <input
+    class="hidden"
+    disabled=""
+    name="foo"
+    readonly=""
+    tabindex="-1"
+    type="checkbox"
+    value="bar"
+  />
+  <label />
+</div>
+`;
+
+exports[`AptoCheckbox Renders with name/value 1`] = `
+<div
+  class="ui fitted checkbox"
+>
+  <input
+    class="hidden"
+    name="foo"
+    readonly=""
+    tabindex="0"
+    type="checkbox"
+    value="bar"
+  />
+  <label />
+</div>
+`;

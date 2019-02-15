@@ -1,0 +1,495 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AptoIcon Renders 1`] = `
+<span
+  class="AptoIcon AptoIcon--size3"
+>
+  <svg
+    focusable="false"
+    height="100%"
+    preserveAspectRatio="xMidYMid meet"
+    viewBox="0 0 24 24"
+    width="100%"
+  >
+    <path
+      d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+    />
+    <path
+      d="M0 0h24v24H0z"
+      fill="none"
+    />
+  </svg>
+</span>
+`;
+
+exports[`AptoIcon circle color renders blue 1`] = `
+<span
+  class="AptoIcon AptoIcon--size3 AptoIcon--circleColorBlue"
+>
+  <svg
+    focusable="false"
+    height="100%"
+    preserveAspectRatio="xMidYMid meet"
+    viewBox="0 0 24 24"
+    width="100%"
+  >
+    <path
+      d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+    />
+    <path
+      d="M0 0h24v24H0z"
+      fill="none"
+    />
+  </svg>
+</span>
+`;
+
+exports[`AptoIcon circle color renders gray 1`] = `
+<span
+  class="AptoIcon AptoIcon--size3 AptoIcon--circleColorGray"
+>
+  <svg
+    focusable="false"
+    height="100%"
+    preserveAspectRatio="xMidYMid meet"
+    viewBox="0 0 24 24"
+    width="100%"
+  >
+    <path
+      d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+    />
+    <path
+      d="M0 0h24v24H0z"
+      fill="none"
+    />
+  </svg>
+</span>
+`;
+
+exports[`AptoIcon circle color renders lightGray 1`] = `
+<span
+  class="AptoIcon AptoIcon--size3 AptoIcon--circleColorLightGray"
+>
+  <svg
+    focusable="false"
+    height="100%"
+    preserveAspectRatio="xMidYMid meet"
+    viewBox="0 0 24 24"
+    width="100%"
+  >
+    <path
+      d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+    />
+    <path
+      d="M0 0h24v24H0z"
+      fill="none"
+    />
+  </svg>
+</span>
+`;
+
+exports[`AptoIcon circle color renders orange 1`] = `
+<span
+  class="AptoIcon AptoIcon--size3 AptoIcon--circleColorOrange"
+>
+  <svg
+    focusable="false"
+    height="100%"
+    preserveAspectRatio="xMidYMid meet"
+    viewBox="0 0 24 24"
+    width="100%"
+  >
+    <path
+      d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+    />
+    <path
+      d="M0 0h24v24H0z"
+      fill="none"
+    />
+  </svg>
+</span>
+`;
+
+exports[`AptoIcon circle color renders white 1`] = `
+<span
+  class="AptoIcon AptoIcon--size3 AptoIcon--circleColorWhite"
+>
+  <svg
+    focusable="false"
+    height="100%"
+    preserveAspectRatio="xMidYMid meet"
+    viewBox="0 0 24 24"
+    width="100%"
+  >
+    <path
+      d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+    />
+    <path
+      d="M0 0h24v24H0z"
+      fill="none"
+    />
+  </svg>
+</span>
+`;
+
+exports[`AptoIcon color renders blue 1`] = `
+<span
+  class="AptoIcon AptoIcon--size3 AptoIcon--colorBlue"
+>
+  <svg
+    focusable="false"
+    height="100%"
+    preserveAspectRatio="xMidYMid meet"
+    viewBox="0 0 24 24"
+    width="100%"
+  >
+    <path
+      d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+    />
+    <path
+      d="M0 0h24v24H0z"
+      fill="none"
+    />
+  </svg>
+</span>
+`;
+
+exports[`AptoIcon color renders gray 1`] = `
+<span
+  class="AptoIcon AptoIcon--size3 AptoIcon--colorGray"
+>
+  <svg
+    focusable="false"
+    height="100%"
+    preserveAspectRatio="xMidYMid meet"
+    viewBox="0 0 24 24"
+    width="100%"
+  >
+    <path
+      d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+    />
+    <path
+      d="M0 0h24v24H0z"
+      fill="none"
+    />
+  </svg>
+</span>
+`;
+
+exports[`AptoIcon color renders lightGray 1`] = `
+<span
+  class="AptoIcon AptoIcon--size3 AptoIcon--colorLightGray"
+>
+  <svg
+    focusable="false"
+    height="100%"
+    preserveAspectRatio="xMidYMid meet"
+    viewBox="0 0 24 24"
+    width="100%"
+  >
+    <path
+      d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+    />
+    <path
+      d="M0 0h24v24H0z"
+      fill="none"
+    />
+  </svg>
+</span>
+`;
+
+exports[`AptoIcon color renders orange 1`] = `
+<span
+  class="AptoIcon AptoIcon--size3 AptoIcon--colorOrange"
+>
+  <svg
+    focusable="false"
+    height="100%"
+    preserveAspectRatio="xMidYMid meet"
+    viewBox="0 0 24 24"
+    width="100%"
+  >
+    <path
+      d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+    />
+    <path
+      d="M0 0h24v24H0z"
+      fill="none"
+    />
+  </svg>
+</span>
+`;
+
+exports[`AptoIcon color renders white 1`] = `
+<span
+  class="AptoIcon AptoIcon--size3 AptoIcon--colorWhite"
+>
+  <svg
+    focusable="false"
+    height="100%"
+    preserveAspectRatio="xMidYMid meet"
+    viewBox="0 0 24 24"
+    width="100%"
+  >
+    <path
+      d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+    />
+    <path
+      d="M0 0h24v24H0z"
+      fill="none"
+    />
+  </svg>
+</span>
+`;
+
+exports[`AptoIcon renders circle 1`] = `
+<span
+  class="AptoIcon AptoIcon--size3 AptoIcon--circle"
+>
+  <svg
+    focusable="false"
+    height="100%"
+    preserveAspectRatio="xMidYMid meet"
+    viewBox="0 0 24 24"
+    width="100%"
+  >
+    <path
+      d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+    />
+    <path
+      d="M0 0h24v24H0z"
+      fill="none"
+    />
+  </svg>
+</span>
+`;
+
+exports[`AptoIcon renders extra class 1`] = `
+<span
+  class="AptoIcon AptoIcon--size3 foooo"
+>
+  <svg
+    focusable="false"
+    height="100%"
+    preserveAspectRatio="xMidYMid meet"
+    viewBox="0 0 24 24"
+    width="100%"
+  >
+    <path
+      d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+    />
+    <path
+      d="M0 0h24v24H0z"
+      fill="none"
+    />
+  </svg>
+</span>
+`;
+
+exports[`AptoIcon renders inline 1`] = `
+<span
+  class="AptoIcon AptoIcon--size3 AptoIcon--inline"
+>
+  <svg
+    focusable="false"
+    height="100%"
+    preserveAspectRatio="xMidYMid meet"
+    viewBox="0 0 24 24"
+    width="100%"
+  >
+    <path
+      d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+    />
+    <path
+      d="M0 0h24v24H0z"
+      fill="none"
+    />
+  </svg>
+</span>
+`;
+
+exports[`AptoIcon size 1 1`] = `
+<span
+  class="AptoIcon AptoIcon--size1"
+>
+  <svg
+    focusable="false"
+    height="100%"
+    preserveAspectRatio="xMidYMid meet"
+    viewBox="0 0 24 24"
+    width="100%"
+  >
+    <path
+      d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+    />
+    <path
+      d="M0 0h24v24H0z"
+      fill="none"
+    />
+  </svg>
+</span>
+`;
+
+exports[`AptoIcon size 2 1`] = `
+<span
+  class="AptoIcon AptoIcon--size2"
+>
+  <svg
+    focusable="false"
+    height="100%"
+    preserveAspectRatio="xMidYMid meet"
+    viewBox="0 0 24 24"
+    width="100%"
+  >
+    <path
+      d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+    />
+    <path
+      d="M0 0h24v24H0z"
+      fill="none"
+    />
+  </svg>
+</span>
+`;
+
+exports[`AptoIcon size 3 1`] = `
+<span
+  class="AptoIcon AptoIcon--size3"
+>
+  <svg
+    focusable="false"
+    height="100%"
+    preserveAspectRatio="xMidYMid meet"
+    viewBox="0 0 24 24"
+    width="100%"
+  >
+    <path
+      d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+    />
+    <path
+      d="M0 0h24v24H0z"
+      fill="none"
+    />
+  </svg>
+</span>
+`;
+
+exports[`AptoIcon size 4 1`] = `
+<span
+  class="AptoIcon AptoIcon--size4"
+>
+  <svg
+    focusable="false"
+    height="100%"
+    preserveAspectRatio="xMidYMid meet"
+    viewBox="0 0 24 24"
+    width="100%"
+  >
+    <path
+      d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+    />
+    <path
+      d="M0 0h24v24H0z"
+      fill="none"
+    />
+  </svg>
+</span>
+`;
+
+exports[`AptoIcon size 5 1`] = `
+<span
+  class="AptoIcon AptoIcon--size5"
+>
+  <svg
+    focusable="false"
+    height="100%"
+    preserveAspectRatio="xMidYMid meet"
+    viewBox="0 0 24 24"
+    width="100%"
+  >
+    <path
+      d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+    />
+    <path
+      d="M0 0h24v24H0z"
+      fill="none"
+    />
+  </svg>
+</span>
+`;
+
+exports[`AptoIcon size 6 1`] = `
+<span
+  class="AptoIcon AptoIcon--size6"
+>
+  <svg
+    focusable="false"
+    height="100%"
+    preserveAspectRatio="xMidYMid meet"
+    viewBox="0 0 24 24"
+    width="100%"
+  >
+    <path
+      d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+    />
+    <path
+      d="M0 0h24v24H0z"
+      fill="none"
+    />
+  </svg>
+</span>
+`;
+
+exports[`AptoIcon status danger 1`] = `
+<span
+  class="AptoIcon AptoIcon--size3 AptoIcon--statusDanger"
+>
+  <svg
+    focusable="false"
+    height="100%"
+    preserveAspectRatio="xMidYMid meet"
+    viewBox="0 0 24 24"
+    width="100%"
+  >
+    <path
+      d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+    />
+    <path
+      d="M0 0h24v24H0z"
+      fill="none"
+    />
+  </svg>
+  <span
+    class="AptoIcon-status"
+  >
+    !
+  </span>
+</span>
+`;
+
+exports[`AptoIcon status warning 1`] = `
+<span
+  class="AptoIcon AptoIcon--size3 AptoIcon--statusWarning"
+>
+  <svg
+    focusable="false"
+    height="100%"
+    preserveAspectRatio="xMidYMid meet"
+    viewBox="0 0 24 24"
+    width="100%"
+  >
+    <path
+      d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+    />
+    <path
+      d="M0 0h24v24H0z"
+      fill="none"
+    />
+  </svg>
+  <span
+    class="AptoIcon-status"
+  >
+    !
+  </span>
+</span>
+`;

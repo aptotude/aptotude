@@ -41,7 +41,6 @@ interface AptoIconProps extends StandardTypes {
   circle?: AptoIconCircle;
   size?: AptoIconSize;
   icon: AptoIconIcon;
-  onClick?: (event: React.MouseEvent<HTMLSpanElement>) => void;
 }
 
 class AptoIcon extends React.Component<AptoIconProps> {
@@ -60,7 +59,8 @@ class AptoIcon extends React.Component<AptoIconProps> {
       circleColor,
       icon: Component,
       status,
-      className
+      className,
+      ...rest
     } = this.props;
     const classes = classNames(
       COMPONENT_PREFIX,
@@ -82,7 +82,7 @@ class AptoIcon extends React.Component<AptoIconProps> {
       focusable: 'false'
     };
     return (
-      <span className={classes}>
+      <span className={classes} {...rest}>
         <Component {...svgProps} />
         {status && <span className="AptoIcon-status">!</span>}
       </span>
