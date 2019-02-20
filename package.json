@@ -38,7 +38,7 @@
   "browser": "aptotude.umd.js",
   "types": "index.d.ts",
   "dependencies": {
-    "@apto/icons": "^1.0.6",
+    "@apto/icons": "^1.0.7",
     "@reach/router": "^1.2.1",
     "classnames": "^2.2.6",
     "faker": "^4.1.0",
@@ -51,7 +51,7 @@
     "semantic-ui-react": "0.84.0"
   },
   "peerDependencies": {
-    "@apto/icons": "^1.0.4"
+    "@apto/icons": "^1.0.7"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
