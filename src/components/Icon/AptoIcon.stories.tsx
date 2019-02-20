@@ -15,6 +15,7 @@ import {
   assignment,
   briefCase,
   callList,
+  calloutExclamation,
   check,
   checkboxChecked,
   checkboxOutline,
@@ -111,6 +112,10 @@ storiesOf('Icon', module).add('Default', () => (
       <AptoCol sm="2">
         <AptoIcon icon={callList} />
         <span className="icon-meta">callList</span>
+      </AptoCol>
+      <AptoCol sm="2">
+        <AptoIcon icon={calloutExclamation} />
+        <span className="icon-meta">calloutExclamation</span>
       </AptoCol>
       <AptoCol sm="2">
         <AptoIcon icon={person} />
