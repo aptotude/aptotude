@@ -12,7 +12,8 @@ import { UploadIcon } from './UploadIcon';
 interface AptoFileUploadProps {
   name: string;
   value?: string | undefined | null;
-  onDrop?: (acceptedFiles: any, rejectedFiles: any) => void;
+  onDrop?: (acceptedFiles: AptoFile[], rejectedFiles: AptoFile[]) => void;
+  onDragEnter?: (event: React.DragEvent<HTMLElement>) => void;
   onCancel?: (originalValue: string | null) => void;
   onRemoveImage?: () => void;
   maxSize?: number;
@@ -25,8 +26,12 @@ interface AptoFileUploadProps {
     | any;
 }
 
+interface AptoFile extends File {
+  preview?: string;
+}
+
 interface AptoFileUploadState {
-  files: any;
+  files: AptoFile[];
   hasPreviousImage: boolean;
 }
 
@@ -43,6 +48,7 @@ export class AptoFileUpload extends React.Component<
   };
 
   public originalValue: string | null = null;
+  public urlPointers: string[] = [];
 
   constructor(props: AptoFileUploadProps) {
     super(props);
@@ -52,6 +58,10 @@ export class AptoFileUpload extends React.Component<
       hasPreviousImage:
         this.originalValue && this.originalValue !== '' ? true : false
     };
+  }
+
+  public componentWillUnmount() {
+    this.removeImageBlobs();
   }
 
   public removeOldImage = (e: React.MouseEvent) => {
@@ -67,11 +77,17 @@ export class AptoFileUpload extends React.Component<
     }
   };
 
-  public onDrop = (acceptedFiles: any, rejectedFiles: any) => {
+  public onDrop = (acceptedFiles: AptoFile[], rejectedFiles: AptoFile[]) => {
     const { onDrop } = this.props;
 
+    const files = acceptedFiles.map(file =>
+      Object.assign(file, {
+        preview: this.getPreview(file)
+      })
+    );
+
     this.setState({
-      files: acceptedFiles
+      files
     });
 
     if (onDrop) {
@@ -96,6 +112,8 @@ export class AptoFileUpload extends React.Component<
     this.setState({
       files: []
     });
+
+    this.removeImageBlobs();
 
     if (onCancel) {
       onCancel(this.originalValue);
@@ -131,10 +149,13 @@ export class AptoFileUpload extends React.Component<
     const { files } = this.state;
     const acceptedList =
       files && files.length
-        ? files.map((f: any) => {
+        ? files.map((file: any) => {
             return (
-              <AptoListItem key={f.name || 'unknown'}>
-                {f.name || 'unknown'}
+              <AptoListItem key={file.name || 'unknown'}>
+                {file.preview && (
+                  <img src={file.preview} className="dropzone-preview" />
+                )}
+                {file.name || 'unknown'}
               </AptoListItem>
             );
           })
@@ -148,6 +169,7 @@ export class AptoFileUpload extends React.Component<
         onFileDialogCancel={this.onCancel}
         accept={this.props.accept}
         onDrop={this.onDrop}
+        onDragEnter={this.props.onDragEnter}
       >
         {({ getRootProps, getInputProps, isDragActive }) => {
           return (
@@ -194,5 +216,25 @@ export class AptoFileUpload extends React.Component<
         }}
       </Dropzone>
     );
+  }
+
+  private getPreview(file: AptoFile) {
+    let url = null;
+    if (this.isImage(file.type)) {
+      url = URL.createObjectURL(file);
+      this.urlPointers.push(url);
+    }
+    return url;
+  }
+
+  private removeImageBlobs() {
+    this.urlPointers.forEach(url => {
+      URL.revokeObjectURL(url);
+    });
+  }
+
+  private isImage(type: string): boolean {
+    const imageTypes = ['image/png', 'image/jpeg', 'image/gif', 'image/bmp'];
+    return imageTypes.indexOf(type) > -1;
   }
 }

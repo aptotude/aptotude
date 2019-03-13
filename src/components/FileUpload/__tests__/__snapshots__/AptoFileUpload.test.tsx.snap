@@ -93,7 +93,7 @@ exports[`AptoFileUpload Renders Custom Image Component Class 1`] = `
 </div>
 `;
 
-exports[`AptoFileUpload Renders Custom Image Funcion Component 1`] = `
+exports[`AptoFileUpload Renders Custom Image Function Component 1`] = `
 <div
   class="dropzone-previousImage"
 >

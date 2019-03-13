@@ -1,5 +1,11 @@
 import * as React from 'react';
-import { render, cleanup, fireEvent, wait } from 'react-testing-library';
+import {
+  render,
+  cleanup,
+  fireEvent,
+  wait,
+  getByText
+} from 'react-testing-library';
 import { AptoFileUpload } from '../AptoFileUpload';
 
 afterEach(() => {
@@ -16,13 +22,42 @@ class Foo extends React.Component<any> {
   }
 }
 
+const mockData = (files: any) => {
+  return {
+    dataTransfer: {
+      files,
+      items: files.map((file: any) => ({
+        kind: 'file',
+        type: file.type,
+        getAsFile: () => file
+      })),
+      types: ['Files']
+    }
+  };
+};
+
+const dispatchEvt = (node: any, type: string, data: any) => {
+  const event = new Event(type, { bubbles: true });
+  Object.assign(event, data);
+  fireEvent(node, event);
+};
+
+const flushPromises = (ui: any, container: any) => {
+  return new Promise(resolve =>
+    setImmediate(() => {
+      render(ui, { container });
+      resolve(container);
+    })
+  );
+};
+
 describe('AptoFileUpload', () => {
   it('Renders Component', () => {
     const { container } = render(<AptoFileUpload name="superName" />);
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('Renders Custom Image Funcion Component', () => {
+  it('Renders Custom Image Function Component', () => {
     const { container } = render(
       <AptoFileUpload value="foo.jpg" imageComponent={Img} name="superName" />
     );
@@ -98,6 +133,58 @@ describe('AptoFileUpload', () => {
       expect(el).not.toBeUndefined();
       expect(hitCancel).toBeTruthy();
       expect(old).toEqual('http://foo.com/j.jpg');
+    });
+  });
+
+  it('invoke onDragEnter when dragenter event occurs', async () => {
+    const file = new File([JSON.stringify({ ping: true })], 'ping.json', {
+      type: 'application/json'
+    });
+    const data = mockData([file]);
+    const onDragEnter = jest.fn();
+
+    const ui = (
+      <AptoFileUpload
+        onDragEnter={onDragEnter}
+        accept="application/json"
+        name="superName"
+      />
+    );
+
+    const { container } = render(ui);
+    const dropzone = container.querySelector('div');
+
+    dispatchEvt(dropzone, 'dragenter', data);
+    await flushPromises(ui, container);
+
+    expect(onDragEnter).toHaveBeenCalled();
+  });
+
+  it('invoke onDrop when file dropped', async () => {
+    const file = new File([JSON.stringify({ ping: true })], 'ping.json', {
+      type: 'application/json'
+    });
+    const data = mockData([file]);
+    const onDrop = jest.fn();
+
+    const ui = (
+      <AptoFileUpload
+        onDrop={onDrop}
+        accept="application/json"
+        name="superName"
+      />
+    );
+
+    const { container } = render(ui);
+    const dropzone = container.querySelector('div');
+
+    dispatchEvt(dropzone, 'drop', data);
+    await flushPromises(ui, container);
+
+    expect(onDrop).toHaveBeenCalled();
+
+    await wait(() => {
+      expect(getByText(container, 'ping.json')).toBeDefined();
     });
   });
 });

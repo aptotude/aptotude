@@ -93,6 +93,7 @@ $button-holdPregressContainer-size: 3px !default;
   cursor: pointer;
   text-transform: uppercase;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+  user-select: none;
   &:disabled,
   &.AptoButton--disabled {
     cursor: not-allowed;
