@@ -5,8 +5,10 @@ import './aptoAlert.scss';
 
 const COMPONENT_PREFIX = 'AptoAlert';
 
+export type AptoAlertVariants = 'info' | 'success' | 'warning' | 'danger';
+
 export interface AptoAlertDisplayProps extends StandardTypes {
-  variant?: 'info' | 'success' | 'warning' | 'danger';
+  variant?: AptoAlertVariants;
 }
 
 export class AptoAlert extends React.Component<AptoAlertDisplayProps> {
