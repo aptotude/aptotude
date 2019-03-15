@@ -21,7 +21,7 @@ export class AptoSnackbar extends React.Component<AptoSnackbarProps> {
   public static defaultProps = {
     anchorOrigin: {
       vertical: 'bottom',
-      horizontal: 'right'
+      horizontal: 'left'
     },
     duration: 5000
   };
