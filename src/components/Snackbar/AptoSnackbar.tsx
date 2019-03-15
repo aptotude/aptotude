@@ -7,31 +7,28 @@ import { AptoButton } from '../Button';
 import { AptoIcon } from '../Icon';
 import { close } from '@apto/icons';
 
-interface AnchorOrigin {
-  horizontal: 'left' | 'center' | 'right';
-  vertical: 'top' | 'bottom';
-}
+export type AptoSnackbarHorizontal = 'left' | 'center' | 'right';
+export type AptoSnackbarVertical = 'top' | 'bottom';
 
-interface AptoSnackbarProps extends StandardTypes {
-  anchorOrigin: AnchorOrigin;
-  duration: number;
+export interface AptoSnackbarProps extends StandardTypes {
+  anchorOrigin?: {
+    horizontal: string | AptoSnackbarHorizontal;
+    vertical: string | AptoSnackbarVertical;
+  };
+  duration?: number;
 }
 
 export class AptoSnackbar extends React.Component<AptoSnackbarProps> {
   public static defaultProps = {
-    anchorOrigin: {
-      vertical: 'bottom',
-      horizontal: 'left'
-    },
     duration: 5000
   };
 
   public render() {
-    const {
-      anchorOrigin: { vertical, horizontal },
-      className,
-      duration
-    } = this.props;
+    const { className, duration } = this.props;
+    const vertical =
+      (this.props.anchorOrigin && this.props.anchorOrigin.vertical) || 'bottom';
+    const horizontal =
+      (this.props.anchorOrigin && this.props.anchorOrigin.horizontal) || 'left';
     const anchorClasses = classNames(
       `AptoSnackbar`,
       `AptoSnackbarAnchorOrigin${vertical}${horizontal}`,
@@ -58,6 +55,7 @@ export class AptoSnackbar extends React.Component<AptoSnackbarProps> {
                             kind="link"
                             variant="secondaryDark"
                             key="close"
+                            data-testid="close-snack"
                             onClick={e => hideSnack(snack, e)}
                           >
                             <AptoIcon inline={true} icon={close} />

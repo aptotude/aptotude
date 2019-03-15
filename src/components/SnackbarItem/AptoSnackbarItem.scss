@@ -45,11 +45,13 @@
 .AptoSnackbarItem + .AptoSnackbarItem {
   margin-top: 0.5rem;
 }
+
 .AptoSnackbarItem {
+  animation: show-snack 225ms;
   &.AptoSnackbarItem--hide {
+    animation: hide-snack 225ms;
     opacity: 0;
   }
-  transition: opacity ease-in-out 0.2s;
 }
 .AptoSnackbarItemContent {
   display: flex;
@@ -66,4 +68,26 @@
   flex-grow: 0;
   padding-left: 1rem;
   max-width: 100%;
+}
+
+@keyframes show-snack {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes hide-snack {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
 }

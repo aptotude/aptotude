@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SnackbarItem Component It does not hide if no onClose set 1`] = `
+<div
+  class="AptoSnackbarItem"
+>
+  <div
+    class="AptoAlert AptoAlert--info AptoSnackbarItemContent"
+  >
+    <div
+      class="AptoSnackbarItemContentMessage"
+    >
+      Hey
+    </div>
+    <div
+      class="AptoSnackbarItemContentAction"
+    />
+  </div>
+</div>
+`;
+
+exports[`SnackbarItem Component It eventually hides 1`] = `
+<div
+  class="AptoSnackbarItem AptoSnackbarItem--hide"
+>
+  <div
+    class="AptoAlert AptoAlert--info AptoSnackbarItemContent"
+  >
+    <div
+      class="AptoSnackbarItemContentMessage"
+    >
+      Hey
+    </div>
+    <div
+      class="AptoSnackbarItemContentAction"
+    />
+  </div>
+</div>
+`;
+
+exports[`SnackbarItem Component It renders actions 1`] = `
+<div
+  class="AptoSnackbarItem"
+>
+  <div
+    class="AptoAlert AptoAlert--info AptoSnackbarItemContent"
+  >
+    <div
+      class="AptoSnackbarItemContentMessage"
+    >
+      Hey
+    </div>
+    <div
+      class="AptoSnackbarItemContentAction"
+    >
+      <button>
+        Foo
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SnackbarItem Component It renders null if closed 1`] = `null`;
+
+exports[`SnackbarItem Component It renders variant 1`] = `
+<div
+  class="AptoSnackbarItem"
+>
+  <div
+    class="AptoAlert AptoAlert--danger AptoSnackbarItemContent"
+  >
+    <div
+      class="AptoSnackbarItemContentMessage"
+    >
+      Hey
+    </div>
+    <div
+      class="AptoSnackbarItemContentAction"
+    >
+      <button>
+        Foo
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SnackbarItem Component It renders with message 1`] = `
+<div
+  class="AptoSnackbarItem"
+>
+  <div
+    class="AptoAlert AptoAlert--info AptoSnackbarItemContent"
+  >
+    <div
+      class="AptoSnackbarItemContentMessage"
+    >
+      Hey
+    </div>
+    <div
+      class="AptoSnackbarItemContentAction"
+    />
+  </div>
+</div>
+`;

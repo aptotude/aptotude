@@ -7,7 +7,7 @@ import { AptoIcon } from '../Icon';
 import { AptoList } from '../List';
 import { AptoButton } from '../Button';
 import { AptoListItem } from '../ListItem';
-import { UploadIcon } from './UploadIcon';
+import { addPhoto } from '@apto/icons';
 
 interface AptoFileUploadProps {
   name: string;
@@ -179,11 +179,7 @@ export class AptoFileUpload extends React.Component<
                 'dropzone--isActive': isDragActive
               })}
             >
-              <AptoIcon
-                size="5"
-                icon={UploadIcon}
-                className="dropzone-addIcon"
-              />
+              <AptoIcon size="5" icon={addPhoto} className="dropzone-addIcon" />
               <input {...getInputProps()} />
               {isDragActive ? (
                 <AptoParagraph>Drop the file here</AptoParagraph>

@@ -1,0 +1,209 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snackbar Component It Closes a snack when clicking close 1`] = `null`;
+
+exports[`Snackbar Component It adds a snack 1`] = `
+<div
+  class="AptoSnackbar AptoSnackbarAnchorOriginbottomleft"
+>
+  <div>
+    <div
+      class="AptoSnackbarItem"
+    >
+      <div
+        class="AptoAlert AptoAlert--info AptoSnackbarItemContent"
+      >
+        <div
+          class="AptoSnackbarItemContentMessage"
+        >
+          This is a snack
+        </div>
+        <div
+          class="AptoSnackbarItemContentAction"
+        >
+          <button
+            aria-label="close"
+            class="AptoButton AptoButton--link AptoButton--secondaryDark"
+            data-testid="close-snack"
+          >
+            <span
+              class="AptoIcon AptoIcon--size3 AptoIcon--inline"
+            >
+              <svg
+                focusable="false"
+                height="100%"
+                preserveAspectRatio="xMidYMid meet"
+                viewBox="0 0 24 24"
+                width="100%"
+              >
+                <path
+                  d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                />
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+              </svg>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snackbar Component It adds multiple snacks 1`] = `
+<div
+  class="AptoSnackbar AptoSnackbarAnchorOriginbottomleft"
+>
+  <div>
+    <div
+      class="AptoSnackbarItem"
+    >
+      <div
+        class="AptoAlert AptoAlert--info AptoSnackbarItemContent"
+      >
+        <div
+          class="AptoSnackbarItemContentMessage"
+        >
+          This is a snack
+        </div>
+        <div
+          class="AptoSnackbarItemContentAction"
+        >
+          <button
+            aria-label="close"
+            class="AptoButton AptoButton--link AptoButton--secondaryDark"
+            data-testid="close-snack"
+          >
+            <span
+              class="AptoIcon AptoIcon--size3 AptoIcon--inline"
+            >
+              <svg
+                focusable="false"
+                height="100%"
+                preserveAspectRatio="xMidYMid meet"
+                viewBox="0 0 24 24"
+                width="100%"
+              >
+                <path
+                  d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                />
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+              </svg>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="AptoSnackbarItem"
+    >
+      <div
+        class="AptoAlert AptoAlert--danger AptoSnackbarItemContent"
+      >
+        <div
+          class="AptoSnackbarItemContentMessage"
+        >
+          This is another snack
+        </div>
+        <div
+          class="AptoSnackbarItemContentAction"
+        >
+          <button
+            aria-label="close"
+            class="AptoButton AptoButton--link AptoButton--secondaryDark"
+            data-testid="close-snack"
+          >
+            <span
+              class="AptoIcon AptoIcon--size3 AptoIcon--inline"
+            >
+              <svg
+                focusable="false"
+                height="100%"
+                preserveAspectRatio="xMidYMid meet"
+                viewBox="0 0 24 24"
+                width="100%"
+              >
+                <path
+                  d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                />
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+              </svg>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snackbar Component It lets you set anchor location 1`] = `
+<div
+  class="AptoSnackbar AptoSnackbarAnchorOrigintopright"
+>
+  <div>
+    <div
+      class="AptoSnackbarItem"
+    >
+      <div
+        class="AptoAlert AptoAlert--info AptoSnackbarItemContent"
+      >
+        <div
+          class="AptoSnackbarItemContentMessage"
+        >
+          This is a snack
+        </div>
+        <div
+          class="AptoSnackbarItemContentAction"
+        >
+          <button
+            aria-label="close"
+            class="AptoButton AptoButton--link AptoButton--secondaryDark"
+            data-testid="close-snack"
+          >
+            <span
+              class="AptoIcon AptoIcon--size3 AptoIcon--inline"
+            >
+              <svg
+                focusable="false"
+                height="100%"
+                preserveAspectRatio="xMidYMid meet"
+                viewBox="0 0 24 24"
+                width="100%"
+              >
+                <path
+                  d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                />
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+              </svg>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snackbar Component It renders 1`] = `
+<div>
+  <button>
+    Open Snack
+  </button>
+  <button>
+    Open Another Snack
+  </button>
+</div>
+`;

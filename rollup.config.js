@@ -7,11 +7,14 @@ import pkg from './package.json';
 import babel from 'rollup-plugin-babel';
 
 const globalLibs = {
+  '@apto/icons': 'close',
+  '@apto/icons': 'addPhoto',
+  '@apto/icons': 'search',
+  '@reach/router': 'Link',
   'classnames': 'classnames',
   'react': 'React',
   'react-dom': 'reactDom',
   'react-dropzone': 'Dropzone',
-  '@reach/router': 'Link',
   'react-event-listener': 'EventListener',
   'semantic-ui-react': 'Input',
   'semantic-ui-react': 'Select',
@@ -22,12 +25,13 @@ const globalLibs = {
   'semantic-ui-react': 'SearchProps',
 };
 const externalLibs = [
+  '@apto/icons',
+  '@reach/router',
   'classnames',
   'react',
   'react-dom',
   'react-dropzone',
   'react-event-listener',
-  '@reach/router',
   'semantic-ui-react',
   'semantic-ui-css',
 ];
@@ -72,8 +76,7 @@ export default {
         "main": pkg.main,
         "module": pkg.module,
         "browser": pkg.browser,
-        "types": pkg.types,
-        "peerDependencies": pkg.peerDependencies
+        "types": pkg.types
       }
     })
   ]

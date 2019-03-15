@@ -5,7 +5,6 @@ export * from './CardContent';
 export * from './CardFooter';
 export * from './CardHeader';
 export * from './Checkbox';
-export * from './ClickAwayListener';
 export * from './Column';
 export * from './Container';
 export * from './ErrorPage';
