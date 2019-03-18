@@ -7,7 +7,7 @@ import { AptoIcon } from '../Icon';
 import { AptoList } from '../List';
 import { AptoButton } from '../Button';
 import { AptoListItem } from '../ListItem';
-import { addPhoto } from '@apto/icons';
+import { addPhoto, close } from '@apto/icons';
 
 interface AptoFileUploadProps {
   name: string;
@@ -106,6 +106,18 @@ export class AptoFileUpload extends React.Component<
     this.onCancel();
   };
 
+  public removeSelected = (
+    event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>
+  ) => {
+    event.preventDefault();
+    event.stopPropagation();
+    const fileName = event.currentTarget.dataset.name;
+    const newFiles = this.state.files.filter(file => file.name !== fileName);
+    this.setState({
+      files: newFiles
+    });
+  };
+
   public onCancel = () => {
     const { onCancel } = this.props;
 
@@ -140,7 +152,7 @@ export class AptoFileUpload extends React.Component<
             kind="link"
             onClick={this.removeOldImage}
           >
-            Change
+            Remove <AptoIcon size="2" inline={true} icon={close} />
           </AptoButton>
         </div>
       );
@@ -156,6 +168,13 @@ export class AptoFileUpload extends React.Component<
                   <img src={file.preview} className="dropzone-preview" />
                 )}
                 {file.name || 'unknown'}
+                <AptoButton
+                  kind="link"
+                  data-name={file.name}
+                  onClick={this.removeSelected}
+                >
+                  <AptoIcon size="2" inline={true} icon={close} />
+                </AptoButton>
               </AptoListItem>
             );
           })

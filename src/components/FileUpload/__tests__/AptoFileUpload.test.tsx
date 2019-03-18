@@ -82,7 +82,7 @@ describe('AptoFileUpload', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('toggles change', async () => {
+  it('toggles remove', async () => {
     let hitRemove = false;
     const { container } = render(
       <AptoFileUpload

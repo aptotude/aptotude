@@ -18,6 +18,9 @@ $selectDisabledOpactiy: 0.5;
     border-radius: 0 !important;
     border-bottom: 1px solid $selectBorderColor;
     background-color: $white !important;
+    input.search {
+      padding: $selectPadding !important;
+    }
     &.selection {
       box-shadow: none !important;
     }

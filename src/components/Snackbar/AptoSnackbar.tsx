@@ -6,6 +6,7 @@ import { StandardTypes } from '../../utils/standardTypes';
 import { AptoButton } from '../Button';
 import { AptoIcon } from '../Icon';
 import { close } from '@apto/icons';
+import './AptoSnackbar.scss';
 
 export type AptoSnackbarHorizontal = 'left' | 'center' | 'right';
 export type AptoSnackbarVertical = 'top' | 'bottom';

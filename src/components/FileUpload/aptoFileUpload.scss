@@ -36,6 +36,12 @@
     vertical-align: middle;
     margin-right: 1rem;
   }
+
+  .AptoListItem-content {
+    .AptoButton {
+      margin-left: 1rem;
+    }
+  }
 }
 
 .dropzone-previousImage {
