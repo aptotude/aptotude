@@ -15,6 +15,7 @@ export interface AptoSnackbarContextInterface {
     type?: AptoAlertVariants,
     action?: React.ReactNode | null
   ) => void;
+  showSnacks?: (snacks: AptoSnack[]) => void;
   hideSnack: (snack: AptoSnack, event: React.MouseEvent | null) => void;
 }
 
@@ -25,7 +26,8 @@ export const aptoSnackbarContextInitialState: AptoSnackbarContextInterface = {
     message: React.ReactNode,
     type: AptoAlertVariants = 'info',
     action: React.ReactNode | null = null
-  ) => {}
+  ) => {},
+  showSnacks: (snacks: AptoSnack[]) => {}
 };
 
 export const AptoSnackbarContext = React.createContext<
