@@ -204,178 +204,305 @@ describe('Button Component', () => {
     expect(onClick).not.toBeCalled();
   });
 
-  it('Button hold renders', () => {
-    const { container } = render(<AptoButton hold />);
-    const node = container.querySelector('button.AptoButton');
-    expect(node!.className).toEqual(
-      'AptoButton AptoButton--button AptoButton--primary AptoButtonHold'
-    );
-  });
+  describe('Hold Button', () => {
+    it('Button hold renders', () => {
+      const { container } = render(<AptoButton hold />);
+      const node = container.querySelector('button.AptoButton');
+      expect(node!.className).toEqual(
+        'AptoButton AptoButton--button AptoButton--primary AptoButtonHold'
+      );
+    });
 
-  it('Clicking Hold Button starts bar and then calls hold', async () => {
-    let called = false;
-    const { container } = render(
-      <AptoButton
-        hold
-        onHold={() => {
-          called = true;
-        }}
-      >
-        Hold
-      </AptoButton>
-    );
-    const btn = getByText(container, 'Hold');
-    fireEvent.mouseDown(btn);
-    await wait(
-      () => {
-        const node = container.querySelector('button.AptoButton');
-        expect(called).toBeFalsy();
-        expect(node!.className).toEqual(
-          'AptoButton AptoButton--button AptoButton--primary AptoButtonHold AptoButtonHold--processing'
-        );
-      },
-      {
-        timeout: 200
-      }
-    );
+    it('MouseDown starts bar and then calls hold', async () => {
+      let called = false;
+      const { container } = render(
+        <AptoButton
+          hold
+          onHold={() => {
+            called = true;
+          }}
+        >
+          Hold
+        </AptoButton>
+      );
+      const btn = getByText(container, 'Hold');
+      fireEvent.mouseDown(btn);
+      await wait(
+        () => {
+          const node = container.querySelector('button.AptoButton');
+          expect(called).toBeFalsy();
+          expect(node!.className).toEqual(
+            'AptoButton AptoButton--button AptoButton--primary AptoButtonHold AptoButtonHold--processing'
+          );
+        },
+        {
+          timeout: 200
+        }
+      );
 
-    await wait(
-      () => {
-        const node = container.querySelector('button.AptoButton');
-        expect(called).toBeTruthy();
-        expect(node!.className).toEqual(
-          'AptoButton AptoButton--button AptoButton--primary AptoButtonHold'
-        );
-      },
-      {
-        timeout: 3000
-      }
-    );
-  });
+      await wait(
+        () => {
+          const node = container.querySelector('button.AptoButton');
+          expect(called).toBeTruthy();
+          expect(node!.className).toEqual(
+            'AptoButton AptoButton--button AptoButton--primary AptoButtonHold'
+          );
+        },
+        {
+          timeout: 3000
+        }
+      );
+    });
 
-  it('mouse up stops hold', async () => {
-    let called = false;
-    const { container } = render(
-      <AptoButton
-        hold
-        onHold={() => {
-          called = true;
-        }}
-      >
-        Hold
-      </AptoButton>
-    );
-    const btn = getByText(container, 'Hold');
-    fireEvent.mouseDown(btn);
-    await wait(
-      () => {
-        const node = container.querySelector('button.AptoButton');
-        expect(called).toBeFalsy();
-        expect(node!.className).toEqual(
-          'AptoButton AptoButton--button AptoButton--primary AptoButtonHold AptoButtonHold--processing'
-        );
-        fireEvent.mouseUp(btn);
-      },
-      {
-        timeout: 100
-      }
-    );
+    it('MouseUp stops hold', async () => {
+      let called = false;
+      const { container } = render(
+        <AptoButton
+          hold
+          onHold={() => {
+            called = true;
+          }}
+        >
+          Hold
+        </AptoButton>
+      );
+      const btn = getByText(container, 'Hold');
+      fireEvent.mouseDown(btn);
+      await wait(
+        () => {
+          const node = container.querySelector('button.AptoButton');
+          expect(called).toBeFalsy();
+          expect(node!.className).toEqual(
+            'AptoButton AptoButton--button AptoButton--primary AptoButtonHold AptoButtonHold--processing'
+          );
+          fireEvent.mouseUp(btn);
+        },
+        {
+          timeout: 100
+        }
+      );
 
-    await wait(
-      () => {
-        const node = container.querySelector('button.AptoButton');
-        expect(called).toBeFalsy();
-        expect(node!.className).toEqual(
-          'AptoButton AptoButton--button AptoButton--primary AptoButtonHold'
-        );
-      },
-      {
-        timeout: 3000
-      }
-    );
-  });
+      await wait(
+        () => {
+          const node = container.querySelector('button.AptoButton');
+          expect(called).toBeFalsy();
+          expect(node!.className).toEqual(
+            'AptoButton AptoButton--button AptoButton--primary AptoButtonHold'
+          );
+        },
+        {
+          timeout: 3000
+        }
+      );
+    });
 
-  it('mouse out stops hold', async () => {
-    let called = false;
-    const { container } = render(
-      <AptoButton
-        hold
-        onHold={() => {
-          called = true;
-        }}
-      >
-        Hold
-      </AptoButton>
-    );
-    const btn = getByText(container, 'Hold');
-    fireEvent.mouseDown(btn);
-    await wait(
-      () => {
-        const node = container.querySelector('button.AptoButton');
-        expect(called).toBeFalsy();
-        expect(node!.className).toEqual(
-          'AptoButton AptoButton--button AptoButton--primary AptoButtonHold AptoButtonHold--processing'
-        );
-        fireEvent.mouseOut(btn);
-      },
-      {
-        timeout: 100
-      }
-    );
+    it('MouseOut stops hold', async () => {
+      let called = false;
+      const { container } = render(
+        <AptoButton
+          hold
+          onHold={() => {
+            called = true;
+          }}
+        >
+          Hold
+        </AptoButton>
+      );
+      const btn = getByText(container, 'Hold');
+      fireEvent.mouseDown(btn);
+      await wait(
+        () => {
+          const node = container.querySelector('button.AptoButton');
+          expect(called).toBeFalsy();
+          expect(node!.className).toEqual(
+            'AptoButton AptoButton--button AptoButton--primary AptoButtonHold AptoButtonHold--processing'
+          );
+          fireEvent.mouseOut(btn);
+        },
+        {
+          timeout: 100
+        }
+      );
 
-    await wait(
-      () => {
-        const node = container.querySelector('button.AptoButton');
-        expect(called).toBeFalsy();
-        expect(node!.className).toEqual(
-          'AptoButton AptoButton--button AptoButton--primary AptoButtonHold'
-        );
-      },
-      {
-        timeout: 3000
-      }
-    );
-  });
+      await wait(
+        () => {
+          const node = container.querySelector('button.AptoButton');
+          expect(called).toBeFalsy();
+          expect(node!.className).toEqual(
+            'AptoButton AptoButton--button AptoButton--primary AptoButtonHold'
+          );
+        },
+        {
+          timeout: 3000
+        }
+      );
+    });
 
-  it('Clicking disabled Hold Button does nothing', async () => {
-    let called = false;
-    const { container } = render(
-      <AptoButton
-        disabled
-        hold
-        onHold={() => {
-          called = true;
-        }}
-      >
-        Hold
-      </AptoButton>
-    );
-    const btn = getByText(container, 'Hold');
-    fireEvent.mouseDown(btn);
-    await wait(
-      () => {
-        const node = container.querySelector('button.AptoButton');
-        expect(called).toBeFalsy();
-        expect(node!.className).toEqual(
-          'AptoButton AptoButton--button AptoButton--primary AptoButtonHold AptoButton--disabled'
-        );
-      },
-      {
-        timeout: 200
-      }
-    );
+    it('TouchStart starts bar and then calls hold', async () => {
+      let called = false;
+      const { container } = render(
+        <AptoButton
+          hold
+          onHold={() => {
+            called = true;
+          }}
+        >
+          Hold
+        </AptoButton>
+      );
+      const btn = getByText(container, 'Hold');
+      fireEvent.touchStart(btn);
+      await wait(
+        () => {
+          const node = container.querySelector('button.AptoButton');
+          expect(called).toBeFalsy();
+          expect(node!.className).toEqual(
+            'AptoButton AptoButton--button AptoButton--primary AptoButtonHold AptoButtonHold--processing'
+          );
+        },
+        {
+          timeout: 200
+        }
+      );
 
-    await wait(
-      () => {
-        const node = container.querySelector('button.AptoButton');
-        expect(called).toBeFalsy();
-        expect(node!.className).toEqual(
-          'AptoButton AptoButton--button AptoButton--primary AptoButtonHold AptoButton--disabled'
-        );
-      },
-      {
-        timeout: 3000
-      }
-    );
+      await wait(
+        () => {
+          const node = container.querySelector('button.AptoButton');
+          expect(called).toBeTruthy();
+          expect(node!.className).toEqual(
+            'AptoButton AptoButton--button AptoButton--primary AptoButtonHold'
+          );
+        },
+        {
+          timeout: 3000
+        }
+      );
+    });
+
+    it('TouchEnd stops hold', async () => {
+      let called = false;
+      const { container } = render(
+        <AptoButton
+          hold
+          onHold={() => {
+            called = true;
+          }}
+        >
+          Hold
+        </AptoButton>
+      );
+      const btn = getByText(container, 'Hold');
+      fireEvent.touchStart(btn);
+      await wait(
+        () => {
+          const node = container.querySelector('button.AptoButton');
+          expect(called).toBeFalsy();
+          expect(node!.className).toEqual(
+            'AptoButton AptoButton--button AptoButton--primary AptoButtonHold AptoButtonHold--processing'
+          );
+          fireEvent.touchEnd(btn);
+        },
+        {
+          timeout: 100
+        }
+      );
+
+      await wait(
+        () => {
+          const node = container.querySelector('button.AptoButton');
+          expect(called).toBeFalsy();
+          expect(node!.className).toEqual(
+            'AptoButton AptoButton--button AptoButton--primary AptoButtonHold'
+          );
+        },
+        {
+          timeout: 3000
+        }
+      );
+    });
+
+    it('MouseMove stops hold', async () => {
+      let called = false;
+      const { container } = render(
+        <AptoButton
+          hold
+          onHold={() => {
+            called = true;
+          }}
+        >
+          Hold
+        </AptoButton>
+      );
+      const btn = getByText(container, 'Hold');
+      fireEvent.touchStart(btn);
+      await wait(
+        () => {
+          const node = container.querySelector('button.AptoButton');
+          expect(called).toBeFalsy();
+          expect(node!.className).toEqual(
+            'AptoButton AptoButton--button AptoButton--primary AptoButtonHold AptoButtonHold--processing'
+          );
+          fireEvent.touchMove(btn);
+        },
+        {
+          timeout: 100
+        }
+      );
+
+      await wait(
+        () => {
+          const node = container.querySelector('button.AptoButton');
+          expect(called).toBeFalsy();
+          expect(node!.className).toEqual(
+            'AptoButton AptoButton--button AptoButton--primary AptoButtonHold'
+          );
+        },
+        {
+          timeout: 3000
+        }
+      );
+    });
+
+    it('Clicking disabled Hold Button does nothing', async () => {
+      let called = false;
+      const { container } = render(
+        <AptoButton
+          disabled
+          hold
+          onHold={() => {
+            called = true;
+          }}
+        >
+          Hold
+        </AptoButton>
+      );
+      const btn = getByText(container, 'Hold');
+      fireEvent.mouseDown(btn);
+      await wait(
+        () => {
+          const node = container.querySelector('button.AptoButton');
+          expect(called).toBeFalsy();
+          expect(node!.className).toEqual(
+            'AptoButton AptoButton--button AptoButton--primary AptoButtonHold AptoButton--disabled'
+          );
+        },
+        {
+          timeout: 200
+        }
+      );
+
+      await wait(
+        () => {
+          const node = container.querySelector('button.AptoButton');
+          expect(called).toBeFalsy();
+          expect(node!.className).toEqual(
+            'AptoButton AptoButton--button AptoButton--primary AptoButtonHold AptoButton--disabled'
+          );
+        },
+        {
+          timeout: 3000
+        }
+      );
+    });
   });
 });

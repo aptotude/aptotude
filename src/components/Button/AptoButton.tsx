@@ -151,8 +151,11 @@ export class AptoButton extends React.Component<AptoButtonDisplayProps> {
 
     if (hold) {
       propList.onMouseDown = this.handleMouseDown;
-      propList.onMouseOut = this.handleMouseUp;
       propList.onMouseUp = this.handleMouseUp;
+      propList.onMouseOut = this.handleMouseUp;
+      propList.onTouchStart = this.handleMouseDown;
+      propList.onTouchEnd = this.handleMouseUp;
+      propList.onTouchMove = this.handleMouseUp;
     }
 
     if (propList.target && propList.target === '_blank') {
