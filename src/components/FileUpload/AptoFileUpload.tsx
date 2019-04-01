@@ -8,6 +8,8 @@ import { AptoList } from '../List';
 import { AptoButton } from '../Button';
 import { AptoListItem } from '../ListItem';
 import { addPhoto, close } from '@apto/icons';
+import { AptoHeader } from '../Header';
+import prettyBytes from 'pretty-bytes';
 
 interface AptoFileUploadProps {
   name: string;
@@ -32,6 +34,7 @@ interface AptoFile extends File {
 
 interface AptoFileUploadState {
   files: AptoFile[];
+  rejected: AptoFile[];
   hasPreviousImage: boolean;
 }
 
@@ -40,7 +43,7 @@ export class AptoFileUpload extends React.Component<
   AptoFileUploadState
 > {
   public static defaultProps = {
-    maxSize: 5242880, // 5mb
+    maxSize: 5000000, // 5mb
     minSize: 0,
     accept: 'image/png,image/jpeg',
     value: null,
@@ -55,6 +58,7 @@ export class AptoFileUpload extends React.Component<
     this.originalValue = this.props.value || null;
     this.state = {
       files: [],
+      rejected: [],
       hasPreviousImage:
         this.originalValue && this.originalValue !== '' ? true : false
     };
@@ -87,7 +91,8 @@ export class AptoFileUpload extends React.Component<
     );
 
     this.setState({
-      files
+      files,
+      rejected: rejectedFiles
     });
 
     if (onDrop) {
@@ -122,7 +127,8 @@ export class AptoFileUpload extends React.Component<
     const { onCancel } = this.props;
 
     this.setState({
-      files: []
+      files: [],
+      rejected: []
     });
 
     this.removeImageBlobs();
@@ -134,18 +140,9 @@ export class AptoFileUpload extends React.Component<
 
   public render() {
     if (this.state.hasPreviousImage) {
-      const { imageComponent: Component } = this.props;
-      let image = null;
-      if (this.originalValue && typeof Component === 'object') {
-        image = Component;
-      } else if (this.originalValue && Component) {
-        image = <Component />;
-      } else if (this.originalValue) {
-        image = <img src={this.originalValue} alt="" />;
-      }
       return (
         <div className="dropzone-previousImage">
-          {image}
+          {this.getImageTag()}
           <br />
           <AptoButton
             className="dropzone-change"
@@ -158,27 +155,9 @@ export class AptoFileUpload extends React.Component<
       );
     }
 
-    const { files } = this.state;
-    const acceptedList =
-      files && files.length
-        ? files.map((file: any) => {
-            return (
-              <AptoListItem key={file.name || 'unknown'}>
-                {file.preview && (
-                  <img src={file.preview} className="dropzone-preview" />
-                )}
-                {file.name || 'unknown'}
-                <AptoButton
-                  kind="link"
-                  data-name={file.name}
-                  onClick={this.removeSelected}
-                >
-                  <AptoIcon size="2" inline={true} icon={close} />
-                </AptoButton>
-              </AptoListItem>
-            );
-          })
-        : null;
+    const acceptedList = this.getAcceptedFiles();
+    const rejectedList = this.getRejectedFiles();
+
     return (
       <Dropzone
         maxSize={this.props.maxSize}
@@ -200,6 +179,7 @@ export class AptoFileUpload extends React.Component<
             >
               <AptoIcon size="5" icon={addPhoto} className="dropzone-addIcon" />
               <input {...getInputProps()} />
+
               {isDragActive ? (
                 <AptoParagraph>Drop the file here</AptoParagraph>
               ) : (
@@ -212,10 +192,26 @@ export class AptoFileUpload extends React.Component<
                   </AptoParagraph>
                 </div>
               )}
+
+              {this.props.maxSize && (
+                <AptoParagraph className="fileSize">
+                  (Max file size {prettyBytes(this.props.maxSize)})
+                </AptoParagraph>
+              )}
+
               {acceptedList && (
-                <AptoList type="ul" className="fileList">
-                  {acceptedList}
-                </AptoList>
+                <div className="fileList">
+                  <AptoList type="ul" className="fileList">
+                    {acceptedList}
+                  </AptoList>
+                </div>
+              )}
+
+              {rejectedList && (
+                <div className="fileList rejetedFileList">
+                  <AptoHeader type="4">Rejected Files</AptoHeader>
+                  <AptoList type="ul">{rejectedList}</AptoList>
+                </div>
               )}
               {this.originalValue && (
                 <AptoButton
@@ -231,6 +227,56 @@ export class AptoFileUpload extends React.Component<
         }}
       </Dropzone>
     );
+  }
+
+  private getRejectedFiles() {
+    const { rejected } = this.state;
+    return rejected && rejected.length
+      ? rejected.map((file: any) => {
+          return (
+            <AptoListItem key={file.name || 'unknown'}>
+              {file.name || 'unknown'}
+            </AptoListItem>
+          );
+        })
+      : null;
+  }
+
+  private getAcceptedFiles() {
+    const { files } = this.state;
+    return files && files.length
+      ? files.map((file: any) => {
+          return (
+            <AptoListItem key={file.name || 'unknown'}>
+              {file.preview && (
+                <img src={file.preview} className="dropzone-preview" />
+              )}
+              {file.name || 'unknown'}
+              <AptoButton
+                title="Remove"
+                kind="link"
+                data-name={file.name}
+                onClick={this.removeSelected}
+              >
+                <AptoIcon size="2" inline={true} icon={close} />
+              </AptoButton>
+            </AptoListItem>
+          );
+        })
+      : null;
+  }
+
+  private getImageTag() {
+    const { imageComponent: Component } = this.props;
+    let image = null;
+    if (this.originalValue && typeof Component === 'object') {
+      image = Component;
+    } else if (this.originalValue && Component) {
+      image = <Component />;
+    } else if (this.originalValue) {
+      image = <img src={this.originalValue} alt="" />;
+    }
+    return image;
   }
 
   private getPreview(file: AptoFile) {

@@ -57,6 +57,13 @@ exports[`AptoFileUpload Renders Component 1`] = `
        here
     </p>
   </div>
+  <p
+    class="AptoParagraph fileSize"
+  >
+    (Max file size 
+    5 MB
+    )
+  </p>
 </div>
 `;
 

@@ -1,4 +1,5 @@
 @import '../../scss/mixins/_grid.scss';
+@import '../../scss/theme/variables.scss';
 
 .dropzone {
   margin: 0.8rem 0;
@@ -27,6 +28,12 @@
 
   .fileList {
     text-align: left;
+  }
+  .rejetedFileList {
+    color: $danger;
+    .AptoListItem {
+      background: $red-300;
+    }
   }
 
   .dropzone-preview {
